@@ -1,0 +1,256 @@
+<h2>FV コピーのレイアウト案</h2>
+<p class="subtitle">左側コピーエリアの3パターン比較。右側の写真はそのまま。クリックして選択してください。</p>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+  .fv-mock {
+    background: linear-gradient(105deg, #F8F5EF 0%, #F3EFE5 48%, #EFE7D6 100%);
+    padding: 48px 40px 40px 48px;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Noto Serif JP', serif;
+    border: 1px solid #e4ded4;
+  }
+
+  .fv-mock::before {
+    content: "TATTOO";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px;
+    font-weight: 500;
+    color: rgba(30,30,28,.05);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .fv-label {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: .3em;
+    color: #8a7e64;
+    margin-bottom: 20px;
+    border-left: 2px solid #B59A6A;
+    padding-left: 10px;
+  }
+
+  .fv-h1 {
+    font-family: 'Noto Serif JP', serif;
+    color: #1E1E1C;
+    margin: 0 0 8px 0;
+    line-height: 1.25;
+  }
+
+  .fv-h1-line1 { font-size: 36px; font-weight: 600; letter-spacing: .02em; }
+  .fv-h1-line2 { font-size: 26px; font-weight: 400; color: #3a3833; letter-spacing: .04em; margin-top: 8px; }
+
+  .fv-marker {
+    background: linear-gradient(transparent 62%, #b59a6a 63%);
+    padding: 0 .08em;
+  }
+
+  .fv-divider {
+    display: flex; align-items: center; gap: 8px;
+    margin: 16px 0;
+  }
+  .fv-divider span { display: block; height: 1px; background: rgba(181,154,106,.5); width: 48px; }
+  .fv-diamond { width: 6px; height: 6px; transform: rotate(45deg); background: #B59A6A; display: inline-block; flex-shrink: 0; }
+
+  .fv-cta {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: linear-gradient(180deg, #1E1E1C, #0F0E0C);
+    border: 1px solid rgba(216,199,164,.45);
+    padding: 4px;
+    border-radius: 4px;
+    text-decoration: none;
+    width: fit-content;
+  }
+  .fv-cta-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; padding: 14px 20px;
+    border: 1px solid rgba(216,199,164,.35);
+    border-radius: 2px;
+  }
+  .fv-cta-chip {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 34px; height: 34px; border-radius: 6px;
+    background: #20B94D;
+    font-size: 9px; font-weight: 700; color: white; letter-spacing: .18em;
+    font-family: 'Noto Serif JP', serif;
+  }
+  .fv-cta-text { font-family: 'Noto Serif JP', serif; font-size: 15px; color: white; letter-spacing: .08em; }
+  .fv-cta-arrow { color: #D8C7A4; font-size: 18px; }
+
+  .fv-badge {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 11px; color: #6F6A62; letter-spacing: .12em;
+    margin-top: 10px;
+  }
+  .fv-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #20B94D; flex-shrink: 0; }
+
+  .fv-support {
+    margin-top: 20px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    line-height: 1.95;
+    color: #4a4540;
+    letter-spacing: .04em;
+  }
+
+  .fv-support-quote {
+    color: #1E1E1C;
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  /* PLAN B specific */
+  .fv-support-box {
+    border: 1px solid rgba(181,154,106,.3);
+    background: rgba(248,245,239,.7);
+    padding: 14px 18px;
+    margin-top: 20px;
+  }
+
+  /* PLAN C specific */
+  .fv-sub-line {
+    font-size: 20px; font-weight: 400; color: #3a3833;
+    letter-spacing: .06em; margin-top: 6px;
+  }
+  .fv-support-compact {
+    margin-top: 16px;
+    font-size: 13px; line-height: 1.9; color: #6F6A62;
+    letter-spacing: .03em;
+    border-top: 1px solid rgba(181,154,106,.3);
+    padding-top: 14px;
+  }
+
+  .cards { gap: 18px; }
+  .card-image { padding: 0 !important; overflow: hidden; }
+</style>
+
+<div class="cards">
+
+  <!-- PLAN A -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="fv-mock">
+        <div class="fv-label">TATTOO ARTIST SCHOOL</div>
+
+        <h1 class="fv-h1">
+          <div class="fv-h1-line1">「<span class="fv-marker">趣味</span>」を「一生モノの職」へ。</div>
+          <div class="fv-h1-line2">最短3ヶ月で、彫師としてデビュー。</div>
+        </h1>
+
+        <div class="fv-divider">
+          <span></span><span class="fv-diamond"></span><span></span>
+        </div>
+
+        <a class="fv-cta">
+          <div class="fv-cta-inner">
+            <div style="display:flex;align-items:center;gap:10px">
+              <span class="fv-cta-chip">LINE</span>
+              <span class="fv-cta-text">申し込みはLINEから</span>
+            </div>
+            <span class="fv-cta-arrow">→</span>
+          </div>
+        </a>
+        <div class="fv-badge"><span class="fv-badge-dot"></span>相談無料 / 30秒で予約完了</div>
+
+        <div class="fv-support">
+          <span class="fv-support-quote">「絵心がない」「未経験からで大丈夫？」</span><br>
+          そんな不安を、現役トップアーティストが払拭します。<br>
+          あなたの「表現したい」を、確かな収入に変える場所。
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — H1 → CTA → サポートテキスト</h3>
+      <p>現状の縦積み構造を維持。CTAをH1直下に引き上げ、サポートテキストを最後に配置。迷わず行動に誘導する定番レイアウト。</p>
+    </div>
+  </div>
+
+  <!-- PLAN B -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="fv-mock">
+        <div class="fv-label">TATTOO ARTIST SCHOOL</div>
+
+        <h1 class="fv-h1">
+          <div class="fv-h1-line1">「<span class="fv-marker">趣味</span>」を「一生モノの職」へ。</div>
+          <div class="fv-h1-line2">最短3ヶ月で、彫師としてデビュー。</div>
+        </h1>
+
+        <div class="fv-support-box">
+          <div style="font-size:13px;color:#6F6A62;letter-spacing:.03em;line-height:1.85;font-family:'Noto Serif JP',serif">
+            <span style="color:#1E1E1C;font-weight:500;font-size:14px">「絵心がない」「未経験からで大丈夫？」</span><br>
+            そんな不安を、現役トップアーティストが払拭します。<br>
+            あなたの「表現したい」を、確かな収入に変える場所。
+          </div>
+        </div>
+
+        <div style="margin-top:20px">
+          <a class="fv-cta">
+            <div class="fv-cta-inner">
+              <div style="display:flex;align-items:center;gap:10px">
+                <span class="fv-cta-chip">LINE</span>
+                <span class="fv-cta-text">申し込みはLINEから</span>
+              </div>
+              <span class="fv-cta-arrow">→</span>
+            </div>
+          </a>
+          <div class="fv-badge"><span class="fv-badge-dot"></span>相談無料 / 30秒で予約完了</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — H1 → 枠付きサポート → CTA</h3>
+      <p>H1の直下に不安払拭テキストを枠で囲んで配置し、納得したうえでCTAへ誘導。コンバージョン前に「安心」を与える構成。</p>
+    </div>
+  </div>
+
+  <!-- PLAN C -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="fv-mock">
+        <div class="fv-label">TATTOO ARTIST SCHOOL</div>
+
+        <h1 class="fv-h1">
+          <div class="fv-h1-line1" style="font-size:38px">「<span class="fv-marker">趣味</span>」を「一生モノの職」へ。</div>
+        </h1>
+        <div class="fv-sub-line">最短3ヶ月で、<strong style="color:#1E1E1C">彫師</strong>としてデビュー。</div>
+
+        <div class="fv-divider" style="margin:14px 0">
+          <span></span><span class="fv-diamond"></span><span></span>
+        </div>
+
+        <a class="fv-cta">
+          <div class="fv-cta-inner">
+            <div style="display:flex;align-items:center;gap:10px">
+              <span class="fv-cta-chip">LINE</span>
+              <span class="fv-cta-text">申し込みはLINEから</span>
+            </div>
+            <span class="fv-cta-arrow">→</span>
+          </div>
+        </a>
+        <div class="fv-badge"><span class="fv-badge-dot"></span>相談無料 / 30秒で予約完了</div>
+
+        <div class="fv-support-compact">
+          <span style="color:#1E1E1C;font-weight:500">「絵心がない」「未経験からで大丈夫？」</span><br>
+          そんな不安を、現役トップアーティストが払拭します。<br>
+          あなたの「表現したい」を、確かな収入に変える場所。
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — H1大 + サブ行分離 → CTA → 小テキスト</h3>
+      <p>1行目を最大サイズで見せ、2行目をサブコピー扱いに格下げ。CTAを中央に、サポートテキストは区切り線の下に小さく添える構成。</p>
+    </div>
+  </div>
+
+</div>

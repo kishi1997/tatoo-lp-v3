@@ -1,0 +1,57 @@
+<svg width="260" height="520" viewBox="0 0 260 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .circle{stroke:#b59a73;stroke-width:2;fill:none;}
+      .line{stroke:#2f2f2f;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none;}
+      .thin{stroke:#2f2f2f;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;fill:none;}
+      .gold{stroke:#b59a73;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none;}
+    </style>
+  </defs>
+
+  <!-- Icon 01: person + speech bubble -->
+  <g transform="translate(20 16)">
+    <circle class="circle" cx="110" cy="110" r="100"/>
+
+    <!-- head -->
+    <path class="line" d="M88 94c0-17 11-29 27-29s27 12 27 29"/>
+    <path class="line" d="M91 93c0 22 12 38 24 38s24-16 24-38"/>
+    <path class="line" d="M93 84c12-2 22-7 29-15 6 7 13 11 19 13"/>
+
+    <!-- neck / collar -->
+    <path class="line" d="M101 132v17"/>
+    <path class="line" d="M130 132v17"/>
+    <path class="line" d="M101 149l14 15 15-15"/>
+
+    <!-- shoulders/body -->
+    <path class="line" d="M64 199v-28c0-18 17-30 37-30"/>
+    <path class="line" d="M166 199v-28c0-18-17-30-37-30"/>
+    <path class="line" d="M83 173v26"/>
+    <path class="line" d="M147 173v26"/>
+
+    <!-- speech bubble -->
+    <path class="thin" d="M158 52c0-17 17-31 39-31s39 14 39 31-17 31-39 31c-5 0-10-.7-15-2l-19 12 6-18c-7-6-11-14-11-23z"/>
+  </g>
+
+  <!-- Icon 02: hand + sparkle -->
+  <g transform="translate(20 276)">
+    <circle class="circle" cx="110" cy="110" r="100"/>
+
+    <!-- sparkle large -->
+    <path class="line" d="M89 32c10 27 20 37 47 47-27 10-37 20-47 47-10-27-20-37-47-47 27-10 37-20 47-47z"/>
+    <!-- sparkle small -->
+    <path class="line" d="M162 63c6 16 12 22 28 28-16 6-22 12-28 28-6-16-12-22-28-28 16-6 22-12 28-28z"/>
+    <path class="line" d="M151 31v10"/>
+    <path class="line" d="M151 51v7"/>
+    <path class="line" d="M141 45h8"/>
+    <path class="line" d="M154 45h8"/>
+    <path class="line" d="M126 112v8"/>
+    <path class="line" d="M126 129v6"/>
+    <path class="line" d="M118 124h6"/>
+    <path class="line" d="M129 124h6"/>
+
+    <!-- hand -->
+    <path class="line" d="M31 164c30-1 47 3 65 11 10 5 20 9 34 9h21c13 0 24-7 32-19"/>
+    <path class="line" d="M84 150c10-6 22-8 35-5 16 4 28 13 43 8 8-3 14-8 22-15 7-6 17 3 12 11-9 15-23 29-39 39-13 8-29 11-45 8l-54-10"/>
+    <path class="line" d="M30 191c20-1 42 2 60 8 22 8 47 12 71 4"/>
+  </g>
+</svg>

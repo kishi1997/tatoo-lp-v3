@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">AI代替されにくい</title>
+  <desc id="desc">AIチップに斜線を入れた線画アイコン</desc>
+  <circle cx="80" cy="80" r="68" fill="#1d1d1b"/>
+  <g fill="none" stroke="#c7a46a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="54" y="54" width="52" height="52" rx="7"/>
+    <path d="M67 76c0-7 5-12 12-12 6 0 10 3 12 8 6 1 11 6 11 13 0 8-6 14-14 14H71c-7 0-13-6-13-13 0-5 4-10 9-10z"/>
+    <path d="M80 30v12M80 118v12M56 35v12M104 35v12M56 113v12M104 113v12"/>
+    <path d="M30 80h12M118 80h12M35 56h12M113 56h12M35 104h12M113 104h12"/>
+    <path d="M42 118L118 42"/>
+  </g>
+</svg>

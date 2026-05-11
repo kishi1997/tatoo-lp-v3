@@ -1,0 +1,654 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - img "タトゥーアーティストが施術している写真" [ref=e6]
+    - generic [ref=e7]:
+      - generic [ref=e9]: SCROLL
+      - img [ref=e10]
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - img [ref=e15]
+          - generic [ref=e19]: TATTOO ARTIST SCHOOL
+        - generic [ref=e21]: Be yourself, Be an artist.
+      - generic [ref=e27]:
+        - heading "「趣味」を 一生モノの職へ。" [level=1] [ref=e28]:
+          - generic [ref=e29]: 「趣味」を
+          - generic [ref=e30]: 一生モノの職へ。
+        - paragraph [ref=e32]:
+          - text: 最短
+          - strong [ref=e33]: ３ヶ月
+          - text: で、
+          - strong [ref=e34]: 彫師
+          - text: としてデビュー。
+        - link "［ 申し込みはLINEから ］" [ref=e37] [cursor=pointer]:
+          - /url: "#line-cta"
+          - img [ref=e38]
+          - generic [ref=e39]: ［ 申し込みはLINEから ］
+        - generic [ref=e40]:
+          - generic [ref=e41]:
+            - img [ref=e43]
+            - paragraph [ref=e45]:
+              - strong [ref=e46]: 「絵心がない」「未経験からで大丈夫？」
+              - generic [ref=e47]:
+                - text: そんな不安を、
+                - strong [ref=e48]: 現役トップアーティスト
+                - text: が払拭します。
+          - generic [ref=e50]:
+            - img [ref=e52]
+            - paragraph [ref=e54]:
+              - text: あなたの
+              - strong [ref=e55]: 「表現したい」
+              - text: を、
+              - text: 確かな収入に変える場所。
+  - generic [ref=e56]:
+    - generic: STUDIO
+    - generic [ref=e57]:
+      - generic [ref=e58]:
+        - generic [ref=e61]: Re'inkとは？
+        - heading "東京表参道にある 朝倉未来プロデュースの タトゥースタジオ" [level=2] [ref=e63]:
+          - text: 東京表参道にある
+          - emphasis [ref=e64]: 朝倉未来
+          - text: プロデュースの
+          - text: タトゥースタジオ
+        - link "申し込みはLINEから" [ref=e70] [cursor=pointer]:
+          - /url: "#contact"
+          - generic [ref=e71]:
+            - generic [ref=e72]:
+              - generic [ref=e74]: LINE
+              - generic [ref=e75]: 申し込みはLINEから
+            - img [ref=e77]
+      - img "Re'inkタトゥースタジオの様子" [ref=e81]
+  - generic [ref=e83]:
+    - img "独学で悩んでいる学習者の写真" [ref=e85]
+    - generic: WORRY
+    - generic [ref=e88]: TATTOO ARTIST SCHOOL
+    - generic [ref=e90]:
+      - heading "最近、 こんなお悩みありませんか？" [level=2] [ref=e92]:
+        - generic [ref=e93]: 最近、
+        - generic [ref=e94]: こんなお悩みありませんか？
+      - generic [ref=e100]:
+        - generic [ref=e101]: Check List
+        - list [ref=e102]:
+          - listitem [ref=e103]:
+            - img [ref=e105]
+            - generic [ref=e107]: 何から始めればいいか分からない
+          - listitem [ref=e108]:
+            - img [ref=e110]
+            - generic [ref=e112]: 独学で練習しているけど上達しない
+          - listitem [ref=e113]:
+            - img [ref=e115]
+            - generic [ref=e117]: 絵に自信がない
+          - listitem [ref=e118]:
+            - img [ref=e120]
+            - generic [ref=e122]: 道具や衛生管理が不安
+          - listitem [ref=e123]:
+            - img [ref=e125]
+            - generic [ref=e127]: 好きを仕事にできるか不安
+    - generic [ref=e132]: その原因は
+  - generic [ref=e135]:
+    - generic [ref=e136]:
+      - generic [ref=e138]:
+        - img [ref=e139]:
+          - generic [ref=e140]: SKILLED · ARTIST · SCHOOL
+        - img [ref=e141]
+      - generic [ref=e144]:
+        - generic "CHALLENGES" [ref=e145]:
+          - generic [ref=e147]: CHALLENGES
+        - heading "独学だけでは 難しい世界です。" [level=2] [ref=e149]:
+          - generic [ref=e150]: 独学だけでは
+          - generic [ref=e151]: 難しい世界です。
+        - paragraph [ref=e157]:
+          - text: タトゥーは感覚やセンスだけではなく、
+          - text: 専門的な知識・技術・経験が必要な世界。
+          - text: 独学には、どうしても超えられない壁があります。
+      - generic [ref=e158]:
+        - article [ref=e159]:
+          - generic [ref=e160]:
+            - generic [ref=e161]:
+              - generic [ref=e162]: "01"
+              - generic [ref=e163]: CHALLENGE
+              - heading "実践経験の圧倒的な不足" [level=3] [ref=e164]
+              - paragraph [ref=e167]: 本や動画を見て学ぶだけでは、実際の施術で必要な感覚や対応力は身につきません。経験の差が、そのまま技術の差になります。
+            - img "実践経験の圧倒的な不足 の参考写真" [ref=e170]
+        - article [ref=e171]:
+          - generic [ref=e172]:
+            - generic [ref=e173]:
+              - generic [ref=e174]: "02"
+              - generic [ref=e175]: CHALLENGE
+              - heading "衛生管理の知識が不十分" [level=3] [ref=e176]
+              - paragraph [ref=e179]: 衛生管理はお客様の安全に直結する重要なスキルです。独学では見落としがちな知識や基準を、正しく学ぶことができません。
+            - img "衛生管理の知識が不十分 の参考写真" [ref=e182]
+        - article [ref=e183]:
+          - generic [ref=e184]:
+            - generic [ref=e185]:
+              - generic [ref=e186]: "03"
+              - generic [ref=e187]: CHALLENGE
+              - heading "肌質や個人差への対応が難しい" [level=3] [ref=e188]
+              - paragraph [ref=e191]: 肌の状態は人それぞれ。色の入り方や痛みの感じ方も異なります。実践を通して経験を積まなければ、適切な判断ができるようになりません。
+            - img "肌質や個人差への対応が難しい の参考写真" [ref=e194]
+        - article [ref=e195]:
+          - generic [ref=e196]:
+            - generic [ref=e197]:
+              - generic [ref=e198]: "04"
+              - generic [ref=e199]: CHALLENGE
+              - heading "タトゥー特有のデザイン力が必要" [level=3] [ref=e200]
+              - paragraph [ref=e203]: タトゥーは「消えないデザイン」。構図・バランス・流れを考えた、タトゥー専用のデザインスキルが求められます。
+            - img "タトゥー特有のデザイン力が必要 の参考写真" [ref=e206]
+        - article [ref=e207]:
+          - generic [ref=e208]:
+            - generic [ref=e209]:
+              - generic [ref=e210]: "05"
+              - generic [ref=e211]: CHALLENGE
+              - heading "動画やSNSだけでは限界がある" [level=3] [ref=e212]
+              - paragraph [ref=e215]: 断片的な情報や一部のテクニックだけでは、応用力やトラブル対応力は身につきません。体系的な学びが不可欠です。
+            - img "動画やSNSだけでは限界がある の参考写真" [ref=e218]
+        - article [ref=e219]:
+          - generic [ref=e220]:
+            - generic [ref=e221]:
+              - generic [ref=e222]: "06"
+              - generic [ref=e223]: CHALLENGE
+              - heading "弟子入りのハードルが高い現実" [level=3] [ref=e224]
+              - paragraph [ref=e227]: 「見習いとして働きながら学ぶ」方法は、時間・お金・人間関係などのハードルが高く、誰もが簡単に始められる環境ではありません。
+            - img "弟子入りのハードルが高い現実 の参考写真" [ref=e230]
+    - generic [ref=e231]:
+      - generic [ref=e232]:
+        - img
+        - generic [ref=e233]:
+          - paragraph [ref=e234]: だからこそ、正しい環境で、最短ルートで学ぶことが
+          - generic [ref=e235]:
+            - img [ref=e236]
+            - paragraph [ref=e240]: 夢への一番の近道です。
+            - img [ref=e241]
+      - img [ref=e247]
+  - generic [ref=e249]:
+    - generic: FEATURES
+    - generic [ref=e250]:
+      - generic [ref=e251]:
+        - generic [ref=e254]: FEATURES
+        - heading "Re'inkが選ばれる、 3つの理由" [level=2] [ref=e256]:
+          - generic [ref=e257]: Re'inkが選ばれる、
+          - generic [ref=e258]: 3つの理由
+        - paragraph [ref=e264]:
+          - text: 未経験から、現場で活躍するアーティストへ。
+          - text: 私たちは、技術・実践・サポートのすべてに妥協しない環境を用意しました。
+      - generic [ref=e265]:
+        - generic [ref=e266]:
+          - generic: "01"
+          - generic [ref=e267]:
+            - generic [ref=e270]:
+              - generic [ref=e273]: FEATURE
+              - generic [ref=e275]:
+                - generic [ref=e276]: "01"
+                - generic [ref=e278]: SMALL CLASS
+              - heading "少人数制の 技術指導" [level=3] [ref=e279]:
+                - text: 少人数制の
+                - text: 技術指導
+              - img [ref=e282]
+              - paragraph [ref=e285]: 一人ひとりの個性とペースに、深く寄り添う。
+              - paragraph [ref=e286]: 少人数制だからこそ、講師の目が全員に行き届く環境。あなたのつまずきや得意を見極めながら、必要な指導を、必要なタイミングで届けます。
+              - list [ref=e287]:
+                - listitem [ref=e288]:
+                  - img [ref=e289]
+                  - generic [ref=e291]: 1クラス最大4名
+                - listitem [ref=e292]:
+                  - img [ref=e293]
+                  - generic [ref=e295]: マンツーマン指導あり
+                - listitem [ref=e296]:
+                  - img [ref=e297]
+                  - generic [ref=e299]: 質問しやすい距離感
+            - generic [ref=e301]:
+              - img "少人数制の技術指導 の写真" [ref=e302]
+              - generic [ref=e304]:
+                - img [ref=e305]
+                - paragraph [ref=e310]:
+                  - text: PERSONAL
+                  - text: SUPPORT
+          - img [ref=e314]
+        - generic [ref=e316]:
+          - generic: "02"
+          - generic [ref=e317]:
+            - generic [ref=e318]:
+              - img "実践的なカリキュラム の写真" [ref=e319]
+              - generic [ref=e321]: PRACTICAL
+            - generic [ref=e324]:
+              - generic [ref=e325]:
+                - generic [ref=e326]: "02"
+                - generic [ref=e328]: PRACTICAL
+              - heading "実践的なカリキュラム" [level=3] [ref=e329]
+              - paragraph [ref=e330]: 現場で「使える」技術を、基礎から積み上げる。
+              - paragraph [ref=e331]: 道具の扱い・ライン・塗り・ぼかしまで、現場で必要なスキルを順序立てて学習。最終回には実際の施術を体験し、卒業時にはポートフォリオが手元に残ります。
+              - list [ref=e332]:
+                - listitem [ref=e333]:
+                  - img [ref=e334]
+                  - generic [ref=e336]: 全6回の段階別プログラム
+                - listitem [ref=e337]:
+                  - img [ref=e338]
+                  - generic [ref=e340]: "実技 8 : 座学 2 の比率"
+                - listitem [ref=e341]:
+                  - img [ref=e342]
+                  - generic [ref=e344]: 本物の機材で練習
+          - img [ref=e346]
+        - generic [ref=e348]:
+          - generic: "03"
+          - generic [ref=e349]:
+            - generic [ref=e350]:
+              - img "卒業後サポート の写真" [ref=e351]
+              - generic [ref=e353]: AFTER CARE
+            - generic [ref=e356]:
+              - generic [ref=e357]:
+                - generic [ref=e358]: "03"
+                - generic [ref=e360]: AFTER CARE
+              - heading "卒業後サポート" [level=3] [ref=e361]
+              - paragraph [ref=e362]: 学んだ後も、ずっと相談できる場所がある。
+              - paragraph [ref=e363]: 就職・独立・サロン勤務まで、卒業後のキャリアもしっかりサポート。技術相談・ポートフォリオ添削・案件相談まで、長く伴走する関係を大切にします。
+              - list [ref=e364]:
+                - listitem [ref=e365]:
+                  - img [ref=e366]
+                  - generic [ref=e368]: キャリア相談無制限
+                - listitem [ref=e369]:
+                  - img [ref=e370]
+                  - generic [ref=e372]: ポートフォリオ添削
+                - listitem [ref=e373]:
+                  - img [ref=e374]
+                  - generic [ref=e376]: 案件 / 求人の紹介
+  - generic [ref=e377]:
+    - generic: CURRICULUM
+    - generic [ref=e378]:
+      - generic [ref=e379]:
+        - generic [ref=e382]: CURRICULUM
+        - heading "実践に特化した、 全6回完結プログラム。" [level=2] [ref=e384]:
+          - generic [ref=e385]: 実践に特化した、
+          - generic [ref=e386]: 全6回完結プログラム。
+        - paragraph [ref=e392]:
+          - text: 道具の扱いから実践までを、無駄なく順序立てて。
+          - text: 最短3ヶ月で、現場に立てるレベルへ導きます。
+      - list [ref=e395]:
+        - listitem [ref=e396]:
+          - generic: "01"
+          - generic [ref=e399]:
+            - generic [ref=e400]:
+              - generic [ref=e401]:
+                - generic [ref=e402]: STEP
+                - generic [ref=e403]: "01"
+                - generic [ref=e405]: TOOLS
+              - heading "道具の使い方" [level=3] [ref=e406]
+              - paragraph [ref=e407]: タトゥーマシン・ニードル・インクの基礎知識から、メンテナンス・衛生管理まで。安全に施術できる土台を最初に固めます。
+            - img "道具の使い方 の参考写真" [ref=e409]
+        - listitem [ref=e412]:
+          - generic: "02"
+          - generic [ref=e415]:
+            - generic [ref=e416]:
+              - generic [ref=e417]:
+                - generic [ref=e418]: STEP
+                - generic [ref=e419]: "02"
+                - generic [ref=e421]: LINE
+              - heading "ライン" [level=3] [ref=e422]
+              - paragraph [ref=e423]: タトゥーの「骨格」となるライン技術を徹底練習。直線・曲線・抜きどころまで、安定した線が引けるよう繰り返し指導します。
+            - img "ライン の参考写真" [ref=e425]
+        - listitem [ref=e428]:
+          - generic: "03"
+          - generic [ref=e431]:
+            - generic [ref=e432]:
+              - generic [ref=e433]:
+                - generic [ref=e434]: STEP
+                - generic [ref=e435]: "03"
+                - generic [ref=e437]: FILLING
+              - heading "塗り（ベタ塗り）" [level=3] [ref=e438]
+              - paragraph [ref=e439]: 面の塗りを均一に、ムラなく仕上げる技術。針の角度・スピード・力加減のコントロールを身につけ、表現の幅を広げます。
+            - img "塗り（ベタ塗り） の参考写真" [ref=e441]
+        - listitem [ref=e444]:
+          - generic: "04"
+          - generic [ref=e447]:
+            - generic [ref=e448]:
+              - generic [ref=e449]:
+                - generic [ref=e450]: STEP
+                - generic [ref=e451]: "04"
+                - generic [ref=e453]: SHADING
+              - heading "ぼかし" [level=3] [ref=e454]
+              - paragraph [ref=e455]: グラデーションや陰影で立体感を生み出す技術。柔らかいぼかしから濃淡のついた表現まで、絵を「タトゥー」に仕上げます。
+            - img "ぼかし の参考写真" [ref=e457]
+        - listitem [ref=e460]:
+          - generic: "05"
+          - generic [ref=e463]:
+            - generic [ref=e464]:
+              - generic [ref=e465]:
+                - generic [ref=e466]: STEP
+                - generic [ref=e467]: "05"
+                - generic [ref=e469]: PRACTICE I
+              - heading "実践①" [level=3] [ref=e470]
+              - paragraph [ref=e471]: 学んだ技術を組み合わせ、実際のデザインを完成形まで仕上げる回。構図・流れ・全体バランスを、講師と一緒にチェックします。
+            - img "実践① の参考写真" [ref=e473]
+        - listitem [ref=e476]:
+          - generic: "06"
+          - generic [ref=e479]:
+            - generic [ref=e480]:
+              - generic [ref=e481]:
+                - generic [ref=e482]: STEP
+                - generic [ref=e483]: "06"
+                - generic [ref=e485]: PRACTICE II
+              - heading "実践②" [level=3] [ref=e486]
+              - paragraph [ref=e487]: 仕上げの実践回。施術フローを通しで体験し、卒業後にすぐ動ける状態を作ります。ポートフォリオ用の作品もここで完成させます。
+            - img "実践② の参考写真" [ref=e489]
+      - generic [ref=e493]:
+        - generic [ref=e494]: PROGRAM SUMMARY
+        - generic [ref=e495]:
+          - generic [ref=e496]:
+            - generic [ref=e497]: "6"
+            - generic [ref=e498]: SESSIONS
+          - generic [ref=e499]:
+            - generic [ref=e500]: 3ヶ月
+            - generic [ref=e501]: SHORTEST
+          - generic [ref=e502]:
+            - generic [ref=e503]: 4名
+            - generic [ref=e504]: MAX / CLASS
+  - generic [ref=e505]:
+    - generic: ARTIST
+    - generic [ref=e506]:
+      - generic [ref=e507]:
+        - generic [ref=e510]: INSTRUCTOR
+        - heading "経験豊富な現役アーティストが、 直接指導します。" [level=2] [ref=e512]:
+          - generic [ref=e513]: 経験豊富な現役アーティストが、
+          - generic [ref=e514]: 直接指導します。
+      - generic [ref=e520]:
+        - generic [ref=e521]:
+          - img "講師ポートレート" [ref=e522]
+          - generic [ref=e524]: LEAD INSTRUCTOR
+          - generic [ref=e527]:
+            - generic [ref=e528]: — Ryo Tanaka
+            - generic [ref=e529]: FOUNDER · LEAD ARTIST
+        - generic [ref=e530]:
+          - generic [ref=e532]: RYO TANAKA
+          - heading "田中 良Tattoo Artist / Founder" [level=3] [ref=e534]
+          - paragraph [ref=e535]: 東京・大阪を拠点に活動する現役タトゥーアーティスト。繊細なファインライン・ボタニカルを得意とし、国内外のクライアントから指名を受ける。「技術は努力で身につけられる」という信念のもと、未経験から始める方の伴走を大切にしている。
+          - generic [ref=e536]:
+            - generic [ref=e537]:
+              - generic [ref=e538]: 12YEARS
+              - generic [ref=e539]: アーティスト歴
+            - generic [ref=e540]:
+              - generic [ref=e541]: 500+WORKS
+              - generic [ref=e542]: 施術実績
+            - generic [ref=e543]:
+              - generic [ref=e544]: 80+STUDENTS
+              - generic [ref=e545]: 指導したアーティスト
+          - generic [ref=e546]:
+            - generic [ref=e548]: CAREER
+            - list [ref=e550]:
+              - listitem [ref=e551]:
+                - generic [ref=e552]: "2014"
+                - generic [ref=e553]: 東京の老舗タトゥースタジオに入門
+              - listitem [ref=e554]:
+                - generic [ref=e555]: "2017"
+                - generic [ref=e556]: スタジオの主任アーティストに就任
+              - listitem [ref=e557]:
+                - generic [ref=e558]: "2020"
+                - generic [ref=e559]: 独立、Re'ink Studio を東京に設立
+              - listitem [ref=e560]:
+                - generic [ref=e561]: "2023"
+                - generic [ref=e562]: Re'ink Tattoo Artist School を開校
+          - generic [ref=e563]:
+            - generic [ref=e565]: SPECIALITIES
+            - list [ref=e567]:
+              - listitem [ref=e568]: Fine Line
+              - listitem [ref=e569]: Botanical
+              - listitem [ref=e570]: Black & Grey
+              - listitem [ref=e571]: Lettering
+      - generic [ref=e572]:
+        - generic [ref=e573]: MESSAGE
+        - generic [ref=e574]:
+          - generic: “
+          - generic: ”
+          - paragraph [ref=e575]:
+            - text: タトゥーは、人生に寄り添うアートです。
+            - text: 「自分にできるかな」と迷っている今が、
+            - text: 一歩踏み出す最高のタイミング。
+            - text: あなたの挑戦を、全力で支えます。
+          - generic [ref=e577]:
+            - generic [ref=e578]: Ryo Tanaka
+            - generic [ref=e579]: FOUNDER
+      - generic [ref=e580]:
+        - figure "Re'ink Studio / Tokyo" [ref=e581]:
+          - img "Re'ink Studio / Tokyo" [ref=e582]
+          - generic [ref=e583]: Re'ink Studio / Tokyo
+        - figure "デザイン制作の様子" [ref=e585]:
+          - img "デザイン制作の様子" [ref=e586]
+          - generic [ref=e587]: デザイン制作の様子
+        - figure "レッスン風景" [ref=e589]:
+          - img "レッスン風景" [ref=e590]
+          - generic [ref=e591]: レッスン風景
+  - generic [ref=e593]:
+    - generic: WORKS
+    - generic [ref=e594]:
+      - generic [ref=e595]:
+        - generic [ref=e598]: WORKS
+        - heading "講師・卒業生による、 作品ギャラリー。" [level=2] [ref=e600]:
+          - generic [ref=e601]: 講師・卒業生による、
+          - generic [ref=e602]: 作品ギャラリー。
+        - paragraph [ref=e608]:
+          - text: 繊細なファインラインから、流れるようなボタニカルまで。
+          - text: Re'inkで生まれた表現の一部をご紹介します。
+      - generic [ref=e609]:
+        - generic [ref=e610]: All
+        - generic [ref=e611]: Fine Line
+        - generic [ref=e612]: Botanical
+        - generic [ref=e613]: Black & Grey
+        - generic [ref=e614]: Lettering
+        - generic [ref=e615]: Minimal
+      - generic [ref=e616]:
+        - figure "No.01 Fine Line" [ref=e617]:
+          - img "FINE LINE BOTANICAL（Fine Line）" [ref=e618]
+          - generic [ref=e621]:
+            - generic [ref=e624]: No.01
+            - generic [ref=e625]: Fine Line
+        - figure "No.02 Black & Grey" [ref=e626]:
+          - img "BLACK & GREY ROSE（Black & Grey）" [ref=e627]
+          - generic [ref=e630]:
+            - generic [ref=e633]: No.02
+            - generic [ref=e634]: Black & Grey
+        - figure "No.03 Lettering" [ref=e635]:
+          - img "LETTERING SCRIPT（Lettering）" [ref=e636]
+          - generic [ref=e639]:
+            - generic [ref=e642]: No.03
+            - generic [ref=e643]: Lettering
+        - figure "No.04 Botanical" [ref=e644]:
+          - img "BOTANICAL SLEEVE（Botanical）" [ref=e645]
+          - generic [ref=e648]:
+            - generic [ref=e651]: No.04
+            - generic [ref=e652]: Botanical
+        - figure "No.05 Fine Line" [ref=e653]:
+          - img "GEOMETRIC LINE WORK（Fine Line）" [ref=e654]
+          - generic [ref=e657]:
+            - generic [ref=e660]: No.05
+            - generic [ref=e661]: Fine Line
+        - figure "No.06 Minimal" [ref=e662]:
+          - img "MINIMAL SYMBOL（Minimal）" [ref=e663]
+          - generic [ref=e666]:
+            - generic [ref=e669]: No.06
+            - generic [ref=e670]: Minimal
+        - figure "No.07 Botanical" [ref=e671]:
+          - img "WILDFLOWER STUDY（Botanical）" [ref=e672]
+          - generic [ref=e675]:
+            - generic [ref=e678]: No.07
+            - generic [ref=e679]: Botanical
+        - figure "No.08 Fine Line" [ref=e680]:
+          - img "FINE LINE PORTRAIT（Fine Line）" [ref=e681]
+          - generic [ref=e684]:
+            - generic [ref=e687]: No.08
+            - generic [ref=e688]: Fine Line
+      - generic [ref=e689]:
+        - generic [ref=e691]: Your work could be next.
+        - generic [ref=e692]:
+          - generic [ref=e693]: VIEW MORE
+          - img [ref=e695]
+  - generic [ref=e698]:
+    - generic [ref=e699]:
+      - generic [ref=e702]: VOICE
+      - heading "卒業生の声" [level=2] [ref=e704]
+      - paragraph [ref=e710]:
+        - text: Re'inkから旅立った卒業生たちが、
+        - text: それぞれのフィールドで活躍しています。
+    - generic [ref=e711]:
+      - generic [ref=e712]:
+        - generic: "01"
+        - generic [ref=e713]:
+          - generic [ref=e716]:
+            - generic [ref=e719]: VOICE
+            - generic [ref=e721]:
+              - generic [ref=e722]: "01"
+              - generic [ref=e724]: GRADUATE 2024
+            - paragraph [ref=e725]: 元会社員 → フリーランスタトゥーアーティスト
+            - heading "山田 彩花" [level=3] [ref=e726]
+            - img [ref=e729]
+            - paragraph [ref=e732]: 「ゼロからでも、ちゃんとプロになれる」
+            - paragraph [ref=e733]: 前職は全く異業種の会社員。絵を描いた経験もほぼゼロでしたが、丁寧な個別指導のおかげで6ヶ月で独立することができました。今では月20名以上のクライアントを担当し、念願のフリーランス生活を実現しています。
+            - list [ref=e734]:
+              - listitem [ref=e735]:
+                - img [ref=e736]
+                - generic [ref=e738]: 6ヶ月で独立達成
+              - listitem [ref=e739]:
+                - img [ref=e740]
+                - generic [ref=e742]: 月20名以上対応
+              - listitem [ref=e743]:
+                - img [ref=e744]
+                - generic [ref=e746]: SNS集客を完全習得
+          - img "山田 彩花さんの声" [ref=e749]
+        - img [ref=e754]
+      - generic [ref=e756]:
+        - generic: "02"
+        - generic [ref=e757]:
+          - img "佐藤 健斗さんの声" [ref=e760]
+          - generic [ref=e766]:
+            - generic [ref=e769]: VOICE
+            - generic [ref=e771]:
+              - generic [ref=e772]: "02"
+              - generic [ref=e774]: GRADUATE 2023
+            - paragraph [ref=e775]: 元美容師 → タトゥーアーティスト
+            - heading "佐藤 健斗" [level=3] [ref=e776]
+            - img [ref=e779]
+            - paragraph [ref=e782]: 「繊細さへのこだわりが、ここで活きた」
+            - paragraph [ref=e783]: 美容師として培った繊細さとお客様への向き合い方が、ファインラインタトゥーと相性抜群でした。講師の個別指導で自分のスタイルを確立し、今では予約3ヶ月待ちを達成しています。
+            - list [ref=e784]:
+              - listitem [ref=e785]:
+                - img [ref=e786]
+                - generic [ref=e788]: ファインライン特化
+              - listitem [ref=e789]:
+                - img [ref=e790]
+                - generic [ref=e792]: 予約3ヶ月待ち達成
+              - listitem [ref=e793]:
+                - img [ref=e794]
+                - generic [ref=e796]: 自スタジオを開業
+  - generic [ref=e797]:
+    - generic: PRICE
+    - generic [ref=e798]:
+      - generic [ref=e799]:
+        - generic [ref=e802]: PRICE
+        - heading "受講料金" [level=2] [ref=e804]
+        - paragraph [ref=e810]:
+          - text: 必要なものを、すべて含んだシンプルな料金体系。
+          - text: 追加料金は一切ありません。
+      - generic [ref=e811]:
+        - generic [ref=e813]:
+          - generic [ref=e814]:
+            - text: 追加料金
+            - text: なし
+          - img [ref=e815]
+        - generic [ref=e818]:
+          - generic [ref=e821]: FULL COURSE
+          - generic [ref=e823]: 全6回完結プログラム
+          - generic [ref=e824]:
+            - generic [ref=e825]: 398,000
+            - generic [ref=e826]: 円
+          - generic [ref=e827]: TAX INCLUDED · 税込
+          - generic [ref=e833]:
+            - generic [ref=e834]:
+              - generic [ref=e835]:
+                - img [ref=e836]
+                - generic [ref=e838]: CURRICULUM
+              - generic [ref=e839]: 全6回プログラム
+              - generic [ref=e840]: 段階別の体系的カリキュラム
+            - generic [ref=e841]:
+              - generic [ref=e842]:
+                - img [ref=e843]
+                - generic [ref=e845]: MATERIALS
+              - generic [ref=e846]: 教材費・実習費
+              - generic [ref=e847]: 練習用パッド・インク・備品込み
+            - generic [ref=e848]:
+              - generic [ref=e849]:
+                - img [ref=e850]
+                - generic [ref=e852]: STUDIO
+              - generic [ref=e853]: スタジオ利用料
+              - generic [ref=e854]: プロ仕様の機材を全回使い放題
+            - generic [ref=e855]:
+              - generic [ref=e856]:
+                - img [ref=e857]
+                - generic [ref=e859]: AFTERCARE
+              - generic [ref=e860]: 卒業後サポート
+              - generic [ref=e861]: キャリア相談・ポートフォリオ添削
+          - generic [ref=e862]: ※ 分割払いにも対応しています。詳細はLINEにてご案内します。
+      - generic [ref=e863]:
+        - generic [ref=e864]:
+          - generic [ref=e867]: SUPPORT
+          - heading "安心のサポート体制" [level=3] [ref=e869]
+        - list [ref=e870]:
+          - listitem [ref=e871]:
+            - img [ref=e873]
+            - generic [ref=e875]: 少人数制だからこそできる、丁寧で細やかな指導
+          - listitem [ref=e876]:
+            - img [ref=e878]
+            - generic [ref=e880]: 現場レベルの技術を、基礎から実践まで学べる
+          - listitem [ref=e881]:
+            - img [ref=e883]
+            - generic [ref=e885]: 衛生管理・機材の扱い方まで、安全に配慮した指導
+          - listitem [ref=e886]:
+            - img [ref=e888]
+            - generic [ref=e890]: 卒業後も相談できる、安心のアフターサポート
+          - listitem [ref=e891]:
+            - img [ref=e893]
+            - generic [ref=e895]: 就職・独立の相談やポートフォリオ添削もサポート
+  - generic [ref=e896]:
+    - generic: START
+    - generic [ref=e897]:
+      - img [ref=e898]
+      - generic [ref=e899]:
+        - generic [ref=e902]: FINAL STEP
+        - heading "好きな表現を、 一生モノの仕事に。" [level=2] [ref=e904]:
+          - generic [ref=e905]: 好きな表現を、
+          - generic [ref=e906]: 一生モノの仕事に。
+        - paragraph [ref=e912]:
+          - text: 未経験からでも、あなたの挑戦を丁寧にサポートします。
+          - text: まずは、無料の相談から始めてみませんか？
+        - list [ref=e913]:
+          - listitem [ref=e914]:
+            - generic [ref=e915]:
+              - img [ref=e916]
+              - generic [ref=e918]: CONSULT
+            - generic [ref=e919]: 相談無料
+            - generic [ref=e920]: 料金やカリキュラム、進路まで何でも
+          - listitem [ref=e921]:
+            - generic [ref=e922]:
+              - img [ref=e923]
+              - generic [ref=e925]: TRIAL
+            - generic [ref=e926]: 体験OK
+            - generic [ref=e927]: 実際の雰囲気をオンラインで確認
+          - listitem [ref=e928]:
+            - generic [ref=e929]:
+              - img [ref=e930]
+              - generic [ref=e932]: NO PUSH
+            - generic [ref=e933]: 無理な勧誘なし
+            - generic [ref=e934]: 迷っている段階でもお気軽に
+        - generic [ref=e935]: まずはお気軽にご相談ください。
+        - generic [ref=e936]:
+          - link "LINEで無料相談する" [ref=e937] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e938]:
+              - generic [ref=e940]: LINE
+              - generic [ref=e941]: LINEで無料相談する
+            - img [ref=e943]
+          - generic [ref=e947]: 簡単30秒で予約完了 / 無理な勧誘は一切ありません
+        - generic [ref=e948]:
+          - generic [ref=e949]: 一歩踏み出すあなたを、Re'inkは全力で迎えます。
+          - generic [ref=e950]: Your story starts here.
+    - generic [ref=e952]:
+      - generic [ref=e953]:
+        - img [ref=e954]
+        - generic [ref=e957]: RE'INK · TATTOO ARTIST SCHOOL
+      - generic [ref=e958]: © 2026 Re'ink. ALL RIGHTS RESERVED.

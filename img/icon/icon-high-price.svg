@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">高単価</title>
+  <desc id="desc">コインと円マークの線画アイコン</desc>
+  <circle cx="80" cy="80" r="68" fill="#1d1d1b"/>
+  <g fill="none" stroke="#c7a46a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="70" cy="52" rx="34" ry="15"/>
+    <path d="M36 52v42c0 8 15 15 34 15 6 0 12-.7 17-2"/>
+    <path d="M104 52v20"/>
+    <path d="M36 73c0 8 15 15 34 15 6 0 11-.6 16-2"/>
+    <path d="M36 94c0 8 15 15 34 15 4 0 8-.3 12-1"/>
+    <circle cx="102" cy="96" r="27"/>
+    <path d="M91 84l11 14 11-14"/>
+    <path d="M102 98v17"/>
+    <path d="M91 99h22M91 108h22"/>
+  </g>
+</svg>

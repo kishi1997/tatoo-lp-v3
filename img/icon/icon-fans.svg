@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">ファンが付きやすい</title>
+  <desc id="desc">人のグループとハートの線画アイコン</desc>
+  <circle cx="80" cy="80" r="68" fill="#1d1d1b"/>
+  <g fill="none" stroke="#c7a46a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M80 43c-7-9-21-3-21 8 0 12 21 24 21 24s21-12 21-24c0-11-14-17-21-8z"/>
+    <circle cx="80" cy="92" r="13"/>
+    <path d="M55 126c3-17 13-26 25-26s22 9 25 26"/>
+    <circle cx="47" cy="96" r="11"/>
+    <path d="M25 126c3-15 11-23 22-23 7 0 13 3 17 9"/>
+    <circle cx="113" cy="96" r="11"/>
+    <path d="M135 126c-3-15-11-23-22-23-7 0-13 3-17 9"/>
+  </g>
+</svg>
