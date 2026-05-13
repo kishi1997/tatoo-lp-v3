@@ -3,2659 +3,1112 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Re'ink Tattoo Artist School</title>
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600&family=Dancing+Script:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600&display=swap"
     rel="stylesheet" />
-
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- React + Babel -->
-  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js"
-    integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L"
-    crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"
-    integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm"
-    crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"
-    integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y"
-    crossorigin="anonymous"></script>
-
-  <style>
-    :root {
-      --white: #FFFFFF;
-      --ivory: #F8F5EF;
-      --beige: #E8DDCB;
-      --light-gray: #F3F1EC;
-      --ink: #1E1E1C;
-      --soft-ink: #2A2926;
-      --gray-text: #6F6A62;
-      --gold: #B59A6A;
-      --pale-gold: #D8C7A4;
-      --line-beige: #CDBB9D;
-      --charcoal: #151513;
-      --soft-charcoal: #22211E;
-      --dark-border: #3A352C;
-      --line-green: #20B94D;
-      --line-green-hover: #128C3A;
-    }
-
-    html,
-    body {
-      background: var(--ivory);
-      color: var(--ink);
-    }
-
-    body {
-      font-family: 'Noto Serif JP', serif;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .feature-section {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-      background:
-        linear-gradient(90deg, rgba(255, 255, 255, .96) 0%, rgba(255, 255, 255, .94) 44%, rgba(246, 242, 236, .96) 100%);
-      border-top: 1px solid #e4ded4;
-      border-bottom: 1px solid #e4ded4;
-    }
-
-    .feature-section::before,
-    .feature-section::after {
-      content: "";
-      position: absolute;
-      inset: 16px;
-      pointer-events: none;
-      border: 1px solid rgba(190, 175, 151, .28);
-    }
-
-    .feature-section::after {
-      inset: 22px;
-      border-color: rgba(255, 255, 255, .75);
-    }
-
-    .feature-section__inner {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: minmax(360px, 45%) minmax(0, 55%);
-      align-items: center;
-      min-height: 560px;
-      padding: 24px 34px 28px 72px;
-    }
-
-    .feature-section__content {
-      position: relative;
-      padding: 72px 40px 56px 36px;
-    }
-
-    .feature-section__number {
-      position: absolute;
-      top: -20px;
-      left: -34px;
-      color: rgba(151, 139, 124, .08);
-      font-size: clamp(150px, 15vw, 250px);
-      font-weight: 500;
-      font-style: italic;
-      line-height: .8;
-      letter-spacing: -.08em;
-      z-index: -1;
-    }
-
-    .feature-section__label {
-      width: fit-content;
-      margin: 0 auto 30px;
-      padding: 7px 28px 6px;
-      color: #b49a6d;
-      font-family: "Cormorant Garamond", serif;
-      font-size: 20px;
-      font-weight: 600;
-      letter-spacing: .18em;
-      line-height: 1;
-      background: #fff;
-      border: 1px solid #c9b794;
-      box-shadow:
-        0 0 0 3px #fff inset,
-        0 0 0 1px rgba(201, 183, 148, .55),
-        0 3px 12px rgba(98, 80, 49, .08);
-    }
-
-    .feature-section__title {
-      margin: 0;
-      font-size: clamp(42px, 4.5vw, 70px);
-      font-weight: 400;
-      line-height: 1.33;
-      letter-spacing: .18em;
-      text-align: center;
-      text-shadow: 3px 3px 0 rgba(0, 0, 0, .055);
-    }
-
-    .feature-section__divider {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 34px auto 38px;
-    }
-
-    .feature-section__divider span {
-      position: relative;
-      display: block;
-      width: min(100%, 520px);
-      height: 1px;
-      background: linear-gradient(90deg, transparent, #cfc5b5 15%, #cfc5b5 85%, transparent);
-    }
-
-    .feature-section__divider span::before,
-    .feature-section__divider span::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 9px;
-      height: 9px;
-      background: #b69d74;
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
-
-    .feature-section__divider span::after {
-      width: 4px;
-      height: 4px;
-      background: #fff;
-    }
-
-    .feature-section__text {
-      margin: 0;
-      color: #4a4a4a;
-      font-size: clamp(18px, 1.6vw, 28px);
-      font-weight: 500;
-      line-height: 2.05;
-      letter-spacing: .08em;
-      text-shadow: 2px 2px 0 rgba(0, 0, 0, .045);
-    }
-
-    .feature-section__text strong {
-      color: #9f7d48;
-      font-weight: 600;
-    }
-
-    .feature-section__visual {
-      position: relative;
-      align-self: stretch;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 0 10px 26px;
-    }
-
-    .feature-section__image-wrap {
-      position: relative;
-      width: 100%;
-      max-width: 850px;
-      aspect-ratio: 820 / 520;
-      overflow: hidden;
-      border: 1px solid rgba(184, 171, 148, .72);
-      box-shadow: 0 12px 28px rgba(35, 29, 21, .12);
-      background: #e8e1d7;
-    }
-
-    .feature-section__image-wrap::before,
-    .feature-section__image-wrap::after {
-      content: "";
-      position: absolute;
-      z-index: 2;
-      pointer-events: none;
-    }
-
-    .feature-section__image-wrap::before {
-      inset: 0;
-      border: 6px solid rgba(255, 255, 255, .86);
-    }
-
-    .feature-section__image-wrap::after {
-      inset: 14px;
-      border: 1px solid rgba(255, 255, 255, .55);
-    }
-
-    .feature-section__image {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .feature-section__badge {
-      position: absolute;
-      top: 0;
-      right: 32px;
-      z-index: 4;
-      width: 150px;
-      min-height: 176px;
-      padding: 24px 14px 20px;
-      color: #d2b887;
-      text-align: center;
-      background: linear-gradient(180deg, #181817, #11100f);
-      border: 1px solid rgba(187, 157, 100, .55);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, .22);
-    }
-
-    .feature-section__badge::before,
-    .feature-section__badge::after {
-      content: "";
-      position: absolute;
-      left: 10px;
-      right: 10px;
-      height: 1px;
-      background: rgba(187, 157, 100, .55);
-    }
-
-    .feature-section__badge::before {
-      top: 8px;
-    }
-
-    .feature-section__badge::after {
-      bottom: 8px;
-    }
-
-    .feature-section__badge p {
-      margin: 18px 0 0;
-      font-family: "Cormorant Garamond", serif;
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 1.45;
-      letter-spacing: .16em;
-    }
-
-    .feature-section__badge-icon {
-      position: relative;
-      width: 64px;
-      height: 50px;
-      margin: 0 auto;
-    }
-
-    .feature-section__badge-icon span {
-      position: absolute;
-      bottom: 0;
-      width: 28px;
-      height: 26px;
-      border: 2px solid #d2b887;
-      border-radius: 50% 50% 0 0;
-    }
-
-    .feature-section__badge-icon span:nth-child(1) {
-      left: 0;
-    }
-
-    .feature-section__badge-icon span:nth-child(2) {
-      left: 18px;
-      bottom: 8px;
-    }
-
-    .feature-section__badge-icon span:nth-child(3) {
-      right: 0;
-    }
-
-    .feature-section__bottom-mark {
-      position: absolute;
-      left: 50%;
-      bottom: -18px;
-      z-index: 3;
-      width: 98px;
-      height: 64px;
-      transform: translateX(-50%);
-      background: linear-gradient(135deg, transparent 47%, #d4c1a1 48%, #fff 54%, transparent 55%),
-        linear-gradient(225deg, transparent 47%, #d4c1a1 48%, #fff 54%, transparent 55%);
-      background-size: 50% 100%;
-      background-repeat: no-repeat;
-      background-position: left top, right top;
-    }
-
-    @media (max-width: 1024px) {
-      .feature-section__inner {
-        grid-template-columns: 1fr;
-        padding: 42px 22px 54px;
-        gap: 22px;
-      }
-
-      .feature-section__content {
-        padding: 52px 16px 22px;
-      }
-
-      .feature-section__text {
-        text-align: center;
-      }
-
-      .feature-section__visual {
-        padding: 0;
-      }
-
-      .feature-section__badge {
-        right: 18px;
-        width: 128px;
-        min-height: 150px;
-        padding-top: 18px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .pc-only {
-        display: none;
-      }
-
-      .feature-section::before,
-      .feature-section::after {
-        inset: 10px;
-      }
-
-      .feature-section__inner {
-        padding: 28px 14px 44px;
-      }
-
-      .feature-section__content {
-        padding: 46px 8px 12px;
-      }
-
-      .feature-section__label {
-        margin-bottom: 22px;
-        font-size: 16px;
-      }
-
-      .feature-section__title {
-        letter-spacing: .12em;
-      }
-
-      .feature-section__divider {
-        margin: 24px auto 26px;
-      }
-
-      .feature-section__text {
-        font-size: 16px;
-        line-height: 1.9;
-        letter-spacing: .04em;
-      }
-
-      .feature-section__badge {
-        top: -10px;
-        right: 10px;
-        transform: scale(.78);
-        transform-origin: top right;
-      }
-    }
-
-    .p-challenge-card {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-      background:
-        linear-gradient(90deg, rgba(255, 255, 255, .96) 0%, rgba(255, 255, 255, .94) 44%, rgba(246, 242, 236, .96) 100%);
-      border-top: 1px solid #e4ded4;
-      border-bottom: 1px solid #e4ded4;
-    }
-
-    .p-challenge-card::before,
-    .p-challenge-card::after {
-      content: "";
-      position: absolute;
-      inset: 16px;
-      pointer-events: none;
-      border: 1px solid rgba(190, 175, 151, .28);
-    }
-
-    .p-challenge-card::after {
-      inset: 22px;
-      border-color: rgba(255, 255, 255, .75);
-    }
-
-    .p-challenge-card__inner {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: minmax(300px, 45%) minmax(0, 55%);
-      align-items: center;
-      min-height: 460px;
-      padding: 24px 34px 28px 72px;
-    }
-
-    @media (max-width: 1024px) {
-      .p-challenge-card__inner {
-        grid-template-columns: 1fr;
-        padding: 42px 22px 54px;
-        gap: 22px;
-      }
-    }
-
-    @media (max-width: 640px) {
-
-      .p-challenge-card::before,
-      .p-challenge-card::after {
-        inset: 10px;
-      }
-
-      .p-challenge-card__inner {
-        padding: 28px 14px 44px;
-      }
-    }
-
-    .font-mincho {
-      font-family: 'Noto Serif JP', serif;
-    }
-
-    /* Marker highlight */
-    .marker {
-      background: linear-gradient(transparent 60%, rgba(183, 155, 99, 0.45) 60%);
-      padding: 0 .12em;
-      font-size: 1.3em;
-      font-weight: 600;
-    }
-
-    /* Faded background typography */
-    .bg-type {
-      position: absolute;
-      pointer-events: none;
-      user-select: none;
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 500;
-      color: rgba(30, 30, 28, .06);
-      line-height: .9;
-      letter-spacing: .02em;
-      white-space: nowrap;
-    }
-
-    /* Vertical ribbon (top-left) */
-    .v-ribbon {
-      background: linear-gradient(180deg, #1E1E1C 0%, #2A2926 100%);
-      color: #F3EFE5;
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 88%, 0 100%);
-      box-shadow: 0 8px 24px -12px rgba(0, 0, 0, .45);
-    }
-
-    /* Side label (vertical) */
-    .vlabel {
-      writing-mode: vertical-rl;
-      text-orientation: mixed;
-      letter-spacing: .35em;
-    }
-
-    /* Diamond divider dot */
-    .diamond {
-      width: 6px;
-      height: 6px;
-      transform: rotate(45deg);
-      background: var(--gold);
-      display: inline-block;
-    }
-
-    /* Subtle paper grain on hero */
-    .paper-grain {
-      background-image:
-        radial-gradient(rgba(30, 30, 28, .025) 1px, transparent 1px),
-        radial-gradient(rgba(181, 154, 106, .04) 1px, transparent 1px);
-      background-size: 3px 3px, 7px 7px;
-      background-position: 0 0, 1px 2px;
-    }
-
-    /* Hero photo placeholder (image_slot replacement) */
-    .photo-ph {
-      background:
-        linear-gradient(135deg, #2a2926 0%, #1a1916 60%, #0f0e0c 100%);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .photo-ph::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image:
-        repeating-linear-gradient(135deg, rgba(255, 255, 255, .025) 0 2px, transparent 2px 14px);
-      mix-blend-mode: overlay;
-    }
-
-    .photo-ph::after {
-      content: attr(data-label);
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      font-family: 'Cormorant Garamond', monospace, serif;
-      color: rgba(255, 255, 255, .35);
-      letter-spacing: .4em;
-      font-size: 11px;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    /* CTA */
-    .cta-dark {
-      background: linear-gradient(145deg, #06C755 0%, #04A847 60%, #039940 100%);
-      border: 1px solid rgba(255, 255, 255, .35);
-      box-shadow: 0 6px 24px -8px rgba(6, 199, 85, .55), inset 0 1px 0 rgba(255, 255, 255, .25), inset 0 -1px 0 rgba(0, 0, 0, .08);
-      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
-    }
-
-    .cta-dark:hover {
-      background: linear-gradient(145deg, #07D95D 0%, #06C755 60%, #04A847 100%);
-      box-shadow: 0 10px 32px -6px rgba(6, 199, 85, .65), inset 0 1px 0 rgba(255, 255, 255, .3), inset 0 -1px 0 rgba(0, 0, 0, .1);
-      transform: translateY(-2px);
-    }
-
-    .cta-dark .cta-frame {
-      border: 1px solid rgba(255, 255, 255, .3);
-    }
-
-    /* Arrow */
-
-    /* Round emblem */
-    .emblem {
-      background: #fff;
-      border: 1px solid rgba(181, 154, 106, .45);
-      box-shadow: 0 6px 22px -10px rgba(30, 30, 28, .18);
-    }
-
-    /* Hide decorative pieces on small screens */
-    @media (max-width: 1000px) {
-      .pc-only {
-        display: none !important;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .tablet-only {
-        display: none !important;
-      }
-    }
-
-    /* Hero — left-to-center beige fade over photo */
-    .p-hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      z-index: 5;
-      background: linear-gradient(90deg,
-          #F5F0E8 0%,
-          #F5F0E8 50%,
-          rgba(245, 240, 232, 0.94) 58%,
-          rgba(245, 240, 232, 0.7) 66%,
-          rgba(245, 240, 232, 0.3) 74%,
-          rgba(245, 240, 232, 0.08) 82%,
-          transparent 90%);
-    }
-
-    /* Smooth horizontal scroll guard */
-    html,
-    body {
-      overflow-x: clip;
-    }
-
-
-    .curriculum-ribbon {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-
-      height: 46px;
-      padding: 0 30px;
-
-      background: linear-gradient(135deg,
-          #b59a6a 0%,
-          #c9ae7d 100%);
-
-      color: #fff;
-
-      transform: skewX(-18deg);
-
-      box-shadow:
-        0 10px 24px rgba(181, 154, 106, .22),
-        inset 0 1px 0 rgba(255, 255, 255, .15);
-
-      border: 1px solid rgba(255, 255, 255, .12);
-
-      overflow: hidden;
-
-      &__step,
-      &__num {
-        position: relative;
-        z-index: 2;
-
-        transform: skewX(18deg);
-      }
-
-      &__step {
-        font-size: 10px;
-        letter-spacing: .35em;
-        font-family: var(--font-mincho);
-      }
-
-      &__num {
-        font-size: 20px;
-        line-height: 1;
-        font-family: var(--font-mincho);
-      }
-
-      &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-
-        background:
-          linear-gradient(180deg,
-            rgba(255, 255, 255, .18) 0%,
-            rgba(255, 255, 255, 0) 100%);
-
-        mix-blend-mode: screen;
-      }
-    }
-
-    /* .curriculum-step-item:nth-child(2) .curriculum-ribbon {
-      background: linear-gradient(135deg, #8f7652 0%, #b59a6a 100%);
-    }
-
-    .curriculum-step-item:nth-child(3) .curriculum-ribbon {
-      background: linear-gradient(135deg, #6e5840 0%, #a78d63 100%);
-    } */
-  </style>
-
-  <script type="application/json" id="speaker-notes">[]</script>
+  <link rel="stylesheet" href="https://unpkg.com/scss-reset/reset.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div id="root"></div>
+  <main class="l-page">
+    <!-- ==================== HERO ==================== -->
 
-  <script type="text/babel" data-presets="env,react">
-    const { useState } = React;
+    <section class="p-hero" id="top">
+      <div class="p-hero__bg">
+        <img src="img/clinic-hero.png" alt="タトゥーアーティストが施術している写真" />
+      </div>
 
-    /* ---------- Reusable atoms ---------- */
-    function VRibbon({ children }) {
-      return (
-        <div className="v-ribbon w-[88px] sm:w-[100px] md:w-[112px] py-5 px-3 flex items-center justify-center">
-          <div className="flex flex-col items-center gap-3">
-            {/* small machine icon */}
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M5 14h6l3-3 3 3v3h-3" stroke="#D8C7A4" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-              <circle cx="8" cy="14" r="1.6" stroke="#D8C7A4" strokeWidth="1" />
-              <path d="M14 11l2-4h2" stroke="#D8C7A4" strokeWidth="1" strokeLinecap="round" />
-            </svg>
-            <div className="font-mincho text-[10px] sm:text-[11px] text-[#E8DDCB] text-center leading-[1.9]">
-              {children}
-            </div>
+      <div class="p-hero__content">
+        <header class="p-hero__header">
+          <a href="#top" class="c-logo" aria-label="Re'ink Tattoo Artist School">
+            <span class="c-logo__icon" aria-hidden="true"></span>
+            <span class="c-logo__text">TATTOO ARTIST SCHOOL</span>
+          </a>
+          <p class="p-hero__tagline">Be yourself, Be an artist.</p>
+        </header>
+
+        <div class="p-hero__body">
+          <p class="p-hero__eyebrow">未経験から、プロの彫師を目指す</p>
+
+          <div class="p-hero__catch">
+            <span>最短3ヶ月</span>
+            <small>でデビュー可能</small>
           </div>
-        </div>
-      );
-    }
 
-    function HandwrittenNote({ className = "", children, color = "rgba(181,154,106,.85)" }) {
-      return (
-        <span className={`font-mincho ${className}`} style={{ color, fontSize: 'inherit' }}>
-          {children}
-        </span>
-      );
-    }
+          <h1 class="p-hero__title">
+            <span>趣味を</span><br>
+            <span>一生モノの職へ</span>
+          </h1>
 
-    function DiamondDivider({ width = 80 }) {
-      return (
-        <div className="flex items-center gap-2" aria-hidden="true">
-          <span className="block h-px bg-[rgba(181,154,106,.5)]" style={{ width }} />
-          <span className="diamond" />
-          <span className="block h-px bg-[rgba(181,154,106,.5)]" style={{ width }} />
-        </div>
-      );
-    }
+          <p class="p-hero__lead">
+            絵心がない。未経験で不安。<br>
+            そんなあなたの「表現したい」を、現役トップアーティストが収入につながる技術へ導きます。
+          </p>
 
-    function LineCTA({ label = "LINEで無料相談する" }) {
-      return (
-        <a
-          href="#contact"
-          className="cta-dark group inline-flex items-center w-full sm:w-auto"
-          style={{ borderRadius: 4, padding: '4px' }}
-          aria-label={label}
-        >
-          <span className="cta-frame flex items-center justify-between w-full sm:w-[420px] px-5 sm:px-6 py-4 sm:py-5" style={{ borderRadius: 2 }}>
-            <span className="flex items-center gap-3 sm:gap-4">
-              {/* LINE chip */}
-              <span className="inline-flex items-center justify-center w-9 h-9 rounded-md" style={{ background: 'rgba(255,255,255,0.22)', border: '1px solid rgba(255,255,255,0.4)' }}>
-                <img src="img/icon/line.png" alt="LINE" className="w-5 h-5 object-contain" />
-              </span>
-              <span className="font-mincho text-white text-[15px] sm:text-[17px] tracking-[.08em] font-semibold drop-shadow-sm">
-                {label}
-              </span>
-            </span>
-            <span className="text-white">
-              <svg width="28" height="14" viewBox="0 0 28 14" fill="none" aria-hidden="true">
-                <path d="M1 7h24M19 1l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <div class="p-hero__points">
+            <span>完全未経験OK</span>
+            <span>少人数制指導</span>
+            <span>現役彫師が直接指導</span>
+          </div>
+
+          <div class="p-hero__cta">
+            <a class="c-line-button" href="#contact">
+              <div class="c-line-button-inner">
+                <span class="c-line-button-icon">
+                  <img src="img/icon/line.png" alt="LINE">
+                </span>
+                <span class="c-line-button-text">申し込みはLINEから</span>
+              </div>
+              <svg width="20" height="12" viewBox="0 0 20 12" fill="none" aria-hidden="true">
+                <path d="M1 6h17M13 1.5l5 4.5-5 4.5" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
               </svg>
-            </span>
-          </span>
-        </a>
-      );
-    }
-
-    /* ---------- HERO (FV) ---------- */
-    function Hero() {
-      return (
-        <section
-          data-screen-label="01 Hero"
-          className="p-hero relative w-full overflow-hidden"
-          style={{
-            minHeight: '100vh',
-            background: '#F5F0E8',
-            display: 'flex',
-            flexDirection: 'column',
-          }}
-        >
-          {/* FULL-WIDTH background photo (gradient handles the left mask) */}
-          <div className="absolute inset-0 hidden lg:block">
-            <img
-              src="img/clinic-hero.png"
-              alt="タトゥーアーティストが施術している写真"
-              className="w-full h-full object-cover"
-              style={{ objectPosition: 'right center' }}
-            />
+            </a>
           </div>
+        </div>
+      </div>
+    </section>
 
-          {/* Mobile photo — in-flow */}
-          <div className="block lg:hidden w-full" style={{ height: 260 }}>
-            <img
-              src="img/clinic-hero.png"
-              alt="タトゥーアーティストが施術している写真"
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
+    <!-- ==================== ABOUT ==================== -->
+    <section class="p-about">
+      <!-- <div class="u-bg-type u-pc-only" aria-hidden="true">
+        ABOUT
+      </div> -->
+      <div class="l-container p-about__inner">
+        <div class="p-about__text">
+          <p class="c-section-label c-section-label--dark">Re'inkとは？</p>
+          <h2 class="c-section-title c-section-title--dark">東京表参道にある<br><em>朝倉未来</em>プロデュースのタトゥースタジオ</h2>
+          <a class="c-line-button" href="#contact">
+            <div class="c-line-button-inner">
+              <span class="c-line-button-icon">
+                <img src="img/icon/line.png" alt="LINE">
+              </span>
 
-          {/* SCROLL indicator — far right vertical */}
-          <div className="absolute hidden lg:flex flex-col items-center gap-3 z-30"
-            style={{ right: 28, top: '50%', transform: 'translateY(-50%)' }}>
-            <span className="block w-px bg-[#b5a898]" style={{ height: 80 }} aria-hidden="true" />
-            <span className="vlabel text-[9px] tracking-[.38em] text-[#9a8e80]"
-              style={{ fontFamily: 'Cinzel, serif', writingMode: 'vertical-rl' }}>
-              SCROLL
-            </span>
-            <svg width="10" height="22" viewBox="0 0 10 22" fill="none" aria-hidden="true">
-              <line x1="5" y1="0" x2="5" y2="18" stroke="#9a8e80" strokeWidth="1" />
-              <polyline points="1,14 5,20 9,14" stroke="#9a8e80" strokeWidth="1" fill="none" />
+              <span class="c-line-button-text">
+                申し込みはLINEから
+              </span>
+            </div>
+
+            <svg width="20" height="12" viewBox="0 0 20 12" fill="none" aria-hidden="true">
+              <path d="M1 6h17M13 1.5l5 4.5-5 4.5" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
             </svg>
+          </a>
+        </div>
+        <!-- <figure class="c-framed-image"><img src="img/clinic-counseling.png" alt="Re'inkタトゥースタジオの様子"></figure> -->
+      </div>
+    </section>
+
+    <!-- ==================== PROBLEM ==================== -->
+    <section class="p-problem">
+      <div class="u-bg-type u-bg-type-left u-pc-only" aria-hidden="true">
+        WORRY
+      </div>
+      <div class="p-problem__image"><img src="img/onayami.png" alt="独学で悩んでいる学習者の写真"></div>
+      <div class="l-container p-problem__inner">
+        <div class="p-problem__content">
+          <h2 class="c-section-title">こんな<span class="u-marker">お悩み</span>ありませんか？</h2>
+          <ul class="p-problem__list">
+            <li><small>タトゥーアーティストになりたいが</small><strong>何から始めればいいか分からない</strong></li>
+            <li><small>独学で練習しているけど</small><strong>上達の限界を感じている</strong></li>
+            <li><small>今の仕事を辞めて</small><strong>自分らしく自由に働きたい</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== HOT JOB ==================== -->
+    <section class="p-hotjob">
+      <div class="u-bg-type u-pc-only" aria-hidden="true">
+        FEATURE
+      </div>
+      <div class="l-container">
+        <div class="c-heading-center">
+          <!-- <p class="c-heading-center__sub">実は彫り師は</p> -->
+          <h2 class="c-section-title">実は彫り師は<span class="u-marker">「アツい」</span>職業</h2>
+          <div class="u-divider-diamond" aria-hidden="true">
+            <span class="u-divider-diamond__line"></span>
+            <span class="u-divider-diamond__diamond"></span>
+            <span class="u-divider-diamond__line"></span>
           </div>
+        </div>
+        <div class="p-hotjob__grid">
+          <article><img src="img/icon/icon-ai-resistant.svg" alt="">
+            <p>“一点もの”の<br>職人ビジネスなので</p>
+            <h3>AI代替されにくい</h3>
+          </article>
+          <article><img src="img/icon/icon-high-price.svg" alt="">
+            <p>単価が高い<br>（数万円〜数十万円）ので</p>
+            <h3>利益率を<br>作りやすい</h3>
+          </article>
+          <article><img src="img/icon/icon-beauty-fashion.svg" alt="">
+            <p>美容・ファッション<br>寄りに</p>
+            <h3>市場が変化<span>している</span></h3>
+          </article>
+          <article><img src="img/icon/icon-fans.svg" alt="">
+            <p>アーティスト本人に</p>
+            <h3>ファンが<br>付きやすい</h3>
+          </article>
+        </div>
+      </div>
+    </section>
 
-          {/* ── Left content column ── */}
-          <div className="relative z-10 flex flex-col"
-            style={{ width: '100%', maxWidth: '65%', minWidth: 320, minHeight: '100vh' }}>
-
-            {/* Top nav bar */}
-            <div className="flex items-center justify-between px-8 lg:px-10"
-              style={{ paddingTop: 28, paddingBottom: 0 }}>
-              {/* Logo */}
-              <div className="flex items-center gap-2.5">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M17 3l-2 6-1.5-1.5L12 9l-1-4" stroke="#3a3020" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M12 9l-7 7" stroke="#3a3020" strokeWidth="1.6" strokeLinecap="round" />
-                  <circle cx="4.5" cy="16.5" r="1.5" fill="#3a3020" />
-                </svg>
-                <span className="text-[11px] tracking-[.22em] text-[#2a2316]"
-                  style={{ fontFamily: 'Cinzel, serif', fontWeight: 400 }}>
-                  TATTOO ARTIST SCHOOL
-                </span>
-              </div>
-
-              {/* Top-right tagline + dot decoration */}
-              <div className="hidden lg:flex items-start gap-3">
-                <span className="text-[10px] tracking-[.16em] text-[#7a7060]"
-                  style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', lineHeight: 1.4 }}>
-                  Be yourself, Be an artist.
-                </span>
-                <div className="flex flex-col items-center gap-1" aria-hidden="true">
-                  <span className="block w-px h-8 bg-[#c4b89e]" />
-                  <span className="block w-1 h-1 rounded-full bg-[#c4b89e]" />
-                  <span className="block w-px h-4 bg-[#c4b89e]" />
-                  <span className="block w-1 h-1 rounded-full bg-[#c4b89e]" />
-                </div>
-              </div>
-            </div>
-
-            {/* Main copy area */}
-            <div className="flex flex-col justify-center flex-1 px-8 lg:px-10"
-              style={{ paddingTop: 48, paddingBottom: 48 }}>
-
-              {/* Headline */}
-              <h1 className="font-mincho text-[#1a1810]" style={{ margin: 0 }}>
-                <span className="marker leading-[1.22]"
-                  style={{ fontSize: 'clamp(36px, 4.8vw, 70px)', fontWeight: 400, letterSpacing: '.03em', whiteSpace: 'nowrap' }}>
-                  趣味を
-                </span><br />
-                <span className="marker leading-[1.22]"
-                  style={{ fontSize: 'clamp(36px, 4.8vw, 70px)', fontWeight: 400, letterSpacing: '.03em', whiteSpace: 'nowrap' }}>
-                  一生モノの職へ
-                </span>
-              </h1>
-
-              {/* Sub-headline with dashed rule */}
-              <div className="mt-5 mb-0">
-                <p className="font-mincho text-[#2a2316]"
-                  style={{ fontSize: 'clamp(14px, 1.55vw, 20px)', letterSpacing: '.06em', lineHeight: 1.5, margin: 0 }}>
-                  最短<strong style={{ fontWeight: 700, fontSize: '1.25em' }}>３ヶ月</strong>で、
-                  <strong style={{ fontWeight: 600 }}>彫師</strong>としてデビュー
-                </p>
-                <div className="mt-3" style={{ borderTop: '1px dashed rgba(120,105,80,.35)', width: '100%' }} aria-hidden="true" />
-              </div>
-
-              {/* CTA button */}
-              <div className="mt-8">
-                {/* CTA */}
-                <LineCTA label="申し込みはLINEから" />
-              </div>
-
-              {/* Feature bullets card */}
-              <div className="mt-7"
-                style={{
-                  border: '1px solid rgba(170,155,128,.45)',
-                  borderRadius: 4,
-                  padding: '20px 22px',
-                  maxWidth: 440,
-                  background: 'rgba(255,255,255,.45)',
-                }}>
-                {/* Row 1 */}
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 flex items-center justify-center rounded-full"
-                    style={{ width: 44, height: 44, border: '1px solid rgba(170,140,80,.55)', padding: 6 }}>
-                    <img src="img/icon/fv-onayami.svg" alt="" aria-hidden="true"
-                      style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-                  </div>
-                  <div>
-                    <p className="font-mincho text-[#1a1810]"
-                      style={{ fontSize: 'clamp(12px, 1.1vw, 14px)', lineHeight: 1.8, margin: 0 }}>
-                      <strong style={{ fontWeight: 500 }}>「絵心がない」「未経験からで大丈夫？」</strong><br />
-                      <span className="text-[#4a4540]">そんな不安を、<strong style={{ fontWeight: 500 }}>現役トップアーティスト</strong>が払拭します。</span>
-                    </p>
-                  </div>
-                </div>
-
-                <div className="my-4" style={{ borderTop: '1px solid rgba(170,155,128,.3)' }} aria-hidden="true" />
-
-                {/* Row 2 */}
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 flex items-center justify-center rounded-full"
-                    style={{ width: 44, height: 44, border: '1px solid rgba(170,140,80,.55)', padding: 6 }}>
-                    <img src="img/icon/fv-rich.svg" alt="" aria-hidden="true"
-                      style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-                  </div>
-                  <div>
-                    <p className="font-mincho"
-                      style={{ fontSize: 'clamp(12px, 1.1vw, 14px)', lineHeight: 1.8, margin: 0, color: '#4a4540' }}>
-                      あなたの<strong style={{ fontWeight: 500, color: '#1a1810' }}>「表現したい」</strong>を、<br />
-                      確かな収入に変える場所。
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
+    <!-- ==================== CHALLENGES ==================== -->
+    <section class="p-challenges">
+      <div class="u-bg-type u-pc-only" aria-hidden="true">
+        CHALLENGES
+      </div>
+      <div class="l-container">
+        <div class="c-heading-center c-heading-center--dark">
+          <p class="c-section-label c-section-label--dark">CHALLENGES</p>
+          <p>ただし彫り師になるには</p>
+          <h2 class="c-section-title c-section-title--dark">タトゥー業界は、<span>簡単に始められる世界</span><br />ではありません</h2>
+          <div class="u-divider-diamond" aria-hidden="true">
+            <span class="u-divider-diamond__line"></span>
+            <span class="u-divider-diamond__diamond"></span>
+            <span class="u-divider-diamond__line"></span>
           </div>
-
-        </section>
-      );
-    }
-
-    /* ---------- SECTION 01.5 — ABOUT / Re'inkとは ---------- */
-    function About() {
-      return (
-        <section
-          data-screen-label="01.5 About"
-          className="p-about relative w-full overflow-hidden"
-          style={{ background: 'linear-gradient(135deg, #181816 0%, #1E1D1A 55%, #151513 100%)' }}
-        >
-          {/* faint background text */}
-          <span className="bg-type" style={{
-            right: '2%', bottom: '-8%',
-            fontSize: 'clamp(100px, 14vw, 220px)',
-            color: 'rgba(255,255,255,.03)',
-          }} aria-hidden="true">STUDIO</span>
-
-          <div className="relative z-10 max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-16
-                          grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16
-                          items-center py-20 sm:py-24 lg:py-28">
-
-            {/* Text side */}
+        </div>
+        <div class="p-challenge-list">
+          <article class="c-feature-card">
             <div>
-              {/* eyebrow label */}
-              <div className="inline-flex items-center gap-3 mb-8 px-5 py-2
-                              border border-[rgba(216,199,164,.4)]">
-                <span className="diamond" style={{ background: '#D8C7A4', width: '5px', height: '5px' }} />
-                <span className="font-mincho text-[#D8C7A4] text-[11px] tracking-[.36em]">Re'inkとは？</span>
-                <span className="diamond" style={{ background: '#D8C7A4', width: '5px', height: '5px' }} />
-              </div>
-
-              {/* headline */}
-              <h2 className="font-mincho text-[#F3EFE5] leading-[1.85]"
-                style={{ fontSize: 'clamp(26px, 3.2vw, 50px)', fontWeight: 400, letterSpacing: '.06em', margin: 0 }}>
-                東京表参道にある<br />
-                <em className="not-italic" style={{ color: '#D2B887', fontWeight: 500 }}>朝倉未来</em>プロデュースの<br />
-                タトゥースタジオ
-              </h2>
-
-              {/* divider */}
-              <div className="mt-8 mb-9">
-                <DiamondDivider width={48} />
-              </div>
-
-              {/* CTA */}
-              <LineCTA label="申し込みはLINEから" />
-            </div>
-
-            {/* Image side */}
-            <div className="feature-section__visual" style={{ padding: 0 }}>
-              <div className="feature-section__image-wrap" style={{ aspectRatio: '4/3' }}>
-                <img
-                  src="img/clinic-counseling.png"
-                  alt="Re'inkタトゥースタジオの様子"
-                  className="feature-section__image"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* bottom edge separator */}
-          <div
-            className="absolute bottom-0 left-0 right-0 h-px"
-            style={{ background: 'linear-gradient(90deg, transparent, rgba(216,199,164,.3), transparent)' }}
-            aria-hidden="true"
-          />
-        </section>
-      );
-    }
-
-    /* ---------- SECTION 02 — PROBLEM / お悩み ---------- */
-    function Problem() {
-      const items = [
-        { lead: 'タトゥーアーティストになりたいが', tail: '何から始めればいいか分からない' },
-        { lead: '独学で練習しているけど', tail: '上達の限界を感じている' },
-        { lead: '今の仕事を辞めて', tail: '自分らしく自由に働きたい' },
-      ];
-
-      return (
-        <section
-          data-screen-label="02 Problem"
-          className="p-problem relative w-full overflow-hidden"
-          style={{ background: 'linear-gradient(180deg, #F8F5EF 0%, #F5F0E4 100%)' }}
-        >
-          {/* RIGHT — full-height photo */}
-          <div className="absolute top-0 right-0 h-full hidden lg:block" style={{ width: '46%' }}>
-            <img
-              src="img/onayami.png"
-              alt="独学で悩んでいる学習者の写真"
-              className="w-full h-full object-cover object-top"
-            />
-            <div className="absolute inset-y-0 left-0 pointer-events-none" style={{
-              width: '55%',
-              background: 'linear-gradient(90deg, #F5F0E4 0%, rgba(245,240,228,0.7) 50%, transparent 100%)'
-            }}
-              aria-hidden="true" />
-          </div>
-
-          {/* Mobile photo — in-flow */}
-          <div className="block lg:hidden w-full" style={{ height: 260 }}>
-            <img
-              src="img/onayami.png"
-              alt="独学で悩んでいる学習者の写真"
-              className="w-full h-full object-cover object-top"
-            />
-          </div>
-
-          {/* Faint background "WORRY" */}
-          <div className="bg-type" style={{ top: '4%', right: '5%', fontSize: 'clamp(100px, 12vw, 200px)', color: 'rgba(30,30,28,.025)' }} aria-hidden="true">
-            WORRY
-          </div>
-
-          {/* Left vertical label */}
-          <div className="absolute left-3 top-[300px] z-10 hidden md:flex flex-col items-center gap-3">
-            <span className="block w-px h-10 bg-[rgba(181,154,106,.5)]" aria-hidden="true" />
-            <span className="vlabel font-mincho text-[10px] text-[#8a7e64]">TATTOO ARTIST SCHOOL</span>
-          </div>
-
-          {/* Left content */}
-          <div className="relative z-10 px-5 sm:px-8 lg:px-12 pt-[120px] sm:pt-[140px] pb-8"
-            style={{ maxWidth: '58%', minWidth: 320 }}>
-            <div className="lg:pl-20 xl:pl-24">
-
-              {/* Heading */}
-              <div className="relative">
-                <h2 className="font-mincho text-[#1E1E1C] leading-[1.3] tracking-[.02em]"
-                  style={{ fontSize: 'clamp(26px, 4vw, 52px)', fontWeight: 500 }}>
-                  <span className="block mt-2">
-                    こんな<span className="marker font-mincho" style={{ fontWeight: 600 }}>お悩み</span>ありませんか？
-                  </span>
-                </h2>
-                <div className="mt-6 flex items-center gap-3" aria-hidden="true">
-                  <span className="diamond" />
-                  <span className="block h-px w-32 bg-[rgba(181,154,106,.4)]" />
-                  <span className="diamond" />
-                </div>
-              </div>
-
-              {/* Checklist card */}
-              <div className="mt-10 relative">
-                <div className="bg-white relative"
-                  style={{ border: '1px solid #D8CCBA', boxShadow: '0 10px 30px rgba(30,30,30,0.08)', padding: 'clamp(24px, 3vw, 36px) clamp(20px, 2.5vw, 32px)' }}>
-                  <ul className="relative">
-                    {items.map((it, i) => (
-                      <li key={i} className="flex items-start gap-4"
-                        style={{ padding: 'clamp(14px, 2vw, 22px) 0', borderBottom: i !== items.length - 1 ? '1px solid rgba(216,204,186,0.6)' : 'none' }}>
-                        <span className="flex-shrink-0 rounded-full flex items-center justify-center"
-                          style={{ width: 34, height: 34, background: '#1E1E1C', marginTop: 2 }} aria-hidden="true">
-                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                            <path d="M2 7l3.5 3.5L12 3" stroke="#B79B63" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-                          </svg>
-                        </span>
-                        <span className="font-mincho text-[#1E1E1C] leading-[1.7]"
-                          style={{ fontSize: 'clamp(16px, 1.5vw, 20px)', fontWeight: 400 }}>
-                          <span style={{ color: '#6a6050', fontSize: '0.78em', display: 'block', marginBottom: 2 }}>{it.lead}</span>
-                          <span className="marker">{it.tail}</span>
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              {/* Bottom resolve copy */}
-              <div className="mt-10 sm:mt-12 flex flex-col items-center gap-3 pb-2">
-                <div className="flex items-center gap-4" aria-hidden="true">
-                  <span className="block h-px bg-[rgba(183,155,99,.4)]" style={{ width: 52 }} />
-                  <span className="diamond" />
-                  <span className="block h-px bg-[rgba(183,155,99,.4)]" style={{ width: 52 }} />
-                </div>
-                <p className="font-mincho text-[#3a3428] text-center tracking-[.06em]"
-                  style={{ fontSize: 'clamp(16px, 1.4vw, 18px)', fontWeight: 400, marginTop: 4 }}>
-                  その不安、私たちが<span style={{ color: '#B79B63', fontWeight: 600 }}>すべて解決</span>します。
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="h-10 sm:h-14" />
-        </section>
-      );
-    }
-
-    /* ---------- SECTION 02.5 — HOT JOB / 実は彫り師は「アツい」職業 ---------- */
-    function HotJob() {
-      const items = [
-        {
-          icon: 'img/icon/icon-ai-resistant.svg',
-          lead: '"一点もの"の\n職人ビジネスなので',
-          strong: 'AI代替されにくい',
-        },
-        {
-          icon: 'img/icon/icon-high-price.svg',
-          lead: '単価が高い\n（数万円〜数十万円）ので',
-          strong: '利益率を\n作りやすい',
-        },
-        {
-          icon: 'img/icon/icon-beauty-fashion.svg',
-          lead: '美容・ファッション\n寄りに',
-          strong: '市場が変化',
-          suffix: 'している',
-        },
-        {
-          icon: 'img/icon/icon-fans.svg',
-          lead: 'アーティスト本人に',
-          strong: 'ファンが\n付きやすい',
-        },
-      ];
-
-      return (
-        <section
-          data-screen-label="02.5 HotJob"
-          className="p-hotjob w-full overflow-hidden"
-          style={{ background: '#EFE9DC', padding: 'clamp(64px, 8vw, 104px) 0' }}
-        >
-          {/* ── Title block ── */}
-          <div className="flex flex-col items-center" style={{ marginBottom: 56 }}>
-            <p className="font-mincho text-[#1a1810]"
-              style={{ fontSize: 'clamp(16px, 1.6vw, 22px)', fontWeight: 400, letterSpacing: '.1em', margin: '0 0 6px' }}>
-              実は彫り師は
-            </p>
-            <div className="flex items-center gap-4 sm:gap-6">
-              <span aria-hidden="true" style={{ color: '#c9a96e', fontSize: 20, lineHeight: 1 }}>✦</span>
-              <h2 className="font-mincho text-[#1a1810]"
-                style={{ fontSize: 'clamp(38px, 5.5vw, 76px)', fontWeight: 700, letterSpacing: '.04em', margin: 0, lineHeight: 1.15 }}>
-                「アツい」職業
-              </h2>
-              <span aria-hidden="true" style={{ color: '#c9a96e', fontSize: 20, lineHeight: 1 }}>✦</span>
-            </div>
-            {/* Calligraphic swoosh */}
-            <svg width="260" height="24" viewBox="0 0 260 24" fill="none" aria-hidden="true" style={{ marginTop: 8 }}>
-              <path d="M14 17 C 55 6, 100 22, 140 13 C 182 4, 218 19, 246 9" stroke="#c9a96e" strokeWidth="1.5" fill="none" strokeLinecap="round" />
-              <path d="M24 20 C 64 10, 108 24, 150 16 C 190 8, 222 20, 248 14" stroke="#c9a96e" strokeWidth="0.7" fill="none" strokeLinecap="round" opacity="0.5" />
-            </svg>
-            {/* Diamond divider */}
-            <div className="flex items-center gap-4" style={{ marginTop: 28 }}>
-              <span className="block h-px bg-[rgba(181,154,106,.4)]" style={{ width: 76 }} />
-              <span className="diamond" />
-              <span className="block h-px bg-[rgba(181,154,106,.4)]" style={{ width: 76 }} />
-            </div>
-          </div>
-
-          {/* ── 4-column grid ── */}
-          <div className="flex flex-col sm:flex-row items-stretch justify-center"
-            style={{ maxWidth: 1080, margin: '0 auto', padding: '0 clamp(16px, 4vw, 40px)' }}>
-            {items.map((item, i) => (
-              <div key={i} className="flex-1 flex flex-col items-center text-center"
-                style={{
-                  padding: 'clamp(24px, 3.5vw, 44px) clamp(10px, 2vw, 26px) clamp(28px, 4vw, 48px)',
-                  borderLeft: i > 0 ? '1px solid rgba(181,154,106,.28)' : 'none',
-                  borderTop: i > 0 ? 'none' : 'none',
-                }}>
-                {/* Dark circle with icon */}
-                <div className="rounded-full flex items-center justify-center flex-shrink-0"
-                  style={{ width: 112, height: 112, background: '#1a1810', marginBottom: 22 }}>
-                  <img src={item.icon} alt="" style={{ width: 60, height: 60, objectFit: 'contain' }} />
-                </div>
-                {/* Lead text */}
-                <p className="font-mincho text-[#5a4e3a] whitespace-pre-line leading-[1.9]"
-                  style={{ fontSize: 'clamp(14px, 1.15vw, 16px)', margin: '0 0 10px' }}>
-                  {item.lead}
-                </p>
-                {/* Bold text */}
-                <p className="font-mincho text-[#1a1810] whitespace-pre-line leading-[1.5]"
-                  style={{ fontSize: 'clamp(16px, 1.45vw, 22px)', fontWeight: 700, letterSpacing: '.02em', margin: 0 }}>
-                  {item.strong}
-                  {item.suffix && (
-                    <span className="font-mincho" style={{ fontSize: 'clamp(14px, 1.1vw, 16px)', fontWeight: 400 }}>
-                      {item.suffix}
-                    </span>
-                  )}
-                </p>
-                {/* Bottom golden bar */}
-                <div style={{ marginTop: 'auto', paddingTop: 28 }}>
-                  <span className="block bg-[#c9a96e]" style={{ width: 36, height: 1, margin: '0 auto' }} />
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      );
-    }
-
-    /* ---------- SECTION 03 — CHALLENGES / 独学だけでは難しい ---------- */
-    function Challenges() {
-      const items = [
-        {
-          n: '01',
-          title: '実践経験の圧倒的な不足',
-          body: '本や動画を見て学ぶだけでは、実際の施術で必要な感覚や対応力は身につきません。経験の差が、そのまま技術の差になります。',
-          photo: 'HANDS / TATTOO MACHINE CLOSE-UP',
-          imgSrc: 'img/clinic-curriculum.png',
-        },
-        {
-          n: '02',
-          title: '衛生管理の知識が不十分',
-          body: '衛生管理はお客様の安全に直結する重要なスキルです。独学では見落としがちな知識や基準を、正しく学ぶことができません。',
-          photo: 'STERILIZED EQUIPMENT / INK BOTTLES',
-          imgSrc: 'img/clinic-request.png',
-        },
-        {
-          n: '03',
-          title: '肌質や個人差への対応が難しい',
-          body: '肌の状態は人それぞれ。色の入り方や痛みの感じ方も異なります。実践を通して経験を積まなければ、適切な判断ができるようになりません。',
-          photo: 'SKIN TEXTURE STUDY',
-          imgSrc: 'img/image%208.png',
-        },
-        {
-          n: '04',
-          title: 'タトゥー特有のデザイン力が必要',
-          body: 'タトゥーは「消えないデザイン」。構図・バランス・流れを考えた、タトゥー専用のデザインスキルが求められます。',
-          photo: 'BOTANICAL LINE-WORK SKETCH',
-          imgSrc: 'img/clinic-why-us.png',
-        },
-        {
-          n: '05',
-          title: '動画やSNSだけでは限界がある',
-          body: '断片的な情報や一部のテクニックだけでは、応用力やトラブル対応力は身につきません。体系的な学びが不可欠です。',
-          photo: 'PHONE / TUTORIAL FRAGMENTS',
-          imgSrc: 'img/image%2013.png',
-        },
-        {
-          n: '06',
-          title: '弟子入りのハードルが高い現実',
-          body: '「見習いとして働きながら学ぶ」方法は、時間・お金・人間関係などのハードルが高く、誰もが簡単に始められる環境ではありません。',
-          photo: 'TRADITIONAL STUDIO INTERIOR',
-          imgSrc: 'img/image%201.png',
-        },
-      ];
-
-      return (
-        <section
-          data-screen-label="03 Challenges"
-          className="p-challenges relative w-full"
-          style={{ background: 'linear-gradient(180deg, #151513 0%, #1A1916 60%, #151513 100%)' }}
-        >
-
-          {/* Top label */}
-          <div className="relative max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-12 pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16">
-
-            {/* round corner emblem (top-left) */}
-            <div className="absolute top-10 left-6 sm:left-10 hidden md:flex items-center gap-3 z-10">
-              <div className="w-[78px] h-[78px] rounded-full border border-[rgba(216,199,164,.35)] flex items-center justify-center relative">
-                <svg viewBox="0 0 80 80" className="absolute inset-0 w-full h-full" aria-hidden="true">
-                  <defs>
-                    <path id="ch-circ" d="M 40,40 m -30,0 a 30,30 0 1,1 60,0" />
-                  </defs>
-                  <text fill="#B59A6A" style={{ fontFamily: 'Cinzel', fontSize: '7px', letterSpacing: '.34em' }}>
-                    <textPath href="#ch-circ" startOffset="2%">SKILLED · ARTIST · SCHOOL</textPath>
-                  </text>
-                </svg>
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M5 14h6l3-3 3 3v3h-3" stroke="#B59A6A" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round" />
-                  <circle cx="8" cy="14" r="1.6" stroke="#B59A6A" strokeWidth="1.1" />
-                </svg>
-              </div>
-            </div>
-
-            {/* Heading block */}
-            <div className="text-center max-w-[820px] mx-auto">
-              {/* Ribbon label */}
-              <div className="inline-flex items-center gap-3 px-7 py-2 border border-[rgba(216,199,164,.45)] mb-8" aria-label="CHALLENGES">
-                <span className="diamond" style={{ background: '#D8C7A4' }} />
-                <span className="font-mincho text-[#D8C7A4] text-[11px] tracking-[.4em]">CHALLENGES</span>
-                <span className="diamond" style={{ background: '#D8C7A4' }} />
-              </div>
-
-              <h2 className="font-mincho text-[#F3EFE5] leading-[1.35] tracking-[.04em]"
-                style={{ fontSize: 'clamp(28px, 4.4vw, 52px)', fontWeight: 400 }}>
-                <span className="block"><span className="font-mincho" style={{ fontWeight: 600 }}>独学</span>だけでは</span>
-                <span className="block mt-2"><span className="font-mincho" style={{ fontWeight: 600 }}>難しい世界</span>です。</span>
-              </h2>
-
-              <div className="mt-6 flex justify-center" aria-hidden="true">
-                <DiamondDivider width={50} />
-              </div>
-
-              <p className="mt-7 font-mincho text-[#CDBB9D] leading-[2]"
-                style={{ fontSize: 'clamp(16px, 1.5vw, 18px)' }}>
-                タトゥーは感覚やセンスだけではなく、<br className="hidden sm:block" />
-                専門的な知識・技術・経験が必要な世界。<br className="hidden sm:block" />
-                <span className="text-[#E8DDCB]">独学には、どうしても超えられない壁があります。</span>
+              <span class="c-feature-card__num">01</span>
+              <p class="c-section-label">PRACTICE</p>
+              <h3>実践経験を積む機会が少ない</h3>
+              <p>
+                タトゥーは、実際に手を動かしながら覚えていく技術職です。
+                しかし初心者の場合、練習相手や実践環境を確保すること自体が難しく、
+                経験不足のまま止まってしまうケースも少なくありません。
+                だからこそ、正しい環境で実践を積むことが重要になります。
               </p>
             </div>
+            <figure>
+              <img src="img/clinic-curriculum.png" alt="実践経験を積む機会が少ないイメージ">
+            </figure>
+          </article>
 
-            {/* Cards list */}
-            <div className="mt-14 sm:mt-20 grid grid-cols-1 gap-6 sm:gap-7">
-              {items.map((it, i) => (
-                <article key={it.n} className="p-challenge-card">
-                  <div className="p-challenge-card__inner">
-                    {/* Content */}
-                    <div className="feature-section__content">
-                      <span className="feature-section__number">{it.n}</span>
-                      <div className="feature-section__label">CHALLENGE</div>
-                      <h3 className="feature-section__title" style={{ fontSize: 'clamp(24px, 3vw, 48px)' }}>
-                        {it.title}
-                      </h3>
-                      <div className="feature-section__divider" aria-hidden="true"><span></span></div>
-                      <p className="feature-section__text" style={{ fontSize: 'clamp(15px, 1.4vw, 20px)' }}>
-                        {it.body}
-                      </p>
-                    </div>
-
-                    {/* Visual */}
-                    <div className="feature-section__visual">
-                      <div className="feature-section__image-wrap">
-                        <img
-                          src={it.imgSrc}
-                          alt={`${it.title} の参考写真`}
-                          className="feature-section__image"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-
-          </div>
-
-          {/* Bottom transition: inverted triangle */}
-          <div className="relative">
-            <div className="relative text-center" style={{ paddingTop: '64px', paddingBottom: '100px' }}>
-              {/* Ivory corner overlays that carve the inverted-triangle dark shape */}
-              <div aria-hidden="true" className="absolute inset-0 pointer-events-none" style={{ zIndex: 1 }}>
-                <div style={{ position: 'absolute', top: 0, left: 0, width: '50%', height: '100%', background: '#F8F5EF', clipPath: 'polygon(0 0, 0 100%, 100% 100%)' }} />
-                <div style={{ position: 'absolute', top: 0, right: 0, width: '50%', height: '100%', background: '#F8F5EF', clipPath: 'polygon(100% 0, 0 100%, 100% 100%)' }} />
-              </div>
-              {/* Thin border lines tracing the triangle edges */}
-              <svg className="absolute inset-0 w-full h-full pointer-events-none" preserveAspectRatio="none" viewBox="0 0 1000 300" aria-hidden="true" style={{ zIndex: 2 }}>
-                <line x1="18" y1="0" x2="500" y2="298" stroke="rgba(216,199,164,.45)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-                <line x1="982" y1="0" x2="500" y2="298" stroke="rgba(216,199,164,.45)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-              </svg>
-              {/* Text content */}
-              <div className="relative" style={{ zIndex: 10 }}>
-                <p className="font-mincho text-[#CDBB9D]" style={{ fontSize: 'clamp(16px, 1.5vw, 18px)', lineHeight: 2 }}>
-                  だからこそ、正しい環境で、最短ルートで学ぶことが
-                </p>
-                <div className="mt-5 flex items-center justify-center gap-5">
-                  {/* Left flourish */}
-                  <svg width="120" height="30" viewBox="0 0 120 30" fill="none" aria-hidden="true">
-                    <path d="M118 15 C 96 15, 76 4, 54 15 C 38 23, 20 7, 8 15 C 5 17, 3 15, 2 15" stroke="#B59A6A" strokeWidth="1" fill="none" strokeLinecap="round" />
-                    <circle cx="118" cy="15" r="3" fill="none" stroke="#B59A6A" strokeWidth="1" />
-                    <path d="M2 15 C -1 9, -1 21, 2 15" stroke="#B59A6A" strokeWidth="1" fill="none" strokeLinecap="round" />
-                  </svg>
-                  <p className="font-mincho text-[#F3EFE5]" style={{ fontSize: 'clamp(24px, 3vw, 40px)', fontWeight: 500, letterSpacing: '.12em' }}>
-                    夢への一番の近道です。
-                  </p>
-                  {/* Right flourish */}
-                  <svg width="120" height="30" viewBox="0 0 120 30" fill="none" aria-hidden="true">
-                    <path d="M2 15 C 24 15, 44 4, 66 15 C 82 23, 100 7, 112 15 C 115 17, 117 15, 118 15" stroke="#B59A6A" strokeWidth="1" fill="none" strokeLinecap="round" />
-                    <circle cx="2" cy="15" r="3" fill="none" stroke="#B59A6A" strokeWidth="1" />
-                    <path d="M118 15 C 121 9, 121 21, 118 15" stroke="#B59A6A" strokeWidth="1" fill="none" strokeLinecap="round" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      );
-    }
-
-    /* ---------- SECTION 04 — FEATURES / 3つの特長 ---------- */
-    function Features() {
-      const features = [
-        {
-          n: '01',
-          tag: 'SMALL CLASS',
-          title: '少人数制の技術指導',
-          lead: '一人ひとりの個性とペースに、深く寄り添う。',
-          body: '少人数制だからこそ、講師の目が全員に行き届く環境。あなたのつまずきや得意を見極めながら、必要な指導を、必要なタイミングで届けます。',
-          photo: 'INSTRUCTOR / STUDENT 1-ON-1',
-          imgSrc: 'img/clinic-curriculum.png',
-          bullets: ['1クラス最大4名', 'マンツーマン指導あり', '質問しやすい距離感'],
-        },
-        {
-          n: '02',
-          tag: 'PRACTICAL',
-          title: '実践的なカリキュラム',
-          lead: '現場で「使える」技術を、基礎から積み上げる。',
-          body: '道具の扱い・ライン・塗り・ぼかしまで、現場で必要なスキルを順序立てて学習。最終回には実際の施術を体験し、卒業時にはポートフォリオが手元に残ります。',
-          photo: 'STUDENT PRACTICING ON SKIN PAD',
-          imgSrc: 'img/clinic-open-class.png',
-          bullets: ['全6回の段階別プログラム', '実技 8 : 座学 2 の比率', '本物の機材で練習'],
-        },
-        {
-          n: '03',
-          tag: 'AFTER CARE',
-          title: '卒業後サポート',
-          lead: '学んだ後も、ずっと相談できる場所がある。',
-          body: '就職・独立・サロン勤務まで、卒業後のキャリアもしっかりサポート。技術相談・ポートフォリオ添削・案件相談まで、長く伴走する関係を大切にします。',
-          photo: 'GRADUATE PORTFOLIO REVIEW',
-          imgSrc: 'img/clinic-counseling.png',
-          bullets: ['キャリア相談無制限', 'ポートフォリオ添削', '案件 / 求人の紹介'],
-        },
-      ];
-
-      return (
-        <section
-          data-screen-label="04 Features"
-          className="p-features relative w-full"
-          style={{ background: 'linear-gradient(180deg, #F8F5EF 0%, #F3F1EC 100%)' }}
-        >
-          {/* faint background English */}
-          <div className="bg-type pc-only" style={{ top: '4%', left: '50%', transform: 'translateX(-50%)', fontSize: 'clamp(140px, 16vw, 260px)' }} aria-hidden="true">
-            FEATURES
-          </div>
-
-          <div className="relative max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-12 pt-24 sm:pt-28 lg:pt-32 pb-24 sm:pb-28 lg:pb-32">
-            {/* Heading */}
-            <div className="text-center max-w-[820px] mx-auto">
-              <div className="inline-flex items-center gap-3 px-7 py-2 border border-[rgba(181,154,106,.55)] bg-white mb-8">
-                <span className="diamond" />
-                <span className="font-mincho text-[#8a7548] text-[11px] tracking-[.4em]">FEATURES</span>
-                <span className="diamond" />
-              </div>
-
-              <h2 className="font-mincho text-[#1E1E1C] leading-[1.35] tracking-[.04em]"
-                style={{ fontSize: 'clamp(28px, 4.4vw, 52px)', fontWeight: 500 }}>
-                <span className="block">Re'inkが選ばれる、</span>
-                <span className="block mt-2"><span className="marker">3つの理由</span></span>
-              </h2>
-
-              <div className="mt-6 flex justify-center" aria-hidden="true">
-                <DiamondDivider width={50} />
-              </div>
-
-              <p className="mt-7 font-mincho text-[#3a3833] leading-[2]"
-                style={{ fontSize: 'clamp(16px, 1.5vw, 18px)' }}>
-                未経験から、現場で活躍するアーティストへ。<br className="hidden sm:block" />
-                私たちは、技術・実践・サポートのすべてに<span className="marker">妥協しない</span>環境を用意しました。
+          <article class="c-feature-card">
+            <div>
+              <span class="c-feature-card__num">02</span>
+              <p class="c-section-label">HYGIENE</p>
+              <h3>衛生管理の知識が必要不可欠</h3>
+              <p>
+                タトゥーは肌に直接施術を行うため、技術だけでなく衛生管理の知識も非常に重要です。
+                器具の扱い方や消毒方法など、安全面への理解が不足していると、
+                トラブルにつながる可能性があります。
+                プロとして活動するためには、基礎から正しい知識を学ぶ必要があります。
               </p>
             </div>
+            <figure>
+              <img src="img/clinic-request.png" alt="衛生管理の知識が必要不可欠なイメージ">
+            </figure>
+          </article>
 
-            {/* Cards */}
-            <div className="mt-16 sm:mt-20 grid grid-cols-1 gap-12 sm:gap-16 lg:gap-20">
-              {features.map((f, i) => {
-                /* ── Feature 01: dark hero layout ── */
-                if (i === 0) {
-                  return (
-                    <div key={f.n} className="relative -mx-5 sm:-mx-8 lg:-mx-12 px-5 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24"
-                      style={{ background: 'linear-gradient(135deg, #0f0f0d 0%, #1a1a17 55%, #151513 100%)' }}>
-                      {/* Faded "01" watermark */}
-                      <div aria-hidden="true" className="absolute font-mincho pointer-events-none select-none hidden lg:block"
-                        style={{ top: '-10px', right: 'calc(38% - 20px)', fontSize: 'clamp(180px, 22vw, 360px)', color: 'rgba(181,154,106,.055)', lineHeight: .9, fontWeight: 400 }}>
-                        01
-                      </div>
-                      <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-0 items-stretch">
-                        {/* Text column */}
-                        <div className="lg:col-span-5 relative flex flex-col justify-center lg:pr-14">
-                          {/* Gold vertical accent line */}
-                          <div className="absolute left-0 top-0 bottom-0 w-[2px] hidden lg:block" aria-hidden="true"
-                            style={{ background: 'rgb(181, 154, 106)' }} />
-                          <div className="lg:pl-10">
-                            {/* FEATURE badge */}
-                            <div className="inline-flex items-center gap-3 px-5 py-2 mb-7"
-                              style={{ border: '1px solid rgba(181,154,106,.55)', background: 'rgba(181,154,106,.07)' }}>
-                              <span className="diamond" />
-                              <span className="font-mincho text-[10.5px] tracking-[.5em]" style={{ color: '#B59A6A' }}>FEATURE</span>
-                              <span className="diamond" />
-                            </div>
-                            {/* N + tag row */}
-                            <div className="flex items-center gap-3 mb-4">
-                              <span className="font-mincho" style={{ fontSize: '30px', fontWeight: 300, letterSpacing: '.05em', color: '#B59A6A' }}>01</span>
-                              <span className="block w-10 h-px" style={{ background: 'rgba(181,154,106,.5)' }} aria-hidden="true" />
-                              <span className="font-mincho text-[10px] tracking-[.4em]" style={{ color: '#8a7548' }}>SMALL CLASS</span>
-                            </div>
-                            {/* Title */}
-                            <h3 className="font-mincho leading-[1.25] tracking-[.06em]"
-                              style={{ fontSize: 'clamp(28px, 3.4vw, 46px)', fontWeight: 400, color: '#F3EFE5', textShadow: '0 0 50px rgba(181,154,106,.12)' }}>
-                              少人数制の<br />技術指導
-                            </h3>
-                            {/* Lead */}
-                            <p className="mt-5 font-mincho leading-[1.85]"
-                              style={{ fontSize: 'clamp(16px, 1.4vw, 19px)', fontWeight: 400, color: '#D8C7A4' }}>
-                              {f.lead}
-                            </p>
-                            {/* Body */}
-                            <p className="mt-4 leading-[2]"
-                              style={{ fontSize: 'clamp(16px, 1.2vw, 17px)', color: 'rgba(243,239,229,.6)' }}>
-                              {f.body}
-                            </p>
-                            {/* Bullet pills */}
-                            <ul className="mt-6 flex flex-wrap gap-2">
-                              {f.bullets.map((b, j) => (
-                                <li key={j} className="flex items-center gap-2 px-3 py-1.5"
-                                  style={{ border: '1px solid rgba(181,154,106,.4)', background: 'rgba(181,154,106,.08)' }}>
-                                  <svg width="11" height="11" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                                    <path d="M2 7l3.5 3.5L12 3" stroke="#B59A6A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                  </svg>
-                                  <span style={{ color: '#D8C7A4', fontSize: '12.5px', letterSpacing: '.04em' }}>{b}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                        {/* Image column */}
-                        <div className="lg:col-span-7 relative">
-                          <div className="relative overflow-hidden"
-                            style={{ border: '1px solid rgba(181,154,106,.35)', boxShadow: '0 24px 64px -16px rgba(0,0,0,.65)' }}>
-                            <img
-                              src={f.imgSrc}
-                              alt={`${f.title} の写真`}
-                              className="w-full object-cover"
-                              style={{ aspectRatio: '5/4', display: 'block', filter: 'brightness(0.88) contrast(1.06)' }}
-                            />
-                            {/* Left edge gradient blending into dark panel */}
-                            <div className="absolute inset-0 hidden lg:block" aria-hidden="true"
-                              style={{ background: 'linear-gradient(90deg, rgba(15,15,13,.45) 0%, transparent 28%)' }} />
-                            {/* PERSONAL SUPPORT badge */}
-                            <div className="absolute top-0 right-0 v-ribbon text-center px-3 py-5" style={{ width: '90px' }}>
-                              <svg width="30" height="26" viewBox="0 0 30 26" fill="none" className="mx-auto mb-2" aria-hidden="true">
-                                <circle cx="15" cy="7" r="4.5" stroke="#B59A6A" strokeWidth="1.2" />
-                                <circle cx="7" cy="7" r="3.5" stroke="#B59A6A" strokeWidth="1.1" />
-                                <circle cx="23" cy="7" r="3.5" stroke="#B59A6A" strokeWidth="1.1" />
-                                <path d="M1 24c0-4.5 6-7.5 14-7.5S29 19.5 29 24" stroke="#B59A6A" strokeWidth="1.2" strokeLinecap="round" />
-                              </svg>
-                              <p className="font-mincho leading-[1.5]" style={{ fontSize: '8.5px', letterSpacing: '.2em', color: '#D8C7A4' }}>PERSONAL<br />SUPPORT</p>
-                            </div>
-                            {/* Gold corner frames */}
-                            <span className="absolute top-3 left-3 w-7 h-7 border-t-2 border-l-2 border-[#B59A6A] hidden sm:block" aria-hidden="true" />
-                            <span className="absolute bottom-3 right-3 w-7 h-7 border-b-2 border-r-2 border-[#B59A6A] hidden sm:block" aria-hidden="true" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                }
-
-                /* ── Features 02 & 03: original layout ── */
-                const reverse = i % 2 === 1;
-                return (
-                  <div key={f.n} className="relative">
-                    {/* huge faded number */}
-                    <div
-                      aria-hidden="true"
-                      className="absolute font-mincho pointer-events-none select-none"
-                      style={{
-                        top: '-30px',
-                        [reverse ? 'right' : 'left']: '-10px',
-                        fontSize: 'clamp(140px, 18vw, 280px)',
-                        color: 'rgba(30,30,28,.05)',
-                        lineHeight: .9,
-                        fontWeight: 400,
-                      }}
-                    >
-                      {f.n}
-                    </div>
-
-                    <div className={`relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center ${reverse ? 'lg:[&>*:first-child]:order-2' : ''}`}>
-                      {/* Photo column */}
-                      <div className="lg:col-span-6 relative">
-                        <img
-                          src={f.imgSrc}
-                          alt={`${f.title} の写真`}
-                          className="w-full object-cover"
-                          style={{ aspectRatio: '5 / 4', borderRadius: '2px' }}
-                        />
-                        {/* small handwritten note */}
-                        <div className={`absolute ${reverse ? '-bottom-5 -right-3' : '-bottom-5 -left-3'} hidden sm:block`}>
-                          <div className="px-4 py-2 bg-white border border-[rgba(181,154,106,.55)] shadow-[0_8px_22px_-12px_rgba(30,30,28,.25)]">
-                            <span className="font-mincho text-[10px] text-[#8a7548] tracking-[.32em]">{f.tag}</span>
-                          </div>
-                        </div>
-                        {/* corner ticks */}
-                        <span className="absolute -top-2 -left-2 w-5 h-5 border-t border-l border-[rgba(181,154,106,.7)] hidden sm:block" aria-hidden="true" />
-                        <span className="absolute -bottom-2 -right-2 w-5 h-5 border-b border-r border-[rgba(181,154,106,.7)] hidden sm:block" aria-hidden="true" />
-                      </div>
-
-                      {/* Text column */}
-                      <div className="lg:col-span-6 relative">
-                        {/* tiny meta */}
-                        <div className="flex items-center gap-3 mb-4">
-                          <span className="font-mincho text-[#B59A6A]" style={{ fontSize: '24px', fontWeight: 500 }}>{f.n}</span>
-                          <span className="block w-10 h-px bg-[rgba(181,154,106,.55)]" aria-hidden="true" />
-                          <span className="font-mincho text-[10.5px] text-[#8a7548] tracking-[.36em]">{f.tag}</span>
-                        </div>
-
-                        <h3 className="font-mincho text-[#1E1E1C] leading-[1.35]"
-                          style={{ fontSize: 'clamp(22px, 2.6vw, 34px)', fontWeight: 500 }}>
-                          {f.title}
-                        </h3>
-
-                        <p className="mt-4 font-mincho text-[#2A2926] leading-[1.7]"
-                          style={{ fontSize: 'clamp(16px, 1.4vw, 19px)', fontWeight: 500 }}>
-                          {f.lead}
-                        </p>
-
-                        <p className="mt-4 text-[#5a554c] leading-[2]"
-                          style={{ fontSize: 'clamp(16px, 1.3vw, 18px)' }}>
-                          {f.body}
-                        </p>
-
-                        {/* bullet pills */}
-                        <ul className="mt-6 flex flex-wrap gap-2">
-                          {f.bullets.map((b, j) => (
-                            <li key={j} className="flex items-center gap-2 px-3 py-1.5 bg-white border border-[rgba(181,154,106,.45)]">
-                              <svg width="11" height="11" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                                <path d="M2 7l3.5 3.5L12 3" stroke="#B59A6A" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                              </svg>
-                              <span className="text-[#3a3833] text-[12.5px] tracking-[.04em]">{b}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-
-                    {/* small separator arrow between cards */}
-                    {i !== features.length - 1 && (
-                      <div className="mt-12 sm:mt-16 flex justify-center" aria-hidden="true">
-                        <svg width="32" height="14" viewBox="0 0 32 14" fill="none">
-                          <path d="M2 2 L16 12 L30 2" stroke="rgba(181,154,106,.55)" strokeWidth="1.2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-      );
-    }
-
-    /* ---------- SECTION 05 — CURRICULUM / 6回完結プログラム ---------- */
-    function Curriculum() {
-      const steps = [
-        {
-          n: '01',
-          en: 'TOOLS',
-          title: '道具の使い方',
-          body: 'タトゥーマシン・ニードル・インクの基礎知識から、メンテナンス・衛生管理まで。安全に施術できる土台を最初に固めます。',
-          photo: 'TATTOO MACHINE / TOOLS LAYOUT',
-          imgSrc: 'img/clinic-request.png',
-        },
-        {
-          n: '02',
-          en: 'LINE',
-          title: 'ライン',
-          body: 'タトゥーの「骨格」となるライン技術を徹底練習。直線・曲線・抜きどころまで、安定した線が引けるよう繰り返し指導します。',
-          photo: 'PRACTICING STRAIGHT LINES',
-          imgSrc: 'img/clinic-curriculum.png',
-        },
-        {
-          n: '03',
-          en: 'FILLING',
-          title: '塗り（ベタ塗り）',
-          body: '面の塗りを均一に、ムラなく仕上げる技術。針の角度・スピード・力加減のコントロールを身につけ、表現の幅を広げます。',
-          photo: 'BLACK FILL TECHNIQUE',
-          imgSrc: 'img/image%208.png',
-        },
-        {
-          n: '04',
-          en: 'SHADING',
-          title: 'ぼかし',
-          body: 'グラデーションや陰影で立体感を生み出す技術。柔らかいぼかしから濃淡のついた表現まで、絵を「タトゥー」に仕上げます。',
-          photo: 'SOFT SHADING / GRADIENT',
-          imgSrc: 'img/image%2013.png',
-        },
-        {
-          n: '05',
-          en: 'PRACTICE I',
-          title: '実践①',
-          body: '学んだ技術を組み合わせ、実際のデザインを完成形まで仕上げる回。構図・流れ・全体バランスを、講師と一緒にチェックします。',
-          photo: 'STUDENT WORKING ON DESIGN',
-          imgSrc: 'img/clinic-open-class.png',
-        },
-        {
-          n: '06',
-          en: 'PRACTICE II',
-          title: '実践②',
-          body: '仕上げの実践回。施術フローを通しで体験し、卒業後にすぐ動ける状態を作ります。ポートフォリオ用の作品もここで完成させます。',
-          photo: 'FINAL PROJECT / PORTFOLIO',
-          imgSrc: 'img/clinic-counseling.png',
-        },
-      ];
-
-      return (
-        <section
-          data-screen-label="05 Curriculum"
-          className="p-curriculum relative w-full"
-          style={{ background: 'linear-gradient(180deg, #F3F1EC 0%, #F8F5EF 100%)' }}
-        >
-          {/* faint background English */}
-          <div className="bg-type pc-only" style={{ top: '4%', right: '6%', fontSize: 'clamp(140px, 15vw, 240px)' }} aria-hidden="true">
-            CURRICULUM
-          </div>
-
-          <div className="relative max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-12 pt-24 sm:pt-28 lg:pt-32 pb-24 sm:pb-28 lg:pb-32">
-
-            {/* Heading */}
-            <div className="text-center max-w-[860px] mx-auto">
-              <div className="inline-flex items-center gap-3 px-7 py-2 border border-[rgba(181,154,106,.55)] bg-white mb-8">
-                <span className="diamond" />
-                <span className="font-mincho text-[#8a7548] text-[11px] tracking-[.4em]">CURRICULUM</span>
-                <span className="diamond" />
-              </div>
-
-              <h2 className="font-mincho text-[#1E1E1C] leading-[1.35] tracking-[.04em]"
-                style={{ fontSize: 'clamp(26px, 4.2vw, 50px)', fontWeight: 500 }}>
-                <span className="block">実践に特化した、</span>
-                <span className="block mt-2"><span className="marker">全6回完結</span>プログラム。</span>
-              </h2>
-
-              <div className="mt-6 flex justify-center" aria-hidden="true">
-                <DiamondDivider width={50} />
-              </div>
-
-              <p className="mt-7 font-mincho text-[#3a3833] leading-[2]"
-                style={{ fontSize: 'clamp(16px, 1.5vw, 18px)' }}>
-                道具の扱いから実践までを、無駄なく順序立てて。<br className="hidden sm:block" />
-                最短<span className="font-mincho" style={{ fontSize: '1.15em' }}>3</span>ヶ月で、現場に立てるレベルへ導きます。
+          <article class="c-feature-card">
+            <div>
+              <span class="c-feature-card__num">03</span>
+              <p class="c-section-label">SKIN TYPE</p>
+              <h3>肌に合わせた技術が求められる</h3>
+              <p>
+                人によって肌質や部位の特徴は異なります。
+                同じデザインでも、針の入り方や色の出方が変わるため、
+                一人ひとりに合わせた施術技術が必要です。
+                実践経験を重ねながら感覚を身につけていくことが大切です。
               </p>
             </div>
+            <figure>
+              <img src="img/image%208.png" alt="肌に合わせた技術が求められるイメージ">
+            </figure>
+          </article>
 
-            {/* Timeline */}
-            <div className="relative mt-16 sm:mt-20 lg:mt-24">
-              {/* Left vertical line */}
-              <div
-                className="absolute top-0 bottom-0 w-px"
-                style={{
-                  left: '44px',
-                  background: 'linear-gradient(180deg, transparent 0%, rgba(181,154,106,.5) 4%, rgba(181,154,106,.5) 96%, transparent 100%)',
-                }}
-                aria-hidden="true"
-              />
-
-              <ul className="space-y-14 sm:space-y-16 lg:space-y-20">
-                {steps.map((s, i) => (
-                  <li
-                    key={s.n}
-                    className="relative curriculum-step-item"
-                  >
-                    {/* Row: text left + photo right */}
-                    <div className="pl-[76px] sm:pl-[88px] 
-  grid grid-cols-1 lg:grid-cols-12 
-  gap-6 lg:gap-10 items-start
-  bg-[rgba(255,255,255,.72)]
-  border border-[rgba(181,154,106,.18)]
-  rounded-[2px]
-  p-6 sm:p-8 lg:p-10
-  backdrop-blur-sm
-  transition-all duration-500
-  hover:-translate-y-1
-  hover:shadow-[0_20px_50px_rgba(0,0,0,.06)]
-">
-                      <div className="lg:col-span-5">
-                        {/* Step tag */}
-                        <div className="flex items-center gap-3 mb-5">
-                          <div className="curriculum-ribbon">
-                            <span className="curriculum-ribbon__step">STEP</span>
-                            <span className="curriculum-ribbon__num">{s.n}</span>
-                          </div>
-
-                          <span className="block w-10 h-px bg-[rgba(181,154,106,.55)]" />
-                          <span className="font-mincho text-[10px] text-[#8a7548] tracking-[.28em]">
-                            {s.en}
-                          </span>
-                        </div>
-
-                        <h3
-                          className="relative pl-5 font-mincho text-[#1E1E1C] leading-[1.35]"
-                          style={{ fontSize: 'clamp(20px, 2.2vw, 30px)', fontWeight: 500 }}>
-                          {s.title}
-                        </h3>
-
-                        <p className="mt-4 font-mincho text-[#3a3833] leading-[2]"
-                          style={{ fontSize: 'clamp(16px, 1.3vw, 18px)' }}>
-                          {s.body}
-                        </p>
-                      </div>
-
-                      {/* Photo */}
-                      <div className="lg:col-span-7 relative">
-                        <img
-                          src={s.imgSrc}
-                          alt={`${s.title} の参考写真`}
-                          className="w-full object-cover"
-                          style={{ aspectRatio: '3 / 2', borderRadius: '2px' }}
-                        />
-                        <span className="absolute -top-2 -right-2 w-5 h-5 border-t border-r border-[rgba(181,154,106,.7)] hidden sm:block" aria-hidden="true" />
-                        <span className="absolute -bottom-2 -left-2 w-5 h-5 border-b border-l border-[rgba(181,154,106,.45)] hidden sm:block" aria-hidden="true" />
-                      </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Bottom summary card */}
-            <div className="mt-20 sm:mt-24 max-w-[820px] mx-auto">
-              <div className="relative bg-white border border-[rgba(181,154,106,.5)] p-7 sm:p-10 text-center">
-                <div className="absolute inset-2 border border-[rgba(181,154,106,.25)] pointer-events-none" aria-hidden="true" />
-                <div className="font-mincho text-[#8a7548] text-[10.5px] tracking-[.4em] mb-4">PROGRAM SUMMARY</div>
-                <div className="grid grid-cols-3 gap-4 sm:gap-6">
-                  <div>
-                    <div className="font-mincho text-[#1E1E1C]" style={{ fontSize: 'clamp(28px, 3.6vw, 44px)', fontWeight: 500 }}>6</div>
-                    <div className="text-[#6F6A62] text-[11.5px] tracking-[.18em] mt-1">SESSIONS</div>
-                  </div>
-                  <div className="border-x border-[rgba(181,154,106,.35)]">
-                    <div className="font-mincho text-[#1E1E1C]" style={{ fontSize: 'clamp(28px, 3.6vw, 44px)', fontWeight: 500 }}>3<span className="text-[18px] sm:text-[22px] ml-1 font-mincho">ヶ月</span></div>
-                    <div className="text-[#6F6A62] text-[11.5px] tracking-[.18em] mt-1">SHORTEST</div>
-                  </div>
-                  <div>
-                    <div className="font-mincho text-[#1E1E1C]" style={{ fontSize: 'clamp(28px, 3.6vw, 44px)', fontWeight: 500 }}>4<span className="text-[18px] sm:text-[22px] ml-1 font-mincho">名</span></div>
-                    <div className="text-[#6F6A62] text-[11.5px] tracking-[.18em] mt-1">MAX / CLASS</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      );
-    }
-
-    /* ---------- SECTION 06 — INSTRUCTOR / 講師紹介 ---------- */
-    function Instructor() {
-      const stats = [
-        { v: '12', u: 'YEARS', label: 'アーティスト歴' },
-        { v: '500+', u: 'WORKS', label: '施術実績' },
-        { v: '80+', u: 'STUDENTS', label: '指導したアーティスト' },
-      ];
-      const styles = ['Fine Line', 'Botanical', 'Black & Grey', 'Lettering'];
-      const subPhotos = [
-        { ph: 'STUDIO INTERIOR', cap: 'Re\'ink Studio / Tokyo', imgSrc: 'img/image%201.png' },
-        { ph: 'SKETCHING DESIGN', cap: 'デザイン制作の様子', imgSrc: 'img/clinic-why-us.png' },
-        { ph: 'TEACHING SESSION', cap: 'レッスン風景', imgSrc: 'img/clinic-open-class.png' },
-      ];
-
-      return (
-        <section
-          data-screen-label="06 Instructor"
-          className="p-instructor relative w-full"
-          style={{ background: 'linear-gradient(180deg, #F8F5EF 0%, #F3F1EC 100%)' }}
-        >
-          {/* faint background English */}
-          <div className="bg-type pc-only" style={{ top: '4%', left: '4%', fontSize: 'clamp(140px, 15vw, 240px)' }} aria-hidden="true">
-            ARTIST
-          </div>
-
-          <div className="relative max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-12 pt-24 sm:pt-28 lg:pt-32 pb-24 sm:pb-28 lg:pb-32">
-
-            {/* Heading */}
-            <div className="text-center max-w-[820px] mx-auto">
-              <div className="inline-flex items-center gap-3 px-7 py-2 border border-[rgba(181,154,106,.55)] bg-white mb-8">
-                <span className="diamond" />
-                <span className="font-mincho text-[#8a7548] text-[11px] tracking-[.4em]">INSTRUCTOR</span>
-                <span className="diamond" />
-              </div>
-
-              <h2 className="font-mincho text-[#1E1E1C] leading-[1.35] tracking-[.04em]"
-                style={{ fontSize: 'clamp(26px, 4.2vw, 50px)', fontWeight: 500 }}>
-                <span className="block">経験豊富な現役アーティストが、</span>
-                <span className="block mt-2"><span className="marker">直接指導</span>します。</span>
-              </h2>
-
-              <div className="mt-6 flex justify-center" aria-hidden="true">
-                <DiamondDivider width={50} />
-              </div>
-            </div>
-
-            {/* Profile main */}
-            <div className="mt-16 sm:mt-20 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-
-              {/* Left — Portrait */}
-              <div className="lg:col-span-5 relative">
-                <img
-                  src="img/clinic-mentor.png"
-                  alt="講師ポートレート"
-                  className="w-full object-cover"
-                  style={{ aspectRatio: '4 / 5', borderRadius: '2px' }}
-                />
-                {/* Tag chip */}
-                <div className="absolute -bottom-4 -left-3 sm:-left-6">
-                  <div className="px-4 py-2 bg-white border border-[rgba(181,154,106,.55)] shadow-[0_8px_22px_-12px_rgba(30,30,28,.25)]">
-                    <span className="font-mincho text-[10px] text-[#8a7548] tracking-[.32em]">LEAD INSTRUCTOR</span>
-                  </div>
-                </div>
-                {/* corner ticks */}
-                <span className="absolute -top-2 -left-2 w-5 h-5 border-t border-l border-[rgba(181,154,106,.7)] hidden sm:block" aria-hidden="true" />
-                <span className="absolute -bottom-2 -right-2 w-5 h-5 border-b border-r border-[rgba(181,154,106,.7)] hidden sm:block" aria-hidden="true" />
-
-                {/* signature script */}
-                <div className="mt-8 hidden sm:block">
-                  <div className="font-mincho text-[#9c8a64]" style={{ fontSize: '26px' }}>
-                    — Ryo Tanaka
-                  </div>
-                  <div className="text-[#6F6A62] text-[11.5px] tracking-[.24em] mt-1">FOUNDER · LEAD ARTIST</div>
-                </div>
-              </div>
-
-              {/* Right — Profile */}
-              <div className="lg:col-span-7 relative">
-                {/* Name block */}
-                <div className="flex items-end gap-4 mb-2">
-                  <span className="font-mincho text-[#8a7548] text-[10.5px] tracking-[.4em]">RYO TANAKA</span>
-                  <span className="block flex-1 h-px bg-[rgba(181,154,106,.45)]" aria-hidden="true" />
-                </div>
-                <h3 className="font-mincho text-[#1E1E1C] leading-[1.3]"
-                  style={{ fontSize: 'clamp(28px, 3.4vw, 42px)', fontWeight: 500 }}>
-                  田中 良
-                  <span className="ml-3 font-mincho text-[#6F6A62]" style={{ fontSize: 'clamp(16px, 1.3vw, 18px)', fontWeight: 400 }}>
-                    Tattoo Artist / Founder
-                  </span>
-                </h3>
-
-                <p className="mt-6 text-[#3a3833] leading-[2]"
-                  style={{ fontSize: 'clamp(16px, 1.3vw, 18px)' }}>
-                  東京・大阪を拠点に活動する現役タトゥーアーティスト。繊細なファインライン・ボタニカルを得意とし、国内外のクライアントから指名を受ける。<span className="marker">「技術は努力で身につけられる」</span>という信念のもと、未経験から始める方の伴走を大切にしている。
-                </p>
-
-                {/* Stats */}
-                <div className="mt-8 grid grid-cols-3 gap-4 sm:gap-6">
-                  {stats.map((s, i) => (
-                    <div key={i} className={`pl-4 sm:pl-6 ${i !== 0 ? 'border-l border-[rgba(181,154,106,.4)]' : ''}`}>
-                      <div className="font-mincho text-[#1E1E1C]" style={{ fontSize: 'clamp(28px, 3.4vw, 42px)', fontWeight: 500, lineHeight: 1 }}>
-                        {s.v}
-                        <span className="ml-1 font-mincho text-[#8a7548]" style={{ fontSize: '11px', letterSpacing: '.32em' }}>{s.u}</span>
-                      </div>
-                      <div className="text-[#6F6A62] text-[12px] mt-2 tracking-[.04em]">{s.label}</div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Career */}
-                <div className="mt-10">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="font-mincho text-[#8a7548] text-[10.5px] tracking-[.4em]">CAREER</span>
-                    <span className="block flex-1 h-px bg-[rgba(181,154,106,.45)]" aria-hidden="true" />
-                  </div>
-                  <ul className="space-y-3">
-                    {[
-                      ['2014', '東京の老舗タトゥースタジオに入門'],
-                      ['2017', 'スタジオの主任アーティストに就任'],
-                      ['2020', '独立、Re\'ink Studio を東京に設立'],
-                      ['2023', 'Re\'ink Tattoo Artist School を開校'],
-                    ].map(([y, t], i) => (
-                      <li key={i} className="flex items-baseline gap-4 sm:gap-6 py-2 border-b border-dashed border-[rgba(181,154,106,.35)]">
-                        <span className="font-mincho text-[#B59A6A] flex-shrink-0" style={{ fontSize: '18px', fontWeight: 500, minWidth: '52px' }}>{y}</span>
-                        <span className="font-mincho text-[#2A2926]" style={{ fontSize: 'clamp(16px, 1.3vw, 18px)' }}>{t}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Styles */}
-                <div className="mt-8">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="font-mincho text-[#8a7548] text-[10.5px] tracking-[.4em]">SPECIALITIES</span>
-                    <span className="block flex-1 h-px bg-[rgba(181,154,106,.45)]" aria-hidden="true" />
-                  </div>
-                  <ul className="flex flex-wrap gap-2">
-                    {styles.map((s, i) => (
-                      <li key={i} className="px-3 py-1.5 bg-white border border-[rgba(181,154,106,.45)] font-mincho text-[#3a3833] tracking-[.06em]"
-                        style={{ fontSize: '13.5px' }}>
-                        {s}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Message card */}
-            <div className="mt-20 sm:mt-24 max-w-[920px] mx-auto relative">
-              <span className="absolute -top-4 left-6 sm:left-10 px-3 py-1 bg-[#F8F5EF] font-mincho text-[#8a7548] text-[10.5px] tracking-[.4em]">MESSAGE</span>
-
-              <div className="relative bg-white border border-[rgba(181,154,106,.5)] p-7 sm:p-12 lg:p-14">
-                <div className="absolute inset-2 border border-[rgba(181,154,106,.25)] pointer-events-none" aria-hidden="true" />
-
-                {/* Quote marks */}
-                <span className="absolute top-4 left-4 sm:top-6 sm:left-6 font-mincho text-[rgba(181,154,106,.4)] select-none pointer-events-none"
-                  style={{ fontSize: '80px', lineHeight: .8 }} aria-hidden="true">“</span>
-                <span className="absolute bottom-2 right-4 sm:right-6 font-mincho text-[rgba(181,154,106,.4)] select-none pointer-events-none"
-                  style={{ fontSize: '80px', lineHeight: .8 }} aria-hidden="true">”</span>
-
-                <p className="relative font-mincho text-[#1E1E1C] leading-[2.1] text-center"
-                  style={{ fontSize: 'clamp(16px, 1.5vw, 20px)', fontWeight: 500 }}>
-                  タトゥーは、人生に寄り添うアートです。<br />
-                  「自分にできるかな」と迷っている今が、<br className="hidden sm:block" />
-                  一歩踏み出す<span className="marker">最高のタイミング</span>。<br />
-                  あなたの挑戦を、全力で支えます。
-                </p>
-
-                <div className="mt-8 flex justify-center">
-                  <div className="text-center">
-                    <div className="font-mincho text-[#9c8a64]" style={{ fontSize: '24px' }}>Ryo Tanaka</div>
-                    <div className="text-[#6F6A62] text-[11px] tracking-[.32em] mt-1">FOUNDER</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Sub gallery — 3 photos */}
-            <div className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6">
-              {subPhotos.map((p, i) => (
-                <figure key={i} className="relative">
-                  <img
-                    src={p.imgSrc}
-                    alt={p.cap}
-                    className="w-full object-cover"
-                    style={{ aspectRatio: '4 / 3', borderRadius: '2px' }}
-                  />
-                  <figcaption className="mt-3 flex items-center gap-2 text-[#6F6A62] text-[12px] tracking-[.06em]">
-                    <span className="block w-5 h-px bg-[rgba(181,154,106,.55)]" aria-hidden="true" />
-                    {p.cap}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-          </div>
-        </section>
-      );
-    }
-
-    /* ---------- SECTION 07 — WORKS GALLERY ---------- */
-    function Works() {
-      // Mix of sizes to give rhythm without breaking grid alignment
-      const works = [
-        { ph: 'FINE LINE BOTANICAL', tag: 'Fine Line', ratio: '4 / 5', span: 'sm:col-span-2 lg:col-span-2', imgSrc: 'img/image%2013.png' },
-        { ph: 'BLACK & GREY ROSE', tag: 'Black & Grey', ratio: '4 / 5', span: 'sm:col-span-2 lg:col-span-2', imgSrc: 'img/image%208.png' },
-        { ph: 'LETTERING SCRIPT', tag: 'Lettering', ratio: '4 / 5', span: 'sm:col-span-2 lg:col-span-2', imgSrc: 'img/image%2010.png' },
-        { ph: 'BOTANICAL SLEEVE', tag: 'Botanical', ratio: '1 / 1', span: 'sm:col-span-3 lg:col-span-3', imgSrc: 'img/image%204.png' },
-        { ph: 'GEOMETRIC LINE WORK', tag: 'Fine Line', ratio: '1 / 1', span: 'sm:col-span-3 lg:col-span-3', imgSrc: 'img/image%208.png' },
-        { ph: 'MINIMAL SYMBOL', tag: 'Minimal', ratio: '4 / 5', span: 'sm:col-span-2 lg:col-span-2', imgSrc: 'img/image%2010.png' },
-        { ph: 'WILDFLOWER STUDY', tag: 'Botanical', ratio: '4 / 5', span: 'sm:col-span-2 lg:col-span-2', imgSrc: 'img/image%2013.png' },
-        { ph: 'FINE LINE PORTRAIT', tag: 'Fine Line', ratio: '4 / 5', span: 'sm:col-span-2 lg:col-span-2', imgSrc: 'img/image%204.png' },
-      ];
-
-      const filters = ['All', 'Fine Line', 'Botanical', 'Black & Grey', 'Lettering', 'Minimal'];
-
-      return (
-        <section
-          data-screen-label="07 Works"
-          className="p-works relative w-full"
-          style={{ background: 'linear-gradient(180deg, #F3F1EC 0%, #F8F5EF 100%)' }}
-        >
-          {/* faint background English */}
-          <div className="bg-type pc-only" style={{ top: '4%', right: '6%', fontSize: 'clamp(140px, 16vw, 260px)' }} aria-hidden="true">
-            WORKS
-          </div>
-
-          <div className="relative max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-12 pt-24 sm:pt-28 lg:pt-32 pb-24 sm:pb-28 lg:pb-32">
-
-            {/* Heading */}
-            <div className="text-center max-w-[820px] mx-auto">
-              <div className="inline-flex items-center gap-3 px-7 py-2 border border-[rgba(181,154,106,.55)] bg-white mb-8">
-                <span className="diamond" />
-                <span className="font-mincho text-[#8a7548] text-[11px] tracking-[.4em]">WORKS</span>
-                <span className="diamond" />
-              </div>
-
-              <h2 className="font-mincho text-[#1E1E1C] leading-[1.35] tracking-[.04em]"
-                style={{ fontSize: 'clamp(26px, 4.2vw, 50px)', fontWeight: 500 }}>
-                <span className="block">講師・卒業生による、</span>
-                <span className="block mt-2"><span className="marker">作品ギャラリー</span>。</span>
-              </h2>
-
-              <div className="mt-6 flex justify-center" aria-hidden="true">
-                <DiamondDivider width={50} />
-              </div>
-
-              <p className="mt-7 font-mincho text-[#3a3833] leading-[2]"
-                style={{ fontSize: 'clamp(16px, 1.5vw, 18px)' }}>
-                繊細なファインラインから、流れるようなボタニカルまで。<br className="hidden sm:block" />
-                Re'inkで生まれた表現の一部をご紹介します。
+          <article class="c-feature-card">
+            <div>
+              <span class="c-feature-card__num">04</span>
+              <p class="c-section-label">DESIGN</p>
+              <h3>“絵が上手い”だけでは通用しない</h3>
+              <p>
+                タトゥーはイラストとは違い、身体のラインや肌に馴染むバランスを考えて
+                デザインする必要があります。
+                紙に描く感覚だけではなく、
+                “肌に彫るためのデザイン力” が求められる世界です。
               </p>
             </div>
+            <figure>
+              <img src="img/clinic-why-us.png" alt="絵が上手いだけでは通用しないイメージ">
+            </figure>
+          </article>
 
-            {/* Filter chips (decorative) */}
-            <div className="mt-10 sm:mt-12 flex flex-wrap justify-center gap-2 sm:gap-3">
-              {filters.map((f, i) => (
-                <span
-                  key={i}
-                  className={`px-4 py-2 font-mincho tracking-[.06em] text-[13.5px] ${i === 0
-                    ? 'bg-[#1E1E1C] text-[#F3EFE5] border border-[#1E1E1C]'
-                    : 'bg-white text-[#3a3833] border border-[rgba(181,154,106,.45)]'}`}
-                >
-                  {f}
-                </span>
-              ))}
-            </div>
-
-            {/* Gallery grid (12-col on lg, 6-col on sm, 1-col mobile) */}
-            <div className="mt-10 sm:mt-12 grid grid-cols-1 sm:grid-cols-6 lg:grid-cols-6 gap-4 sm:gap-5 lg:gap-6">
-              {works.map((w, i) => (
-                <figure
-                  key={i}
-                  className={`relative group ${w.span}`}
-                >
-                  <img
-                    src={w.imgSrc}
-                    alt={`${w.ph}（${w.tag}）`}
-                    className="w-full object-cover"
-                    style={{ aspectRatio: w.ratio, borderRadius: '2px' }}
-                  />
-                  {/* corner ticks */}
-                  <span className="absolute -top-1.5 -left-1.5 w-4 h-4 border-t border-l border-[rgba(181,154,106,.6)]" aria-hidden="true" />
-                  <span className="absolute -bottom-1.5 -right-1.5 w-4 h-4 border-b border-r border-[rgba(181,154,106,.6)]" aria-hidden="true" />
-
-                  {/* Tag */}
-                  <figcaption className="mt-3 flex items-center justify-between gap-2">
-                    <span className="flex items-center gap-2 text-[#6F6A62] text-[11.5px] tracking-[.06em]">
-                      <span className="block w-4 h-px bg-[rgba(181,154,106,.55)]" aria-hidden="true" />
-                      <span className="font-mincho">No.{String(i + 1).padStart(2, '0')}</span>
-                    </span>
-                    <span className="font-mincho text-[#8a7548] tracking-[.06em] text-[12.5px]">{w.tag}</span>
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-
-            {/* Bottom note + nav suggestion */}
-            <div className="mt-16 sm:mt-20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 max-w-[920px] mx-auto">
-              <div className="flex items-center gap-4">
-                <div className="font-mincho text-[#9c8a64]" style={{ fontSize: '20px' }}>
-                  Your work could be next.
-                </div>
-              </div>
-              <div className="inline-flex items-center gap-3 self-start sm:self-auto">
-                <span className="font-mincho text-[10.5px] text-[#8a7548] tracking-[.4em]">VIEW MORE</span>
-                <span className="block w-12 h-px bg-[rgba(181,154,106,.6)]" aria-hidden="true" />
-                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" aria-hidden="true">
-                  <path d="M1 5h13M11 1l4 4-4 4" stroke="#B59A6A" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </section>
-      );
-    }
-
-    /* ---------- SECTION 08 — VOICE / 卒業生の声 ---------- */
-    function Voice() {
-      const voices = [
-        {
-          n: '01',
-          name: '山田 彩花',
-          role: '元会社員 → フリーランスタトゥーアーティスト',
-          tag: 'GRADUATE 2024',
-          img: 'img/woman1%201.png',
-          lead: '「ゼロからでも、ちゃんとプロになれる」',
-          body: '前職は全く異業種の会社員。絵を描いた経験もほぼゼロでしたが、丁寧な個別指導のおかげで6ヶ月で独立することができました。今では月20名以上のクライアントを担当し、念願のフリーランス生活を実現しています。',
-          bullets: ['6ヶ月で独立達成', '月20名以上対応', 'SNS集客を完全習得'],
-        },
-        {
-          n: '02',
-          name: '佐藤 健斗',
-          role: '元美容師 → タトゥーアーティスト',
-          tag: 'GRADUATE 2023',
-          img: 'img/man1%201.png',
-          lead: '「繊細さへのこだわりが、ここで活きた」',
-          body: '美容師として培った繊細さとお客様への向き合い方が、ファインラインタトゥーと相性抜群でした。講師の個別指導で自分のスタイルを確立し、今では予約3ヶ月待ちを達成しています。',
-          bullets: ['ファインライン特化', '予約3ヶ月待ち達成', '自スタジオを開業'],
-        },
-      ];
-
-      return (
-        <section
-          data-screen-label="08 Voice"
-          className="relative w-full"
-          style={{ background: 'linear-gradient(180deg, #111110 0%, #151513 100%)' }}
-        >
-          <div className="relative max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-12 pt-24 sm:pt-28 lg:pt-32 pb-24 sm:pb-28 lg:pb-32">
-
-            {/* Section header */}
-            <div className="text-center mb-16 sm:mb-20 lg:mb-24">
-              <div className="inline-flex items-center gap-3 px-5 py-2 mb-8"
-                style={{ border: '1px solid rgba(181,154,106,.55)', background: 'rgba(181,154,106,.07)' }}>
-                <span className="diamond" />
-                <span className="font-mincho text-[10.5px] tracking-[.5em]" style={{ color: '#B59A6A' }}>VOICE</span>
-                <span className="diamond" />
-              </div>
-              <h2 className="font-mincho leading-[1.35] tracking-[.04em]"
-                style={{ fontSize: 'clamp(30px, 4vw, 52px)', fontWeight: 400, color: '#F3EFE5' }}>
-                卒業生の声
-              </h2>
-              <div className="mt-7 flex justify-center" aria-hidden="true">
-                <DiamondDivider width={50} />
-              </div>
-              <p className="mt-7 font-mincho leading-[2]"
-                style={{ fontSize: 'clamp(16px, 1.4vw, 18px)', color: 'rgba(243,239,229,.65)' }}>
-                Re'inkから旅立った卒業生たちが、<br className="hidden sm:block" />
-                それぞれのフィールドで活躍しています。
+          <article class="c-feature-card">
+            <div>
+              <span class="c-feature-card__num">05</span>
+              <p class="c-section-label">SELF-STUDY</p>
+              <h3>独学では限界がある</h3>
+              <p>
+                動画やSNSだけでも情報を得られる時代ですが、
+                実際の細かな手の動きや力加減は、
+                独学だけでは習得が難しい部分も多くあります。
+                間違った癖がついてしまう前に、
+                正しい技術を学ぶことが重要です。
               </p>
             </div>
+            <figure>
+              <img src="img/image%2013.png" alt="独学では限界があるイメージ">
+            </figure>
+          </article>
 
-            {/* Voice cards */}
-            <div className="flex flex-col gap-20 sm:gap-24">
-              {voices.map((v, i) => {
-                const rev = i % 2 === 1;
-                return (
-                  <div key={v.n} className="relative">
-                    {/* Watermark number */}
-                    <div aria-hidden="true" className="absolute font-mincho pointer-events-none select-none hidden lg:block"
-                      style={{
-                        top: '-10px',
-                        [rev ? 'left' : 'right']: 'calc(38% - 20px)',
-                        fontSize: 'clamp(180px, 22vw, 360px)',
-                        color: 'rgba(181,154,106,.055)',
-                        lineHeight: .9,
-                        fontWeight: 400,
-                      }}>
-                      {v.n}
-                    </div>
-
-                    <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-0 items-stretch">
-                      {/* ── Text column ── */}
-                      {!rev && (
-                        <div className="lg:col-span-5 relative flex flex-col justify-center lg:pr-14">
-                          <div className="absolute left-0 top-0 bottom-0 w-[2px] hidden lg:block"
-                            style={{ background: 'linear-gradient(180deg, transparent 0%, #B59A6A 15%, #D8C7A4 50%, #B59A6A 85%, transparent 100%)' }} />
-                          <div className="lg:pl-10">
-                            <div className="inline-flex items-center gap-3 px-5 py-2 mb-7"
-                              style={{ border: '1px solid rgba(181,154,106,.55)', background: 'rgba(181,154,106,.07)' }}>
-                              <span className="diamond" />
-                              <span className="font-mincho text-[10.5px] tracking-[.5em]" style={{ color: '#B59A6A' }}>VOICE</span>
-                              <span className="diamond" />
-                            </div>
-                            <div className="flex items-center gap-3 mb-3">
-                              <span className="font-mincho" style={{ fontSize: '30px', fontWeight: 300, letterSpacing: '.05em', color: '#B59A6A' }}>{v.n}</span>
-                              <span className="block w-10 h-px" style={{ background: 'rgba(181,154,106,.5)' }} />
-                              <span className="font-mincho text-[10px] tracking-[.4em]" style={{ color: '#8a7548' }}>{v.tag}</span>
-                            </div>
-                            <p className="font-mincho mb-2" style={{ fontSize: '13px', letterSpacing: '.1em', color: '#8a7548' }}>{v.role}</p>
-                            <h3 className="font-mincho leading-[1.3] tracking-[.06em]"
-                              style={{ fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 400, color: '#F3EFE5', textShadow: '0 0 50px rgba(181,154,106,.12)' }}>
-                              {v.name}
-                            </h3>
-                            <div className="mt-6 flex items-center gap-3">
-                              <div style={{ width: '44px', height: '1px', background: 'linear-gradient(90deg, transparent, #B59A6A)' }} />
-                              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                <rect x="7" y="0.5" width="9" height="9" transform="rotate(45 7 7)" stroke="#B59A6A" strokeWidth="1" fill="rgba(181,154,106,.12)" />
-                              </svg>
-                              <div style={{ width: '44px', height: '1px', background: 'linear-gradient(90deg, #B59A6A, transparent)' }} />
-                            </div>
-                            <p className="mt-5 font-mincho leading-[1.85]"
-                              style={{ fontSize: 'clamp(16px, 1.4vw, 19px)', fontWeight: 400, color: '#D8C7A4' }}>
-                              {v.lead}
-                            </p>
-                            <p className="mt-4 leading-[2]"
-                              style={{ fontSize: 'clamp(16px, 1.2vw, 17px)', color: 'rgba(243,239,229,.6)' }}>
-                              {v.body}
-                            </p>
-                            <ul className="mt-6 flex flex-wrap gap-2">
-                              {v.bullets.map((b, j) => (
-                                <li key={j} className="flex items-center gap-2 px-3 py-1.5"
-                                  style={{ border: '1px solid rgba(181,154,106,.4)', background: 'rgba(181,154,106,.08)' }}>
-                                  <svg width="11" height="11" viewBox="0 0 14 14" fill="none">
-                                    <path d="M2 7l3.5 3.5L12 3" stroke="#B59A6A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                  </svg>
-                                  <span style={{ color: '#D8C7A4', fontSize: '12.5px', letterSpacing: '.04em' }}>{b}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                      )}
-
-                      {/* ── Image column ── */}
-                      <div className={`${rev ? 'lg:col-span-7' : 'lg:col-span-7'} relative`}>
-                        <div className="relative overflow-hidden"
-                          style={{ border: '1px solid rgba(181,154,106,.35)', boxShadow: '0 24px 64px -16px rgba(0,0,0,.65)' }}>
-                          <img src={v.img} alt={`${v.name}さんの声`} className="w-full object-cover object-top"
-                            style={{ aspectRatio: '5/4', display: 'block', filter: 'brightness(0.88) contrast(1.06)' }} />
-                          <div className="absolute inset-0 hidden lg:block"
-                            style={{
-                              background: rev
-                                ? 'linear-gradient(270deg, rgba(15,15,13,.45) 0%, transparent 28%)'
-                                : 'linear-gradient(90deg, rgba(15,15,13,.45) 0%, transparent 28%)'
-                            }} />
-                          <span className="absolute top-3 left-3 w-7 h-7 border-t-2 border-l-2 border-[#B59A6A] hidden sm:block" />
-                          <span className="absolute bottom-3 right-3 w-7 h-7 border-b-2 border-r-2 border-[#B59A6A] hidden sm:block" />
-                        </div>
-                      </div>
-
-                      {/* ── Text column (reversed) ── */}
-                      {rev && (
-                        <div className="lg:col-span-5 relative flex flex-col justify-center lg:pl-14">
-                          <div className="absolute right-0 top-0 bottom-0 w-[2px] hidden lg:block"
-                            style={{ background: 'linear-gradient(180deg, transparent 0%, #B59A6A 15%, #D8C7A4 50%, #B59A6A 85%, transparent 100%)' }} />
-                          <div className="lg:pr-10">
-                            <div className="inline-flex items-center gap-3 px-5 py-2 mb-7"
-                              style={{ border: '1px solid rgba(181,154,106,.55)', background: 'rgba(181,154,106,.07)' }}>
-                              <span className="diamond" />
-                              <span className="font-mincho text-[10.5px] tracking-[.5em]" style={{ color: '#B59A6A' }}>VOICE</span>
-                              <span className="diamond" />
-                            </div>
-                            <div className="flex items-center gap-3 mb-3">
-                              <span className="font-mincho" style={{ fontSize: '30px', fontWeight: 300, letterSpacing: '.05em', color: '#B59A6A' }}>{v.n}</span>
-                              <span className="block w-10 h-px" style={{ background: 'rgba(181,154,106,.5)' }} />
-                              <span className="font-mincho text-[10px] tracking-[.4em]" style={{ color: '#8a7548' }}>{v.tag}</span>
-                            </div>
-                            <p className="font-mincho mb-2" style={{ fontSize: '13px', letterSpacing: '.1em', color: '#8a7548' }}>{v.role}</p>
-                            <h3 className="font-mincho leading-[1.3] tracking-[.06em]"
-                              style={{ fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 400, color: '#F3EFE5', textShadow: '0 0 50px rgba(181,154,106,.12)' }}>
-                              {v.name}
-                            </h3>
-                            <div className="mt-6 flex items-center gap-3">
-                              <div style={{ width: '44px', height: '1px', background: 'linear-gradient(90deg, transparent, #B59A6A)' }} />
-                              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                <rect x="7" y="0.5" width="9" height="9" transform="rotate(45 7 7)" stroke="#B59A6A" strokeWidth="1" fill="rgba(181,154,106,.12)" />
-                              </svg>
-                              <div style={{ width: '44px', height: '1px', background: 'linear-gradient(90deg, #B59A6A, transparent)' }} />
-                            </div>
-                            <p className="mt-5 font-mincho leading-[1.85]"
-                              style={{ fontSize: 'clamp(16px, 1.4vw, 19px)', fontWeight: 400, color: '#D8C7A4' }}>
-                              {v.lead}
-                            </p>
-                            <p className="mt-4 leading-[2]"
-                              style={{ fontSize: 'clamp(16px, 1.2vw, 17px)', color: 'rgba(243,239,229,.6)' }}>
-                              {v.body}
-                            </p>
-                            <ul className="mt-6 flex flex-wrap gap-2">
-                              {v.bullets.map((b, j) => (
-                                <li key={j} className="flex items-center gap-2 px-3 py-1.5"
-                                  style={{ border: '1px solid rgba(181,154,106,.4)', background: 'rgba(181,154,106,.08)' }}>
-                                  <svg width="11" height="11" viewBox="0 0 14 14" fill="none">
-                                    <path d="M2 7l3.5 3.5L12 3" stroke="#B59A6A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                  </svg>
-                                  <span style={{ color: '#D8C7A4', fontSize: '12.5px', letterSpacing: '.04em' }}>{b}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Separator */}
-                    {i < voices.length - 1 && (
-                      <div className="mt-16 flex justify-center">
-                        <svg width="32" height="14" viewBox="0 0 32 14" fill="none">
-                          <path d="M2 2 L16 12 L30 2" stroke="rgba(181,154,106,.55)" strokeWidth="1.2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-      );
-    }
-
-    /* ---------- SECTION 09 — PRICE / 受講料金 ---------- */
-    function Price() {
-      const includes = [
-        { en: 'CURRICULUM', t: '全6回プログラム', d: '段階別の体系的カリキュラム' },
-        { en: 'MATERIALS', t: '教材費・実習費', d: '練習用パッド・インク・備品込み' },
-        { en: 'STUDIO', t: 'スタジオ利用料', d: 'プロ仕様の機材を全回使い放題' },
-        { en: 'AFTERCARE', t: '卒業後サポート', d: 'キャリア相談・ポートフォリオ添削' },
-      ];
-
-      const supports = [
-        '少人数制だからこそできる、丁寧で細やかな指導',
-        '現場レベルの技術を、基礎から実践まで学べる',
-        '衛生管理・機材の扱い方まで、安全に配慮した指導',
-        '卒業後も相談できる、安心のアフターサポート',
-        '就職・独立の相談やポートフォリオ添削もサポート',
-      ];
-
-      return (
-        <section
-          data-screen-label="08 Price"
-          className="p-price relative w-full"
-          style={{ background: 'linear-gradient(180deg, #F8F5EF 0%, #F3F1EC 100%)' }}
-        >
-          <div className="bg-type pc-only" style={{ top: '4%', left: '6%', fontSize: 'clamp(140px, 16vw, 260px)' }} aria-hidden="true">
-            PRICE
-          </div>
-
-          <div className="relative max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-12 pt-24 sm:pt-28 lg:pt-32 pb-24 sm:pb-28 lg:pb-32">
-
-            {/* Heading */}
-            <div className="text-center max-w-[820px] mx-auto">
-              <div className="inline-flex items-center gap-3 px-7 py-2 border border-[rgba(181,154,106,.55)] bg-white mb-8">
-                <span className="diamond" />
-                <span className="font-mincho text-[#8a7548] text-[11px] tracking-[.4em]">PRICE</span>
-                <span className="diamond" />
-              </div>
-              <h2 className="font-mincho text-[#1E1E1C] leading-[1.35] tracking-[.04em]"
-                style={{ fontSize: 'clamp(26px, 4.2vw, 50px)', fontWeight: 500 }}>
-                受講料金
-              </h2>
-              <div className="mt-6 flex justify-center" aria-hidden="true">
-                <DiamondDivider width={50} />
-              </div>
-              <p className="mt-7 font-mincho text-[#3a3833] leading-[2]"
-                style={{ fontSize: 'clamp(16px, 1.5vw, 18px)' }}>
-                必要なものを、すべて含んだシンプルな料金体系。<br className="hidden sm:block" />
-                <span className="marker">追加料金は一切ありません。</span>
+          <article class="c-feature-card">
+            <div>
+              <span class="c-feature-card__num">06</span>
+              <p class="c-section-label">APPRENTICESHIP</p>
+              <h3>従来の弟子制度はハードルが高い</h3>
+              <p>
+                日本では、長期間の弟子制度で技術を学ぶ文化が今も残っています。
+                環境によっては、収入がない状態で長時間働きながら学ぶケースもあり、
+                挑戦へのハードルになっています。
+                そのため現在では、効率的かつ実践的に学べるスクールを選ぶ人も増えています。
               </p>
             </div>
+            <figure>
+              <img src="img/image%201.png" alt="従来の弟子制度はハードルが高いイメージ">
+            </figure>
+          </article>
 
-            {/* Pricing card */}
-            <div className="mt-16 sm:mt-20 max-w-[920px] mx-auto relative">
-              {/* handwritten note top-right */}
-              <div className="absolute -top-8 right-2 sm:-right-4 hidden sm:block">
-                <div className="relative px-4 py-2 border border-[rgba(181,154,106,.55)] bg-white shadow-[0_8px_22px_-12px_rgba(30,30,28,.25)]">
-                  <span className="font-mincho text-[#8a7548]" style={{ fontSize: '17px' }}>
-                    追加料金<br />なし
-                  </span>
-                  <svg className="absolute -bottom-6 left-8" width="40" height="28" viewBox="0 0 40 28" fill="none" aria-hidden="true">
-                    <path d="M2 2 q 12 16 32 22" stroke="rgba(181,154,106,.7)" strokeWidth="1" fill="none" />
-                    <path d="M30 22 l 6 4 l -6 -8" stroke="rgba(181,154,106,.7)" strokeWidth="1" fill="none" />
-                  </svg>
-                </div>
-              </div>
-
-              <div className="relative bg-white border border-[rgba(181,154,106,.55)] shadow-[0_30px_70px_-40px_rgba(30,30,28,.3)] p-7 sm:p-12 lg:p-14 text-center">
-                <div className="absolute inset-2 border border-[rgba(181,154,106,.3)] pointer-events-none" aria-hidden="true" />
-
-                {/* small ribbon */}
-                <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#1E1E1C] mb-6">
-                  <span className="block w-1.5 h-1.5 bg-[#D8C7A4] rotate-45" aria-hidden="true" />
-                  <span className="font-mincho text-[10px] text-[#D8C7A4] tracking-[.36em]">FULL COURSE</span>
-                  <span className="block w-1.5 h-1.5 bg-[#D8C7A4] rotate-45" aria-hidden="true" />
-                </div>
-
-                <div className="font-mincho text-[#3a3833] tracking-[.06em]" style={{ fontSize: 'clamp(16px, 1.4vw, 19px)' }}>
-                  全6回完結プログラム
-                </div>
-
-                {/* Price */}
-                <div className="mt-5 sm:mt-6 flex items-end justify-center gap-1 sm:gap-2">
-                  <span className="font-mincho text-[#1E1E1C] leading-none" style={{ fontSize: 'clamp(64px, 10vw, 120px)', fontWeight: 500 }}>
-                    398,000
-                  </span>
-                  <span className="font-mincho text-[#1E1E1C] pb-2 sm:pb-4" style={{ fontSize: 'clamp(20px, 2.4vw, 30px)', fontWeight: 500 }}>
-                    円
-                  </span>
-                </div>
-                <div className="mt-2 text-[#6F6A62] text-[12.5px] tracking-[.18em]">TAX INCLUDED · 税込</div>
-
-                {/* divider */}
-                <div className="mt-8 flex justify-center" aria-hidden="true">
-                  <DiamondDivider width={60} />
-                </div>
-
-                {/* Includes grid */}
-                <div className="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 text-left">
-                  {includes.map((it, i) => (
-                    <div key={i} className="border border-[rgba(181,154,106,.4)] bg-[#FBFAF6] p-4 sm:p-5">
-                      <div className="flex items-center gap-2 mb-2">
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                          <path d="M2 7l3.5 3.5L12 3" stroke="#B59A6A" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                        <span className="font-mincho text-[#8a7548] text-[10px] tracking-[.32em]">{it.en}</span>
-                      </div>
-                      <div className="font-mincho text-[#1E1E1C]" style={{ fontSize: '16px', fontWeight: 500 }}>{it.t}</div>
-                      <div className="text-[#6F6A62] text-[11.5px] mt-1 leading-[1.7]">{it.d}</div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* footnote */}
-                <div className="mt-8 text-[#6F6A62] text-[12px] tracking-[.04em] leading-[1.9]">
-                  ※ 分割払いにも対応しています。詳細はLINEにてご案内します。
-                </div>
-              </div>
-            </div>
-
-            {/* Support checklist */}
-            <div className="mt-16 sm:mt-20 max-w-[920px] mx-auto">
-              <div className="text-center mb-8">
-                <span className="inline-flex items-center gap-3">
-                  <span className="block w-10 h-px bg-[rgba(181,154,106,.55)]" aria-hidden="true" />
-                  <span className="font-mincho text-[#8a7548] text-[11px] tracking-[.4em]">SUPPORT</span>
-                  <span className="block w-10 h-px bg-[rgba(181,154,106,.55)]" aria-hidden="true" />
-                </span>
-                <h3 className="mt-4 font-mincho text-[#1E1E1C]" style={{ fontSize: 'clamp(20px, 2.4vw, 28px)', fontWeight: 500 }}>
-                  安心のサポート体制
-                </h3>
-              </div>
-              <ul className="bg-white border border-[rgba(181,154,106,.4)] p-5 sm:p-8">
-                {supports.map((s, i) => (
-                  <li key={i} className={`flex items-start gap-4 py-3 sm:py-4 ${i !== supports.length - 1 ? 'border-b border-dashed border-[rgba(181,154,106,.35)]' : ''}`}>
-                    <span className="flex-shrink-0 mt-1 w-5 h-5 border border-[#B59A6A] flex items-center justify-center" aria-hidden="true">
-                      <svg width="11" height="11" viewBox="0 0 14 14" fill="none">
-                        <path d="M2 7l3.5 3.5L12 3" stroke="#B59A6A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <span className="font-mincho text-[#1E1E1C] leading-[1.8]"
-                      style={{ fontSize: 'clamp(16px, 1.3vw, 18px)' }}>
-                      {s}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div class="p-challenge-message"><strong>その悩み、すべてRe'inkタトゥースクールにお任せ！！</strong>
           </div>
-        </section>
-      );
-    }
-
-    /* ---------- SECTION 09 — FINAL CTA ---------- */
-    function FinalCTA() {
-      const benefits = [
-        { en: 'CONSULT', t: '相談無料', d: '料金やカリキュラム、進路まで何でも' },
-        { en: 'TRIAL', t: '体験OK', d: '実際の雰囲気をオンラインで確認' },
-        { en: 'NO PUSH', t: '無理な勧誘なし', d: '迷っている段階でもお気軽に' },
-      ];
-
-      return (
-        <section
-          id="contact"
-          data-screen-label="09 Final CTA"
-          className="p-finalcta relative w-full"
-          style={{ background: 'linear-gradient(180deg, #F3F1EC 0%, #1E1E1C 60%, #0F0E0C 100%)' }}
-        >
-          <div className="bg-type pc-only" style={{ top: '6%', right: '50%', transform: 'translateX(50%)', fontSize: 'clamp(140px, 14vw, 240px)' }} aria-hidden="true">
-            START
-          </div>
-
-          <div className="relative max-w-[1100px] mx-auto px-5 sm:px-8 lg:px-12 pt-24 sm:pt-28 lg:pt-32 pb-24 sm:pb-28 lg:pb-32">
-
-            {/* faint background photo */}
-            <img
-              aria-hidden="true"
-              src="img/clinic-hero.png"
-              alt=""
-              className="absolute inset-x-0 top-0 h-[420px] w-full object-cover opacity-[.18]"
-            />
-
-            <div className="relative text-center max-w-[860px] mx-auto">
-              <div className="inline-flex items-center gap-3 px-7 py-2 border border-[rgba(216,199,164,.45)] bg-[#1E1E1C]/50 mb-8">
-                <span className="diamond" style={{ background: '#D8C7A4' }} />
-                <span className="font-mincho text-[#D8C7A4] text-[11px] tracking-[.4em]">FINAL STEP</span>
-                <span className="diamond" style={{ background: '#D8C7A4' }} />
-              </div>
-
-              <h2 className="font-mincho text-[#F3EFE5] leading-[1.3] tracking-[.04em]"
-                style={{ fontSize: 'clamp(28px, 5vw, 60px)', fontWeight: 500 }}>
-                <span className="block">好きな表現を、</span>
-                <span className="block mt-2">一生モノの<span className="font-mincho" style={{ fontWeight: 600 }}>仕事</span>に。</span>
-              </h2>
-
-              <div className="mt-7 flex justify-center" aria-hidden="true">
-                <DiamondDivider width={50} />
-              </div>
-
-              <p className="mt-7 font-mincho text-[#CDBB9D] leading-[2]"
-                style={{ fontSize: 'clamp(16px, 1.5vw, 18px)' }}>
-                未経験からでも、あなたの挑戦を丁寧にサポートします。<br className="hidden sm:block" />
-                まずは、無料の相談から始めてみませんか？
-              </p>
-
-              {/* Benefit cards */}
-              <ul className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 text-left">
-                {benefits.map((b, i) => (
-                  <li key={i} className="p-5 sm:p-6 border border-[rgba(216,199,164,.25)]"
-                    style={{ background: 'linear-gradient(180deg, rgba(34,33,30,.6), rgba(15,14,12,.4))' }}>
-                    <div className="flex items-center gap-2 mb-3">
-                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                        <path d="M2 7l3.5 3.5L12 3" stroke="#D8C7A4" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span className="font-mincho text-[#D8C7A4] text-[10px] tracking-[.34em]">{b.en}</span>
-                    </div>
-                    <div className="font-mincho text-[#F3EFE5]" style={{ fontSize: '17px', fontWeight: 500 }}>{b.t}</div>
-                    <div className="mt-2 text-[#9c958a] leading-[1.8]" style={{ fontSize: '12.5px' }}>{b.d}</div>
-                  </li>
-                ))}
-              </ul>
-
-              {/* microcopy */}
-              <div className="mt-14 sm:mt-16 mb-5 font-mincho text-[#D8C7A4]" style={{ fontSize: '20px' }}>
-                まずはお気軽にご相談ください。
-              </div>
-
-              {/* Big LINE CTA */}
-              <div className="flex flex-col items-center gap-4">
-                <a
-                  href="#"
-                  className="group inline-flex items-center justify-between w-full sm:w-[480px] px-6 sm:px-8 py-5 sm:py-6 transition-all"
-                  style={{
-                    background: 'linear-gradient(180deg, #20B94D 0%, #128C3A 100%)',
-                    border: '1px solid rgba(255,255,255,.25)',
-                    boxShadow: '0 20px 40px -16px rgba(32,185,77,.5), inset 0 0 0 1px rgba(255,255,255,.08)',
-                    borderRadius: 4,
-                  }}
-                  aria-label="LINEで無料相談する"
-                >
-                  <span className="flex items-center gap-3 sm:gap-4">
-                    <span className="inline-flex items-center justify-center w-10 h-10 rounded-md bg-white">
-                      <img src="img/icon/line.png" alt="LINE" className="w-6 h-6 object-contain" />
-                    </span>
-                    <span className="font-mincho text-white tracking-[.08em]"
-                      style={{ fontSize: 'clamp(16px, 1.6vw, 19px)', fontWeight: 500 }}>
-                      LINEで無料相談する
-                    </span>
-                  </span>
-                  <span className="arrow-drift text-white">
-                    <svg width="24" height="11" viewBox="0 0 22 10" fill="none" aria-hidden="true">
-                      <path d="M1 5h19M16 1l4 4-4 4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </span>
-                </a>
-
-                <div className="flex items-center gap-2 text-[#CDBB9D] text-[12px] tracking-[.14em]">
-                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#20B94D] animate-pulse" aria-hidden="true" />
-                  <span>簡単30秒で予約完了 / 無理な勧誘は一切ありません</span>
-                </div>
-              </div>
-
-              {/* Closing emotional copy */}
-              <div className="mt-16 sm:mt-20">
-                <div className="font-mincho text-[#E8DDCB] leading-[1.8]"
-                  style={{ fontSize: 'clamp(16px, 1.4vw, 19px)' }}>
-                  一歩踏み出すあなたを、Re'inkは全力で迎えます。
-                </div>
-                <div className="mt-3 font-mincho text-[#D8C7A4]" style={{ fontSize: '22px' }}>
-                  Your story starts here.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Footer */}
-          <div className="relative border-t border-[rgba(216,199,164,.18)]">
-            <div className="max-w-[1100px] mx-auto px-5 sm:px-8 lg:px-12 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M5 14h6l3-3 3 3v3h-3" stroke="#D8C7A4" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-                  <circle cx="8" cy="14" r="1.6" stroke="#D8C7A4" strokeWidth="1" />
-                </svg>
-                <span className="font-mincho text-[#D8C7A4] text-[11px] tracking-[.4em]">RE'INK · TATTOO ARTIST SCHOOL</span>
-              </div>
-              <div className="text-[#6F6A62] text-[11px] tracking-[.18em]">© 2026 Re'ink. ALL RIGHTS RESERVED.</div>
-            </div>
-          </div>
-        </section>
-      );
-    }
-
-    /* ---------- App ---------- */
-    function App() {
-      return (
-        <div className="min-h-screen">
-          <Hero />
-          <About />
-          <Problem />
-          <HotJob />
-          <Challenges />
-          <Features />
-          <Curriculum />
-          <Instructor />
-          <Works />
-          <Voice />
-          <Price />
-          <FinalCTA />
         </div>
-      );
-    }
+      </div>
+    </section>
 
-    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
-  </script>
+    <!-- ==================== FEATURES ==================== -->
+    <section class="p-features">
+      <div class="u-bg-type u-pc-only" aria-hidden="true">
+        FEATURES
+      </div>
+      <div class="l-container">
+        <div class="c-heading-center">
+          <p class="c-section-label">FEATURES</p>
+          <h2 class="c-section-title">Re'inkが選ばれる<br><span class="u-marker">3つの理由</span></h2>
+          <div class="u-divider-diamond" aria-hidden="true">
+            <span class="u-divider-diamond__line"></span>
+            <span class="u-divider-diamond__diamond"></span>
+            <span class="u-divider-diamond__line"></span>
+          </div>
+          <p>Re'inkタトゥースクールでは彫り師になるまでのスキルを1から学ぶことができます
+          </p>
+        </div>
+        <div class="p-features__list">
+
+          <!-- 01 -->
+          <article class="feature-card">
+
+            <div class="feature-card__watermark" aria-hidden="true">
+              01
+            </div>
+
+            <div class="feature-card__grid">
+
+              <!-- text -->
+              <div class="feature-card__content">
+
+                <div class="feature-card__line" aria-hidden="true"></div>
+
+                <div class="feature-card__inner">
+
+                  <!-- badge -->
+                  <div class="feature-card__badge">
+                    <span class="u-diamond"></span>
+                    <span class="feature-card__badge-text">FEATURE</span>
+                    <span class="u-diamond"></span>
+                  </div>
+
+                  <!-- number -->
+                  <div class="feature-card__meta">
+                    <span class="feature-card__num">01</span>
+                    <span class="feature-card__meta-line"></span>
+                    <span class="feature-card__tag">SMALL GROUP</span>
+                  </div>
+
+                  <!-- title -->
+                  <h3 class="feature-card__title">
+                    少人数での技術指導
+                  </h3>
+
+                  <!-- lead -->
+                  <p class="feature-card__lead">
+                    “手元を見ながら学べる環境”だから、技術が身につく
+                  </p>
+
+                  <!-- body -->
+                  <p class="feature-card__body">
+                    当スクールでは、少人数制にこだわり、一人ひとりのレベルや目標に合わせた丁寧な指導を行っています。
+                    現役で活躍するプロの彫師が直接指導するため、マシンの基礎操作から、繊細なラインワーク、
+                    カラー技術、デザイン構成まで、実践で求められる技術を最短距離で習得できます。
+                    大人数のスクールでは難しい、“手元を見ながら学べる環境” が強みです。
+                  </p>
+
+                  <!-- pills -->
+                  <ul class="feature-card__pills">
+
+                    <li class="feature-card__pill">
+                      <svg viewBox="0 0 14 14" fill="none">
+                        <path d="M2 7l3.5 3.5L12 3" />
+                      </svg>
+                      <span>少人数制レッスン</span>
+                    </li>
+
+                    <li class="feature-card__pill">
+                      <svg viewBox="0 0 14 14" fill="none">
+                        <path d="M2 7l3.5 3.5L12 3" />
+                      </svg>
+                      <span>現役彫師が直接指導</span>
+                    </li>
+
+                    <li class="feature-card__pill">
+                      <svg viewBox="0 0 14 14" fill="none">
+                        <path d="M2 7l3.5 3.5L12 3" />
+                      </svg>
+                      <span>実践ベースで学習</span>
+                    </li>
+
+                  </ul>
+
+                </div>
+              </div>
+
+              <!-- image -->
+              <div class="feature-card__image-area">
+
+                <div class="feature-card__image-wrap">
+
+                  <img src="img/clinic-counseling.png" alt="少人数での技術指導" class="feature-card__image">
+
+                  <div class="feature-card__image-gradient"></div>
+
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- 02 -->
+          <article class="feature-card">
+
+            <div class="feature-card__watermark" aria-hidden="true">
+              02
+            </div>
+
+            <div class="feature-card__grid">
+
+              <div class="feature-card__content">
+
+                <div class="feature-card__line"></div>
+
+                <div class="feature-card__inner">
+
+                  <div class="feature-card__badge">
+                    <span class="u-diamond"></span>
+                    <span class="feature-card__badge-text">FEATURE</span>
+                    <span class="u-diamond"></span>
+                  </div>
+
+                  <div class="feature-card__meta">
+                    <span class="feature-card__num">02</span>
+                    <span class="feature-card__meta-line"></span>
+                    <span class="feature-card__tag">PRACTICAL</span>
+                  </div>
+
+                  <h3 class="feature-card__title">
+                    実践的なカリキュラム
+                  </h3>
+
+                  <p class="feature-card__lead">
+                    現場で通用する「実践力」を、体系的に身につける
+                  </p>
+
+                  <p class="feature-card__body">
+                    ただ技術を学ぶだけではなく、現場で通用する「実践力」を重視したカリキュラムを用意しています。
+                    デザイン制作、カウンセリング、衛生管理、施術の流れなど、
+                    実際のタトゥースタジオで必要となる内容を体系的に学習。
+                    さらに、SNS運用やブランディングなど、
+                    現代の彫師に欠かせない集客スキルについても実践ベースで学ぶことができます。
+                  </p>
+
+                  <ul class="feature-card__pills">
+
+                    <li class="feature-card__pill">
+                      <svg viewBox="0 0 14 14" fill="none">
+                        <path d="M2 7l3.5 3.5L12 3" />
+                      </svg>
+                      <span>実践重視の授業</span>
+                    </li>
+
+                    <li class="feature-card__pill">
+                      <svg viewBox="0 0 14 14" fill="none">
+                        <path d="M2 7l3.5 3.5L12 3" />
+                      </svg>
+                      <span>SNS運用も学べる</span>
+                    </li>
+
+                    <li class="feature-card__pill">
+                      <svg viewBox="0 0 14 14" fill="none">
+                        <path d="M2 7l3.5 3.5L12 3" />
+                      </svg>
+                      <span>衛生管理も習得</span>
+                    </li>
+
+                  </ul>
+
+                </div>
+              </div>
+
+              <div class="feature-card__image-area">
+
+                <div class="feature-card__image-wrap">
+
+                  <img src="img/clinic-open-class.png" alt="実践的なカリキュラム" class="feature-card__image">
+
+                  <div class="feature-card__image-gradient"></div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- 03 -->
+          <article class="feature-card">
+
+            <div class="feature-card__watermark" aria-hidden="true">
+              03
+            </div>
+
+            <div class="feature-card__grid">
+
+              <div class="feature-card__content">
+
+                <div class="feature-card__line"></div>
+
+                <div class="feature-card__inner">
+
+                  <div class="feature-card__badge">
+                    <span class="u-diamond"></span>
+                    <span class="feature-card__badge-text">FEATURE</span>
+                    <span class="u-diamond"></span>
+                  </div>
+
+                  <div class="feature-card__meta">
+                    <span class="feature-card__num">03</span>
+                    <span class="feature-card__meta-line"></span>
+                    <span class="feature-card__tag">SUPPORT</span>
+                  </div>
+
+                  <h3 class="feature-card__title">
+                    卒業後の圧倒的なサポート体制
+                  </h3>
+
+                  <p class="feature-card__lead">
+                    卒業後も、“仕事として続ける”ための支援を
+                  </p>
+
+                  <p class="feature-card__body">
+                    当スクールは、「卒業して終わり」ではありません。
+                    卒業後も、提携スタジオでの実務サポートや、機材購入のサポート、
+                    独立・集客に関する相談など、プロとして活動していくための環境を整えています。
+                    未経験からでも、安心して“仕事としてのタトゥー”をスタートできるよう、
+                    長期的にサポートいたします。
+                  </p>
+
+                  <ul class="feature-card__pills">
+
+                    <li class="feature-card__pill">
+                      <svg viewBox="0 0 14 14" fill="none">
+                        <path d="M2 7l3.5 3.5L12 3" />
+                      </svg>
+                      <span>独立サポート</span>
+                    </li>
+
+                    <li class="feature-card__pill">
+                      <svg viewBox="0 0 14 14" fill="none">
+                        <path d="M2 7l3.5 3.5L12 3" />
+                      </svg>
+                      <span>提携スタジオ支援</span>
+                    </li>
+
+                    <li class="feature-card__pill">
+                      <svg viewBox="0 0 14 14" fill="none">
+                        <path d="M2 7l3.5 3.5L12 3" />
+                      </svg>
+                      <span>長期キャリア相談</span>
+                    </li>
+
+                  </ul>
+
+                </div>
+              </div>
+
+              <div class="feature-card__image-area">
+
+                <div class="feature-card__image-wrap">
+
+                  <img src="img/clinic-counseling.png" alt="卒業後の圧倒的なサポート体制" class="feature-card__image">
+
+                  <div class="feature-card__image-gradient"></div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CURRICULUM ==================== -->
+    <section class="p-curriculum">
+      <div class="u-bg-type u-pc-only" aria-hidden="true">
+        CURRICULUM
+      </div>
+      <div class="l-container">
+        <div class="c-heading-center">
+          <p class="c-section-label">CURRICULUM</p>
+          <h2 class="c-section-title">実践に特化した、<br><span class="u-marker">全6回完結</span>プログラム</h2>
+          <div class="u-divider-diamond" aria-hidden="true">
+            <span class="u-divider-diamond__line"></span>
+            <span class="u-divider-diamond__diamond"></span>
+            <span class="u-divider-diamond__line"></span>
+          </div>
+          <p>道具の扱いから実践までを、無駄なく順序立てて、最短3ヶ月で、現場に立てるレベルへ導きます</p>
+        </div>
+        <div class="p-curriculum__list">
+
+          <ul class="p-curriculum__timeline">
+
+            <!-- STEP 01 -->
+            <li class="p-curriculum__item">
+              <div class="p-curriculum__content">
+
+                <div class="p-curriculum__text">
+
+                  <div class="p-curriculum__head">
+
+                    <div class="curriculum-ribbon">
+                      <span class="curriculum-ribbon__step">STEP</span>
+                      <span class="curriculum-ribbon__num">01</span>
+                    </div>
+
+                    <span class="p-curriculum__line"></span>
+                    <span class="p-curriculum__en">TOOLS</span>
+
+                  </div>
+
+                  <h3 class="p-curriculum__title">
+                    道具の使い方
+                  </h3>
+
+                  <p class="p-curriculum__body">
+                    タトゥーマシンの種類や基本構造、セッティング方法を学びます。
+                    インクや針の扱い方、衛生管理についても基礎から丁寧に指導します。
+                  </p>
+
+                </div>
+
+                <div class="p-curriculum__photo">
+                  <img src="img/clinic-request.png" alt="道具の使い方 の参考写真">
+                </div>
+
+              </div>
+            </li>
+
+            <!-- STEP 02 -->
+            <li class="p-curriculum__item">
+
+              <div class="p-curriculum__content">
+
+                <div class="p-curriculum__text">
+
+                  <div class="p-curriculum__head">
+
+                    <div class="curriculum-ribbon">
+                      <span class="curriculum-ribbon__step">STEP</span>
+                      <span class="curriculum-ribbon__num">02</span>
+                    </div>
+
+                    <span class="p-curriculum__line"></span>
+                    <span class="p-curriculum__en">LINE</span>
+
+                  </div>
+
+                  <h3 class="p-curriculum__title">
+                    ラインの引き方
+                  </h3>
+
+                  <p class="p-curriculum__body">
+                    タトゥーの基礎となるラインワークを徹底練習。
+                    まっすぐ綺麗な線を引く感覚や、マシンコントロールを身につけます。
+                  </p>
+
+                </div>
+
+                <div class="p-curriculum__photo">
+                  <img src="img/clinic-curriculum.png" alt="ラインの引き方 の参考写真">
+                </div>
+
+              </div>
+
+            </li>
+
+            <!-- STEP 03 -->
+            <li class="p-curriculum__item">
+
+              <div class="p-curriculum__content">
+
+                <div class="p-curriculum__text">
+
+                  <div class="p-curriculum__head">
+
+                    <div class="curriculum-ribbon">
+                      <span class="curriculum-ribbon__step">STEP</span>
+                      <span class="curriculum-ribbon__num">03</span>
+                    </div>
+
+                    <span class="p-curriculum__line"></span>
+                    <span class="p-curriculum__en">FILLING</span>
+
+                  </div>
+
+                  <h3 class="p-curriculum__title">
+                    塗りつぶし
+                  </h3>
+
+                  <p class="p-curriculum__body">
+                    ブラックワークやカラーのベタ塗り技術を学びます。
+                    ムラなく綺麗に色を入れるための角度・速度・圧力を実践形式で習得します。
+                  </p>
+
+                </div>
+
+                <div class="p-curriculum__photo">
+                  <img src="img/image%208.png" alt="塗りつぶし の参考写真">
+                </div>
+
+              </div>
+
+            </li>
+
+            <!-- STEP 04 -->
+            <li class="p-curriculum__item">
+
+              <div class="p-curriculum__content">
+
+                <div class="p-curriculum__text">
+
+                  <div class="p-curriculum__head">
+
+                    <div class="curriculum-ribbon">
+                      <span class="curriculum-ribbon__step">STEP</span>
+                      <span class="curriculum-ribbon__num">04</span>
+                    </div>
+
+                    <span class="p-curriculum__line"></span>
+                    <span class="p-curriculum__en">SHADING</span>
+
+                  </div>
+
+                  <h3 class="p-curriculum__title">
+                    ぼかし
+                  </h3>
+
+                  <p class="p-curriculum__body">
+                    シェーディング（ぼかし）の技術を学習。
+                    立体感や奥行きを表現するための、グラデーション技術を実践的に練習します。
+                  </p>
+
+                </div>
+
+                <div class="p-curriculum__photo">
+                  <img src="img/image%2013.png" alt="ぼかし の参考写真">
+                </div>
+
+              </div>
+
+            </li>
+
+            <!-- STEP 05 -->
+            <li class="p-curriculum__item">
+
+              <div class="p-curriculum__content">
+
+                <div class="p-curriculum__text">
+
+                  <div class="p-curriculum__head">
+
+                    <div class="curriculum-ribbon">
+                      <span class="curriculum-ribbon__step">STEP</span>
+                      <span class="curriculum-ribbon__num">05</span>
+                    </div>
+
+                    <span class="p-curriculum__line"></span>
+                    <span class="p-curriculum__en">PRACTICE I</span>
+
+                  </div>
+
+                  <h3 class="p-curriculum__title">
+                    実践①
+                  </h3>
+
+                  <p class="p-curriculum__body">
+                    これまで学んだ技術を組み合わせ、実際の施術を想定したトレーニングを行います。
+                    講師が手元を見ながら細かくフィードバックします。
+                  </p>
+
+                </div>
+
+                <div class="p-curriculum__photo">
+                  <img src="img/clinic-open-class.png" alt="実践① の参考写真">
+                </div>
+
+              </div>
+
+            </li>
+
+            <!-- STEP 06 -->
+            <li class="p-curriculum__item">
+
+              <div class="p-curriculum__content">
+
+                <div class="p-curriculum__text">
+
+                  <div class="p-curriculum__head">
+
+                    <div class="curriculum-ribbon">
+                      <span class="curriculum-ribbon__step">STEP</span>
+                      <span class="curriculum-ribbon__num">06</span>
+                    </div>
+
+                    <span class="p-curriculum__line"></span>
+                    <span class="p-curriculum__en">PRACTICE II</span>
+
+                  </div>
+
+                  <h3 class="p-curriculum__title u-marker-text">
+                    実践②
+                  </h3>
+
+                  <p class="p-curriculum__body">
+                    総仕上げとして、デザイン制作から施術までを実践形式で体験。
+                    ポートフォリオ用の作品制作や、今後の活動に向けたアドバイスも行います。
+                  </p>
+
+                </div>
+
+                <div class="p-curriculum__photo">
+                  <img src="img/clinic-counseling.png" alt="実践② の参考写真">
+                </div>
+
+              </div>
+
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+    </section>
+    <!-- ==================== PRICE ==================== -->
+    <section class="p-price">
+      <div class="u-bg-type u-pc-only" aria-hidden="true">
+        PRICE
+      </div>
+      <div class="l-container">
+        <div class="c-heading-center">
+          <p class="c-section-label">PRICE</p>
+          <h2 class="c-section-title">受講料金</h2>
+          <p>必要なものを、すべて含んだシンプルな料金体系<br><span class="u-marker">追加料金は一切ありません</span></p>
+        </div>
+        <div class="p-price__card">
+          <p class="p-price__label">全6回 / 教材・実習費込み</p>
+          <p class="p-price__amount"><span>¥</span><span class="u-marker">498,000</span><small>税込</small></p>
+          <ul class="p-price__includes">
+            <li>
+              <div class="p-price__includes-head">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M2 7l3.5 3.5L12 3" stroke="#B59A6A" stroke-width="1.4" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+
+                <span>PROGRAM</span>
+              </div>
+
+              <p>全6回プログラム</p>
+              <small>基礎から実践まで段階的に学べるカリキュラム</small>
+            </li>
+
+            <li>
+              <div class="p-price__includes-head">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M2 7l3.5 3.5L12 3" stroke="#B59A6A" stroke-width="1.4" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+
+                <span>MATERIAL</span>
+              </div>
+
+              <p>教材費・実習費</p>
+              <small>必要な教材・練習用機材込み</small>
+            </li>
+
+            <li>
+              <div class="p-price__includes-head">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M2 7l3.5 3.5L12 3" stroke="#B59A6A" stroke-width="1.4" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+
+                <span>STUDIO</span>
+              </div>
+
+              <p>スタジオ利用料</p>
+              <small>実践環境で学べるスタジオ設備完備</small>
+            </li>
+
+            <li>
+              <div class="p-price__includes-head">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M2 7l3.5 3.5L12 3" stroke="#B59A6A" stroke-width="1.4" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+
+                <span>SUPPORT</span>
+              </div>
+
+              <p>卒業後サポート</p>
+              <small>ポートフォリオ制作・活動相談対応</small>
+            </li>
+          </ul>
+          <a class="c-line-button" href="#contact">
+            <div class="c-line-button-inner">
+              <span class="c-line-button-icon">
+                <img src="img/icon/line.png" alt="LINE">
+              </span>
+
+              <span class="c-line-button-text">
+                申し込みはLINEから
+              </span>
+            </div>
+
+            <svg width="20" height="12" viewBox="0 0 20 12" fill="none" aria-hidden="true">
+              <path d="M1 6h17M13 1.5l5 4.5-5 4.5" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== INSTRUCTOR ==================== -->
+    <section class="p-instructor">
+      <div class="p-instructor__inner">
+        <div class="p-instructor__main">
+          <div class="p-instructor__visual">
+            <p class="p-instructor__vertical">OHINA</p>
+
+            <div class="p-instructor__image">
+              <img src="img/instructor-ohina.jpg" alt="講師 おひな">
+            </div>
+          </div>
+
+          <div class="p-instructor__body">
+            <p class="p-instructor__label">INSTRUCTOR</p>
+
+            <h2 class="p-instructor__catch">
+              あなたの才能を、<br>
+              <span>確信</span>に変える
+            </h2>
+
+            <div class="p-instructor__name">
+              <span>Re’ink Artist</span>
+              <strong>おひな</strong>
+            </div>
+
+            <blockquote class="p-instructor__message">
+              <p>
+                私自身も未経験からスタートしました<br>
+                だからこそ、つまづくポイントが分かります<br>
+                技術は一生の財産です<br>
+                <strong>一緒に歩みましょう</strong>
+              </p>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="p-instructor__works">
+          <div class="p-instructor__works-head">
+            <span></span>
+            <p>WORKS</p>
+            <span></span>
+          </div>
+
+          <div class="p-instructor__works-list">
+            <div class="p-instructor__work">
+              <img src="img/work1.jpg" alt="おひなの作品写真1">
+            </div>
+            <div class="p-instructor__work">
+              <img src="img/work2.jpg" alt="おひなの作品写真2">
+            </div>
+            <div class="p-instructor__work">
+              <img src="img/work3.jpg" alt="おひなの作品写真3">
+            </div>
+            <div class="p-instructor__work">
+              <img src="img/work4.jpg" alt="おひなの作品写真4">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section class="p-faq">
+      <div class="u-bg-type u-pc-only" aria-hidden="true">
+        FAQ
+      </div>
+      <div class="l-container">
+        <div class="c-heading-center">
+          <p class="c-section-label">FAQ</p>
+          <h2 class="c-section-title">よくあるご質問</h2>
+        </div>
+        <div class="p-faq__list">
+          <details open>
+            <summary>
+              <span class="p-faq__q">Q</span>
+              <span>絵が下手なのですが、大丈夫ですか？</span>
+            </summary>
+            <div class="p-faq__answer">
+              <span class="p-faq__a">A</span>
+              <p>もちろん大丈夫です。タトゥーには独特の構図や技術があります。基礎から丁寧に練習していくため、未経験の方でも着実に上達できます。</p>
+            </div>
+          </details>
+
+          <details open>
+            <summary>
+              <span class="p-faq__q">Q</span>
+              <span>未経験でも本当に彫師になれますか？</span>
+            </summary>
+            <div class="p-faq__answer">
+              <span class="p-faq__a">A</span>
+              <p>はい。受講生の多くが未経験からスタートしています。マシンの使い方や衛生管理など、基礎から段階的に学べるカリキュラムをご用意しています。</p>
+            </div>
+          </details>
+
+          <details open>
+            <summary>
+              <span class="p-faq__q">Q</span>
+              <span>働きながらでも通えますか？</span>
+            </summary>
+            <div class="p-faq__answer">
+              <span class="p-faq__a">A</span>
+              <p>可能です。土日や夜間の受講にも対応しているため、お仕事や学校と両立しながら通っていただけます。</p>
+            </div>
+          </details>
+
+          <details open>
+            <summary>
+              <span class="p-faq__q">Q</span>
+              <span>道具を持っていなくても始められますか？</span>
+            </summary>
+            <div class="p-faq__answer">
+              <span class="p-faq__a">A</span>
+              <p>はい。必要な機材についてはスクール側でご案内いたします。初心者向けの機材選びや購入サポートも行っています。</p>
+            </div>
+          </details>
+
+          <details open>
+            <summary>
+              <span class="p-faq__q">Q</span>
+              <span>衛生面や法律面が不安です</span>
+            </summary>
+            <div class="p-faq__answer">
+              <span class="p-faq__a">A</span>
+              <p>当スクールでは、技術だけでなく衛生管理や業界知識についても学んでいただきます。安全面を重視した指導を徹底しています。</p>
+            </div>
+          </details>
+
+          <details open>
+            <summary>
+              <span class="p-faq__q">Q</span>
+              <span>年齢制限はありますか？</span>
+            </summary>
+            <div class="p-faq__answer">
+              <span class="p-faq__a">A</span>
+              <p>18歳以上の方であれば、年齢問わず受講可能です。</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LINE CTA BANNER ==================== -->
+    <section class="p-line-banner">
+      <div class="l-container">
+        <div class="p-line-banner__box">
+
+          <div class="p-line-banner__content">
+            <p class="p-line-banner__label">
+              まずは無料で相談してみませんか？
+            </p>
+
+            <h2 class="p-line-banner__title">
+              あなたの「気になる」を<br>
+              <span>LINE</span>で気軽に相談できます。
+            </h2>
+
+            <a class="c-line-button" href="#contact">
+              <div class="c-line-button-inner">
+                <span class="c-line-button-icon">
+                  <img src="img/icon/line.png" alt="LINE">
+                </span>
+
+                <span class="c-line-button-text">
+                  申し込みはLINEから
+                </span>
+              </div>
+
+              <svg width="20" height="12" viewBox="0 0 20 12" fill="none" aria-hidden="true">
+                <path d="M1 6h17M13 1.5l5 4.5-5 4.5" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="p-line-banner__image">
+            <img src="img/clinic-hero.png" alt="">
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ==================== FINAL CTA ==================== -->
+    <!-- <section class="p-finalcta" id="contact">
+      <div class="l-container">
+        <div class="p-finalcta__content">
+          <p class="c-section-label c-section-label--dark">FINAL STEP</p>
+          <h2 class="c-section-title c-section-title--dark">好きな表現を、<br>一生モノの仕事に</h2>
+          <p>未経験からでも、あなたの挑戦を丁寧にサポートします<br>まずは、無料の相談から始めてみませんか？</p>
+          <a class="c-line-button" href="#"><span> 申し込みはLINEから</span></a>
+          <p class="p-finalcta__copy">一歩踏み出すあなたを、Re'inkは全力で迎えます<br><em>Your story starts here.</em></p>
+        </div>
+        <footer class="p-footer">© 2026 Re'ink. ALL RIGHTS RESERVED.</footer>
+      </div>
+    </section> -->
+  </main>
 </body>
 
 </html>

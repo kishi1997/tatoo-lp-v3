@@ -2,3 +2,6 @@
 /.claude
 /*.png
 /*.log
+/node_modules
+/dist
+/.vscode
