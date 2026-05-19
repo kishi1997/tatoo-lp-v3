@@ -104,7 +104,7 @@ section {
   font-weight: 600;
   letter-spacing: 0.08em;
 
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Noto Serif JP", serif;
 
   color: rgba(181, 154, 106, 0.08);
 
@@ -727,7 +727,7 @@ section {
       z-index: -1;
       content: "RE'INK";
       color: rgba(181, 154, 106, 0.08);
-      font-family: "Cormorant Garamond", serif;
+      font-family: "Noto Serif JP", serif;
       font-size: clamp(70px, 10vw, 140px);
       letter-spacing: 0.08em;
       line-height: 1;
@@ -1246,6 +1246,7 @@ section {
     }
 
     &__title {
+      margin: 0;
       font-family: var(--font-mincho);
       font-size: clamp(28px, 3.4vw, 46px);
       line-height: 1.25;
@@ -1605,7 +1606,7 @@ section {
     right: 7%;
     top: 8%;
     content: "Ohina";
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Noto Serif JP", serif;
     font-size: clamp(90px, 14vw, 190px);
     font-style: italic;
     line-height: 1;
@@ -1657,7 +1658,7 @@ section {
     margin: 0;
     writing-mode: vertical-rl;
     transform: translateY(-50%) rotate(180deg);
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Noto Serif JP", serif;
     font-size: clamp(56px, 7vw, 96px);
     line-height: 1;
     letter-spacing: 0.12em;
@@ -1693,7 +1694,7 @@ section {
       content: "Re’ink Artist";
       width: auto;
       height: auto;
-      font-family: "Cormorant Garamond", serif;
+      font-family: "Noto Serif JP", serif;
       font-size: clamp(28px, 4vw, 46px);
       font-style: italic;
       color: rgba(181, 154, 106, 0.78);
@@ -1714,7 +1715,7 @@ section {
     align-items: center;
     gap: 18px;
     margin: 0 0 22px;
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Noto Serif JP", serif;
     font-size: 15px;
     line-height: 1;
     letter-spacing: 0.34em;
@@ -1749,7 +1750,7 @@ section {
     span {
       display: block;
       margin-bottom: 8px;
-      font-family: "Cormorant Garamond", serif;
+      font-family: "Noto Serif JP", serif;
       font-size: 18px;
       letter-spacing: 0.18em;
       color: #b59a6a;
@@ -1825,7 +1826,7 @@ section {
 
     p {
       margin: 0;
-      font-family: "Cormorant Garamond", serif;
+      font-family: "Noto Serif JP", serif;
       font-size: clamp(24px, 3vw, 36px);
       line-height: 1;
       letter-spacing: 0.26em;
@@ -2378,6 +2379,358 @@ section {
     font-style: normal;
   }
 }
+/* ==================== FLOW ==================== */
+.p-flow {
+  position: relative;
+  padding-block: clamp(80px, 10vw, 130px);
+  background: #151513;
+  overflow: hidden;
+
+  // ノイズ感のあるドットテクスチャ
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(
+      rgba(181, 154, 106, 0.06) 1px,
+      transparent 1px
+    );
+    background-size: 24px 24px;
+    pointer-events: none;
+  }
+
+  &__watermark {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(120px, 18vw, 280px);
+    line-height: 1;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: rgba(181, 154, 106, 0.06);
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .l-container {
+    position: relative;
+    z-index: 1;
+  }
+
+  // ダークモード用 heading variants
+  .c-heading-center--dark {
+    .u-divider-diamond__line {
+      background: rgba(181, 154, 106, 0.3);
+    }
+  }
+
+  &__list {
+    position: relative;
+    display: grid;
+    gap: 0;
+    margin: clamp(48px, 6vw, 80px) auto 0;
+    padding: 0;
+    max-width: 780px;
+    list-style: none;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 0 clamp(24px, 3.5vw, 48px);
+    align-items: start;
+    position: relative;
+
+    &--last {
+      .p-flow__marker {
+        // コネクターを非表示
+      }
+    }
+  }
+
+  // 左側のマーカー列（番号 + 縦線）
+  &__marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: 2px;
+  }
+
+  &__step-label {
+    display: block;
+    font-family: "Noto Serif JP", serif;
+    font-size: 10px;
+    letter-spacing: 0.38em;
+    color: #b59a6a;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  &__num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border: 1px solid rgba(181, 154, 106, 0.55);
+    border-radius: 50%;
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(22px, 2.8vw, 32px);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: #b59a6a;
+    background: rgba(181, 154, 106, 0.06);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    transition:
+      background 0.35s ease,
+      border-color 0.35s ease;
+
+    .p-flow__item:hover & {
+      background: rgba(181, 154, 106, 0.14);
+      border-color: rgba(181, 154, 106, 0.9);
+    }
+  }
+
+  &__connector {
+    display: block;
+    width: 1px;
+    flex: 1;
+    min-height: 60px;
+    background: rgba(181, 154, 106, 0.5);
+    margin: 8px 0;
+  }
+
+  // 右側のカード
+  &__card {
+    padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 36px);
+    margin-bottom: clamp(20px, 3vw, 32px);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(181, 154, 106, 0.14);
+    border-left: 2px solid rgba(181, 154, 106, 0.5);
+    border-radius: 2px;
+    transition:
+      background 0.35s ease,
+      border-color 0.35s ease,
+      transform 0.35s ease;
+
+    .p-flow__item:hover & {
+      background: rgba(181, 154, 106, 0.05);
+      border-left-color: #b59a6a;
+      transform: translateX(4px);
+    }
+
+    &--final {
+      border-left-color: #b59a6a;
+      background: rgba(181, 154, 106, 0.07);
+      position: relative;
+    }
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(16px, 1.8vw, 20px);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: #e8dcc8;
+    line-height: 1.4;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: clamp(13px, 1.3vw, 15px);
+    line-height: 1.9;
+    color: #8a8276;
+    letter-spacing: 0.02em;
+  }
+
+  &__complete {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 6px 16px;
+    border: 1px solid rgba(181, 154, 106, 0.6);
+    font-family: "Noto Serif JP", serif;
+    font-size: 13px;
+    letter-spacing: 0.28em;
+    color: #b59a6a;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 6px;
+      height: 6px;
+      background: #b59a6a;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: clamp(40px, 5vw, 64px);
+    text-align: center;
+  }
+
+  &__note {
+    margin: 0;
+    font-size: clamp(12px, 1.2vw, 14px);
+    color: #6a645c;
+    letter-spacing: 0.06em;
+    line-height: 1.9;
+  }
+}
+
+@media (max-width: 640px) {
+  .p-flow {
+    &__item {
+      grid-template-columns: 56px 1fr;
+      gap: 0 16px;
+    }
+
+    &__num {
+      width: 48px;
+      height: 48px;
+      font-size: 18px;
+    }
+
+    &__connector {
+      min-height: 40px;
+    }
+
+    &__card {
+      padding: 16px 18px;
+      margin-bottom: 16px;
+
+      .p-flow__item:hover & {
+        transform: none;
+      }
+    }
+
+    &__watermark {
+      display: none;
+    }
+  }
+}
+
+/* ==================== TERMS ==================== */
+.p-terms {
+  padding-block: clamp(64px, 8vw, 100px);
+  background: #f8f5ef;
+  border-top: 1px solid #e8dfd2;
+
+  &__heading {
+    margin: 0 0 clamp(40px, 5vw, 64px);
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: #1e1e1c;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d8cfc3;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -1px;
+      width: 48px;
+      height: 1px;
+      background: #b59a6a;
+    }
+  }
+
+  &__block {
+    margin-bottom: clamp(32px, 4vw, 48px);
+    padding: clamp(24px, 3vw, 36px);
+    background: #fff;
+    border: 1px solid #e8dfd2;
+    border-top: 2px solid #b59a6a;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 16px;
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(14px, 1.5vw, 17px);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: #2a2926;
+  }
+
+  &__lead {
+    margin: 0 0 14px;
+    font-size: clamp(12px, 1.2vw, 14px);
+    line-height: 1.95;
+    color: #5a5650;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 2px;
+
+    li {
+      font-size: clamp(12px, 1.2vw, 14px);
+      line-height: 1.95;
+      color: #5a5650;
+      padding: 8px 0 8px 20px;
+      position: relative;
+      border-bottom: 1px solid #f0ece5;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 17px;
+        width: 5px;
+        height: 5px;
+        background: #b59a6a;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__note {
+    margin: 16px 0 0;
+    padding: 14px 16px;
+    font-size: clamp(11px, 1.1vw, 13px);
+    line-height: 1.95;
+    color: #6f6a62;
+    background: #f8f5ef;
+    border-left: 2px solid rgba(181, 154, 106, 0.4);
+  }
+}
+
+@media (max-width: 640px) {
+  .p-terms {
+    &__block {
+      padding: 20px 18px;
+    }
+  }
+}
+
 .p-footer {
   border-top: 1px solid rgba(216, 199, 164, 0.18);
   padding: 34px 0;

@@ -1,0 +1,7 @@
+[  144219ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://ogads-pa.clients6.google.com/$rpc/google.internal.onegoogle.asyncdata.v1.AsyncDataService/GetAsyncData:0
+[  145228ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://play.google.com/log?format=json&hasfast=true:0
+[  219487ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://play.google.com/log?format=json&hasfast=true:0
+[  295842ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://play.google.com/log?format=json&hasfast=true:0
+[  375982ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://play.google.com/log?format=json&hasfast=true:0
+[  463886ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://play.google.com/log?format=json&hasfast=true:0
+[  571034ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://play.google.com/log?format=json&hasfast=true:0
