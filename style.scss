@@ -142,11 +142,12 @@ section {
 
 .c-line {
   &-button {
+    position: relative;
     width: 100%;
-    max-width: 380px;
+    max-width: 480px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 28px;
     padding: clamp(14px, 1.8vw, 20px) clamp(20px, 2.5vw, 32px);
     border-radius: 9999px;
@@ -164,6 +165,10 @@ section {
 
     svg {
       flex-shrink: 0;
+      position: absolute;
+      top: 50%;
+      right: 24px;
+      transform: translateY(-50%);
     }
   }
 
@@ -193,7 +198,7 @@ section {
   &-button-text {
     color: #fff;
     font-family: var(--font-mincho, "Noto Serif JP", serif);
-    font-size: clamp(18px, 2.2vw, 26px);
+    font-size: clamp(18px, 2vw, 24px);
     font-weight: 500;
     letter-spacing: 0.06em;
   }
@@ -2443,12 +2448,6 @@ section {
     gap: 0 clamp(24px, 3.5vw, 48px);
     align-items: start;
     position: relative;
-
-    &--last {
-      .p-flow__marker {
-        // コネクターを非表示
-      }
-    }
   }
 
   // 左側のマーカー列（番号 + 縦線）
