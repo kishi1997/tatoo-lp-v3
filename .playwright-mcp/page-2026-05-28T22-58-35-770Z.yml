@@ -1,0 +1,520 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - img "タトゥーアーティストが施術している写真" [ref=e5]
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - link "Re'ink Tattoo Artist School" [ref=e8] [cursor=pointer]:
+          - /url: "#top"
+          - generic [ref=e10]: TATTOO ARTIST SCHOOL
+        - paragraph [ref=e11]: Be yourself, Be an artist.
+      - generic [ref=e12]:
+        - paragraph [ref=e13]: 未経験から、プロの彫師を目指す
+        - generic [ref=e14]:
+          - generic [ref=e15]: 最短3ヶ月
+          - generic [ref=e16]: でデビュー可能
+        - heading "趣味を一生モノの職へ" [level=1] [ref=e17]:
+          - generic [ref=e18]: 趣味を一生モノの職へ
+        - paragraph [ref=e19]:
+          - text: 絵心がない。未経験で不安。
+          - text: そんなあなたの「表現したい」を、現役トップアーティストが収入につながる技術へ導きます。
+        - generic [ref=e20]:
+          - generic [ref=e21]: 完全未経験OK
+          - generic [ref=e22]: 少人数制指導
+          - generic [ref=e23]: 現役彫師が直接指導
+        - link "LINE 申し込みはLINEから" [ref=e25] [cursor=pointer]:
+          - /url: https://lin.ee/8Btanj22
+          - generic [ref=e26]:
+            - img "LINE" [ref=e28]
+            - generic [ref=e29]: 申し込みはLINEから
+          - img [ref=e30]
+  - generic [ref=e34]:
+    - paragraph [ref=e35]: Re'inkとは？
+    - heading "東京表参道にある 朝倉未来 プロデュースのタトゥースタジオ" [level=2] [ref=e36]:
+      - text: 東京表参道にある
+      - emphasis [ref=e37]: 朝倉未来
+      - text: プロデュースのタトゥースタジオ
+    - link "LINE 申し込みはLINEから" [ref=e38] [cursor=pointer]:
+      - /url: https://lin.ee/8Btanj22
+      - generic [ref=e39]:
+        - img "LINE" [ref=e41]
+        - generic [ref=e42]: 申し込みはLINEから
+      - img [ref=e43]
+  - generic [ref=e45]:
+    - generic: WORRY
+    - img "独学で悩んでいる学習者の写真" [ref=e47]
+    - generic [ref=e49]:
+      - heading "こんなお悩みありませんか？" [level=2] [ref=e50]
+      - list [ref=e51]:
+        - listitem [ref=e52]:
+          - text: ✓
+          - generic [ref=e53]: タトゥーアーティストになりたいが
+          - strong [ref=e54]: 何から始めればいいか分からない
+        - listitem [ref=e55]:
+          - text: ✓
+          - generic [ref=e56]: 独学で練習しているけど
+          - strong [ref=e57]: 上達の限界を感じている
+        - listitem [ref=e58]:
+          - text: ✓
+          - generic [ref=e59]: 今の仕事を辞めて
+          - strong [ref=e60]: 自分らしく自由に働きたい
+  - generic [ref=e61]:
+    - generic: FEATURE
+    - generic [ref=e62]:
+      - heading "実は彫り師は「アツい」職業" [level=2] [ref=e64]
+      - generic [ref=e69]:
+        - article [ref=e70]:
+          - paragraph [ref=e71]:
+            - text: “一点もの”の
+            - text: 職人ビジネスなので
+          - heading "AI代替されにくい" [level=3] [ref=e72]
+        - article [ref=e73]:
+          - paragraph [ref=e74]:
+            - text: 単価が高い
+            - text: （数万円〜数十万円）ので
+          - heading "利益率を 作りやすい" [level=3] [ref=e75]:
+            - text: 利益率を
+            - text: 作りやすい
+        - article [ref=e76]:
+          - paragraph [ref=e77]:
+            - text: 美容・ファッション
+            - text: 寄りに
+          - heading "市場が変化している" [level=3] [ref=e78]
+        - article [ref=e79]:
+          - paragraph [ref=e80]: アーティスト本人に
+          - heading "ファンが 付きやすい" [level=3] [ref=e81]:
+            - text: ファンが
+            - text: 付きやすい
+  - generic [ref=e82]:
+    - generic: CHALLENGES
+    - generic [ref=e83]:
+      - generic [ref=e84]:
+        - paragraph [ref=e85]: CHALLENGES
+        - paragraph [ref=e86]: ただし彫り師になるには
+        - heading "タトゥー業界は、簡単に始められる世界 ではありません" [level=2] [ref=e87]:
+          - text: タトゥー業界は、簡単に始められる世界
+          - text: ではありません
+      - generic [ref=e92]:
+        - article [ref=e93]:
+          - generic [ref=e94]:
+            - generic [ref=e95]: "01"
+            - paragraph [ref=e96]: PRACTICE
+            - heading "実践経験を積む機会が少ない" [level=3] [ref=e97]
+            - paragraph [ref=e98]: タトゥーは、実際に手を動かしながら覚えていく技術職です。 しかし初心者の場合、練習相手や実践環境を確保すること自体が難しく、 経験不足のまま止まってしまうケースも少なくありません。 だからこそ、正しい環境で実践を積むことが重要になります。
+          - figure [ref=e99]:
+            - img "実践経験を積む機会が少ないイメージ" [ref=e100]
+        - article [ref=e101]:
+          - generic [ref=e102]:
+            - generic [ref=e103]: "02"
+            - paragraph [ref=e104]: HYGIENE
+            - heading "衛生管理の知識が必要不可欠" [level=3] [ref=e105]
+            - paragraph [ref=e106]: タトゥーは肌に直接施術を行うため、技術だけでなく衛生管理の知識も非常に重要です。 器具の扱い方や消毒方法など、安全面への理解が不足していると、 トラブルにつながる可能性があります。 プロとして活動するためには、基礎から正しい知識を学ぶ必要があります。
+          - figure [ref=e107]:
+            - img "衛生管理の知識が必要不可欠なイメージ" [ref=e108]
+        - article [ref=e109]:
+          - generic [ref=e110]:
+            - generic [ref=e111]: "03"
+            - paragraph [ref=e112]: SKIN TYPE
+            - heading "肌に合わせた技術が求められる" [level=3] [ref=e113]
+            - paragraph [ref=e114]: 人によって肌質や部位の特徴は異なります。 同じデザインでも、針の入り方や色の出方が変わるため、 一人ひとりに合わせた施術技術が必要です。 実践経験を重ねながら感覚を身につけていくことが大切です。
+          - figure [ref=e115]:
+            - img "肌に合わせた技術が求められるイメージ" [ref=e116]
+        - article [ref=e117]:
+          - generic [ref=e118]:
+            - generic [ref=e119]: "04"
+            - paragraph [ref=e120]: DESIGN
+            - heading "“絵が上手い”だけでは通用しない" [level=3] [ref=e121]
+            - paragraph [ref=e122]: タトゥーはイラストとは違い、身体のラインや肌に馴染むバランスを考えて デザインする必要があります。 紙に描く感覚だけではなく、 “肌に彫るためのデザイン力” が求められる世界です。
+          - figure [ref=e123]:
+            - img "絵が上手いだけでは通用しないイメージ" [ref=e124]
+        - article [ref=e125]:
+          - generic [ref=e126]:
+            - generic [ref=e127]: "05"
+            - paragraph [ref=e128]: SELF-STUDY
+            - heading "独学では限界がある" [level=3] [ref=e129]
+            - paragraph [ref=e130]: 動画やSNSだけでも情報を得られる時代ですが、 実際の細かな手の動きや力加減は、 独学だけでは習得が難しい部分も多くあります。 間違った癖がついてしまう前に、 正しい技術を学ぶことが重要です。
+          - figure [ref=e131]:
+            - img "独学では限界があるイメージ" [ref=e132]
+        - article [ref=e133]:
+          - generic [ref=e134]:
+            - generic [ref=e135]: "06"
+            - paragraph [ref=e136]: APPRENTICESHIP
+            - heading "従来の弟子制度はハードルが高い" [level=3] [ref=e137]
+            - paragraph [ref=e138]: 日本では、長期間の弟子制度で技術を学ぶ文化が今も残っています。 環境によっては、収入がない状態で長時間働きながら学ぶケースもあり、 挑戦へのハードルになっています。 そのため現在では、効率的かつ実践的に学べるスクールを選ぶ人も増えています。
+          - figure [ref=e139]:
+            - img "従来の弟子制度はハードルが高いイメージ" [ref=e140]
+        - strong [ref=e142]: その悩み、すべてRe'inkタトゥースクールにお任せ！！
+  - generic [ref=e143]:
+    - generic: FEATURES
+    - generic [ref=e144]:
+      - generic [ref=e145]:
+        - paragraph [ref=e146]: FEATURES
+        - heading "Re'inkが選ばれる 3つの理由" [level=2] [ref=e147]:
+          - text: Re'inkが選ばれる
+          - text: 3つの理由
+        - paragraph [ref=e152]: Re'inkタトゥースクールでは彫り師になるまでのスキルを1から学ぶことができます
+      - generic [ref=e153]:
+        - article [ref=e154]:
+          - generic: "01"
+          - generic [ref=e155]:
+            - generic [ref=e158]:
+              - generic [ref=e161]: FEATURE
+              - generic [ref=e163]:
+                - generic [ref=e164]: "01"
+                - generic [ref=e166]: SMALL GROUP
+              - heading "少人数での技術指導" [level=3] [ref=e167]
+              - paragraph [ref=e168]: “手元を見ながら学べる環境”だから、技術が身につく
+              - paragraph [ref=e169]: 当スクールでは、少人数制にこだわり、一人ひとりのレベルや目標に合わせた丁寧な指導を行っています。 現役で活躍するプロの彫師が直接指導するため、マシンの基礎操作から、繊細なラインワーク、 カラー技術、デザイン構成まで、実践で求められる技術を最短距離で習得できます。 大人数のスクールでは難しい、“手元を見ながら学べる環境” が強みです。
+              - list [ref=e170]:
+                - listitem [ref=e171]:
+                  - img [ref=e172]
+                  - generic [ref=e174]: 少人数制レッスン
+                - listitem [ref=e175]:
+                  - img [ref=e176]
+                  - generic [ref=e178]: 現役彫師が直接指導
+                - listitem [ref=e179]:
+                  - img [ref=e180]
+                  - generic [ref=e182]: 実践ベースで学習
+            - img "少人数での技術指導" [ref=e185]
+        - article [ref=e187]:
+          - generic: "02"
+          - generic [ref=e188]:
+            - generic [ref=e191]:
+              - generic [ref=e194]: FEATURE
+              - generic [ref=e196]:
+                - generic [ref=e197]: "02"
+                - generic [ref=e199]: PRACTICAL
+              - heading "実践的なカリキュラム" [level=3] [ref=e200]
+              - paragraph [ref=e201]: 現場で通用する「実践力」を、体系的に身につける
+              - paragraph [ref=e202]: ただ技術を学ぶだけではなく、現場で通用する「実践力」を重視したカリキュラムを用意しています。 デザイン制作、カウンセリング、衛生管理、施術の流れなど、 実際のタトゥースタジオで必要となる内容を体系的に学習。 さらに、SNS運用やブランディングなど、 現代の彫師に欠かせない集客スキルについても実践ベースで学ぶことができます。
+              - list [ref=e203]:
+                - listitem [ref=e204]:
+                  - img [ref=e205]
+                  - generic [ref=e207]: 実践重視の授業
+                - listitem [ref=e208]:
+                  - img [ref=e209]
+                  - generic [ref=e211]: SNS運用も学べる
+                - listitem [ref=e212]:
+                  - img [ref=e213]
+                  - generic [ref=e215]: 衛生管理も習得
+            - img "実践的なカリキュラム" [ref=e218]
+        - article [ref=e220]:
+          - generic: "03"
+          - generic [ref=e221]:
+            - generic [ref=e224]:
+              - generic [ref=e227]: FEATURE
+              - generic [ref=e229]:
+                - generic [ref=e230]: "03"
+                - generic [ref=e232]: SUPPORT
+              - heading "未経験からでも安心できる学習環境" [level=3] [ref=e233]
+              - paragraph [ref=e234]: 一人ひとりの理解度に合わせた、丁寧なサポート
+              - paragraph [ref=e235]: 当スクールでは、未経験の方でも安心して技術を学べる環境づくりを大切にしています。 授業中はもちろん、学習の進め方やデザインの考え方など、一人ひとりの理解度に合わせて丁寧にサポート。 「自分にできるか不安…」という方でも、基礎から段階的に学べるカリキュラムを通して、無理なく技術を身につけることができます。
+              - list [ref=e236]:
+                - listitem [ref=e237]:
+                  - img [ref=e238]
+                  - generic [ref=e240]: 独立サポート
+                - listitem [ref=e241]:
+                  - img [ref=e242]
+                  - generic [ref=e244]: 提携スタジオ支援
+                - listitem [ref=e245]:
+                  - img [ref=e246]
+                  - generic [ref=e248]: 長期キャリア相談
+            - img "卒業後の圧倒的なサポート体制" [ref=e251]
+  - generic [ref=e253]:
+    - generic: CURRICULUM
+    - generic [ref=e254]:
+      - generic [ref=e255]:
+        - paragraph [ref=e256]: CURRICULUM
+        - heading "実践に特化した、 全6回完結プログラム" [level=2] [ref=e257]:
+          - text: 実践に特化した、
+          - text: 全6回完結プログラム
+        - paragraph [ref=e262]: 道具の扱いから実践までを、無駄なく順序立てて、最短3ヶ月で、現場に立てるレベルへ導きます
+      - list [ref=e264]:
+        - listitem [ref=e265]:
+          - generic [ref=e266]:
+            - generic [ref=e267]:
+              - generic [ref=e268]:
+                - generic [ref=e269]:
+                  - generic [ref=e270]: STEP
+                  - generic [ref=e271]: "01"
+                - generic [ref=e273]: TOOLS
+              - heading "道具・衛生管理について" [level=3] [ref=e274]
+              - paragraph [ref=e275]: タトゥーマシンの種類や基本構造、セッティング方法を学びます。 インクや針の扱い方、衛生管理など、施術を行う上で必要となる基礎知識を丁寧に指導します。
+            - img "道具の使い方 の参考写真" [ref=e277]
+        - listitem [ref=e278]:
+          - generic [ref=e279]:
+            - generic [ref=e280]:
+              - generic [ref=e281]:
+                - generic [ref=e282]:
+                  - generic [ref=e283]: STEP
+                  - generic [ref=e284]: "02"
+                - generic [ref=e286]: LINE
+              - heading "ラインの引き方" [level=3] [ref=e287]
+              - paragraph [ref=e288]: タトゥーの基礎となるラインワークを徹底練習。 綺麗で安定した線を引くためのマシンコントロールや、手の動かし方を実践形式で学びます。
+            - img "ラインの引き方 の参考写真" [ref=e290]
+        - listitem [ref=e291]:
+          - generic [ref=e292]:
+            - generic [ref=e293]:
+              - generic [ref=e294]:
+                - generic [ref=e295]:
+                  - generic [ref=e296]: STEP
+                  - generic [ref=e297]: "03"
+                - generic [ref=e299]: FILLING
+              - heading "塗りつぶし・ぼかしについて" [level=3] [ref=e300]
+              - paragraph [ref=e301]: ブラックワークやカラーの塗りつぶし、シェーディング（ぼかし）の技術を学習。 ムラなく綺麗に色を入れる技術や、立体感を出すグラデーション表現を実践的に習得します。
+            - img "塗りつぶし の参考写真" [ref=e303]
+        - listitem [ref=e304]:
+          - generic [ref=e305]:
+            - generic [ref=e306]:
+              - generic [ref=e307]:
+                - generic [ref=e308]:
+                  - generic [ref=e309]: STEP
+                  - generic [ref=e310]: "04"
+                - generic [ref=e312]: PRACTICE I
+              - heading "実践①" [level=3] [ref=e313]
+              - paragraph [ref=e314]: これまで学んだ技術を組み合わせ、実際の施術を想定したトレーニングを行います。 講師が手元を見ながら細かくフィードバックし、技術の精度を高めていきます。
+            - img "ぼかし の参考写真" [ref=e316]
+        - listitem [ref=e317]:
+          - generic [ref=e318]:
+            - generic [ref=e319]:
+              - generic [ref=e320]:
+                - generic [ref=e321]:
+                  - generic [ref=e322]: STEP
+                  - generic [ref=e323]: "05"
+                - generic [ref=e325]: PRACTICE II
+              - heading "実践②" [level=3] [ref=e326]
+              - paragraph [ref=e327]: デザインから施術まで、一連の流れを実践形式で学習。 現場を想定しながら、より実践的な技術と対応力を身につけます。
+            - img "実践① の参考写真" [ref=e329]
+        - listitem [ref=e330]:
+          - generic [ref=e331]:
+            - generic [ref=e332]:
+              - generic [ref=e333]:
+                - generic [ref=e334]:
+                  - generic [ref=e335]: STEP
+                  - generic [ref=e336]: "06"
+                - generic [ref=e338]: PORTFOLIO
+              - heading "作品制作" [level=3] [ref=e339]
+              - paragraph [ref=e340]: 総仕上げとして、ポートフォリオ用の作品制作を行います。 今後の活動に向けたアドバイスや、作品の見せ方についてもサポートいたします。
+            - img "実践② の参考写真" [ref=e342]
+  - generic [ref=e343]:
+    - generic: PRICE
+    - generic [ref=e344]:
+      - generic [ref=e345]:
+        - paragraph [ref=e346]: PRICE
+        - heading "受講料金" [level=2] [ref=e347]
+        - paragraph [ref=e348]:
+          - text: 必要なものを、すべて含んだシンプルな料金体系
+          - text: 追加料金は一切ありません
+      - generic [ref=e349]:
+        - paragraph [ref=e350]: 全6回 / 教材・実習費込み
+        - paragraph [ref=e351]: ¥598,000税込
+        - list [ref=e352]:
+          - listitem [ref=e353]:
+            - generic [ref=e354]:
+              - img [ref=e355]
+              - generic [ref=e357]: PROGRAM
+            - paragraph [ref=e358]: 全6回プログラム
+            - generic [ref=e359]: 基礎から実践まで段階的に学べるカリキュラム
+          - listitem [ref=e360]:
+            - generic [ref=e361]:
+              - img [ref=e362]
+              - generic [ref=e364]: MATERIAL
+            - paragraph [ref=e365]: 教材費・実習費
+            - generic [ref=e366]: 必要な教材・練習用機材込み
+          - listitem [ref=e367]:
+            - generic [ref=e368]:
+              - img [ref=e369]
+              - generic [ref=e371]: STUDIO
+            - paragraph [ref=e372]: スタジオ利用料
+            - generic [ref=e373]: 実践環境で学べるスタジオ設備完備
+          - listitem [ref=e374]:
+            - generic [ref=e375]:
+              - img [ref=e376]
+              - generic [ref=e378]: SUPPORT
+            - paragraph [ref=e379]: 卒業後サポート
+            - generic [ref=e380]: ポートフォリオ制作・活動相談対応
+        - link "LINE 申し込みはLINEから" [ref=e381] [cursor=pointer]:
+          - /url: https://lin.ee/8Btanj22
+          - generic [ref=e382]:
+            - img "LINE" [ref=e384]
+            - generic [ref=e385]: 申し込みはLINEから
+          - img [ref=e386]
+  - generic [ref=e388]:
+    - generic: FLOW
+    - generic [ref=e389]:
+      - generic [ref=e390]:
+        - paragraph [ref=e391]: FLOW
+        - heading "お申し込みの流れ" [level=2] [ref=e392]
+      - list [ref=e397]:
+        - listitem [ref=e398]:
+          - generic [ref=e399]:
+            - generic [ref=e400]: STEP
+            - generic [ref=e401]: "01"
+          - generic [ref=e403]:
+            - heading "LINEでご連絡" [level=3] [ref=e404]
+            - paragraph [ref=e405]: 申し込みLINEに「タトゥースクール受講希望」とお送りください。担当者より、お申し込み専用フォームをお送りいたします。
+        - listitem [ref=e406]:
+          - generic [ref=e407]:
+            - generic [ref=e408]: STEP
+            - generic [ref=e409]: "02"
+          - generic [ref=e411]:
+            - heading "フォームに記入・送信" [level=3] [ref=e412]
+            - paragraph [ref=e413]: 専用フォームに必要事項をご記入の上、ご送信ください。内容を確認後、担当者よりご連絡させていただきます。
+        - listitem [ref=e414]:
+          - generic [ref=e415]:
+            - generic [ref=e416]: STEP
+            - generic [ref=e417]: "03"
+          - generic [ref=e419]:
+            - heading "事前審査" [level=3] [ref=e420]
+            - paragraph [ref=e421]: フォーム確認後、簡単な事前審査を実施いたします。審査通過後、Zoom面談の日程調整を行います。
+        - listitem [ref=e422]:
+          - generic [ref=e423]:
+            - generic [ref=e424]: STEP
+            - generic [ref=e425]: "04"
+          - generic [ref=e427]:
+            - heading "Zoom面談" [level=3] [ref=e428]
+            - paragraph [ref=e429]: 担当者とZoomにて面談を実施いたします。スクール内容や受講の流れについて詳しくご説明いたします。
+        - listitem [ref=e430]:
+          - generic [ref=e431]:
+            - generic [ref=e432]: STEP
+            - generic [ref=e433]: "05"
+          - generic [ref=e434]:
+            - heading "最終審査・ご入金" [level=3] [ref=e435]
+            - paragraph [ref=e436]: 面談後、最終審査を実施いたします。審査通過後、受講料のご入金確認をもって正式なお申し込み完了となります。
+            - generic [ref=e437]: 受講確定
+      - generic [ref=e438]:
+        - paragraph [ref=e439]: ご相談やご質問のみの方も、お気軽に公式LINEよりお問い合わせください。
+        - link "LINE お問い合わせはこちら" [ref=e440] [cursor=pointer]:
+          - /url: https://lin.ee/8Btanj22
+          - generic [ref=e441]:
+            - img "LINE" [ref=e443]
+            - generic [ref=e444]: お問い合わせはこちら
+          - img [ref=e445]
+  - generic [ref=e447]:
+    - text: Ohina
+    - generic [ref=e448]:
+      - generic [ref=e449]:
+        - generic [ref=e450]:
+          - paragraph [ref=e451]: OHINA
+          - generic [ref=e452]:
+            - img "講師 おひな" [ref=e453]
+            - text: Re’ink Artist
+        - generic [ref=e454]:
+          - paragraph [ref=e455]: INSTRUCTOR
+          - heading "あなたの才能を、 確信に変える" [level=2] [ref=e456]:
+            - text: あなたの才能を、
+            - text: 確信に変える
+          - generic [ref=e457]:
+            - generic [ref=e458]: Re’ink Artist
+            - strong [ref=e459]: おひな
+          - blockquote [ref=e460]:
+            - paragraph [ref=e461]:
+              - text: 私自身も未経験からスタートしました
+              - text: だからこそ、つまづくポイントが分かります
+              - text: 技術は一生の財産です
+              - strong [ref=e462]: 一緒に歩みましょう
+      - generic [ref=e463]:
+        - paragraph [ref=e466]: WORKS
+        - generic [ref=e468]:
+          - img "おひなの作品写真1" [ref=e470]
+          - img "おひなの作品写真2" [ref=e472]
+          - img "おひなの作品写真3" [ref=e474]
+          - img "おひなの作品写真4" [ref=e476]
+  - generic [ref=e477]:
+    - generic: FAQ
+    - generic [ref=e478]:
+      - generic [ref=e479]:
+        - paragraph [ref=e480]: FAQ
+        - heading "よくあるご質問" [level=2] [ref=e481]
+      - generic [ref=e482]:
+        - group [ref=e483]:
+          - generic "Q 未経験でも本当に彫師になれますか？" [ref=e484] [cursor=pointer]:
+            - generic [ref=e485]: Q
+            - generic [ref=e486]: 未経験でも本当に彫師になれますか？
+          - generic [ref=e487]:
+            - generic [ref=e488]: A
+            - paragraph [ref=e489]: はい。受講生の多くが未経験からスタートしています。マシンの使い方や衛生管理など、基礎から丁寧に学べるカリキュラムをご用意しています。
+        - group [ref=e490]:
+          - generic "Q 働きながらでも通えますか？" [ref=e491] [cursor=pointer]:
+            - generic [ref=e492]: Q
+            - generic [ref=e493]: 働きながらでも通えますか？
+          - generic [ref=e494]:
+            - generic [ref=e495]: A
+            - paragraph [ref=e496]: 可能です。土日や夜間にも対応しているため、お仕事や学校と両立しながら受講していただけます。
+        - group [ref=e497]:
+          - generic "Q 道具を持っていなくても始められますか？" [ref=e498] [cursor=pointer]:
+            - generic [ref=e499]: Q
+            - generic [ref=e500]: 道具を持っていなくても始められますか？
+          - generic [ref=e501]:
+            - generic [ref=e502]: A
+            - paragraph [ref=e503]: はい。必要な機材についてはスクール側でご案内いたします。初心者向けの機材選びや購入サポートも行っています。
+        - group [ref=e504]:
+          - generic "Q 衛生面や法律面が不安です。" [ref=e505] [cursor=pointer]:
+            - generic [ref=e506]: Q
+            - generic [ref=e507]: 衛生面や法律面が不安です。
+          - generic [ref=e508]:
+            - generic [ref=e509]: A
+            - paragraph [ref=e510]: 当スクールでは、技術だけでなく衛生管理や業界知識についても学んでいただきます。安全面を重視した指導を徹底しています。
+        - group [ref=e511]:
+          - generic "Q 年齢制限はありますか？" [ref=e512] [cursor=pointer]:
+            - generic [ref=e513]: Q
+            - generic [ref=e514]: 年齢制限はありますか？
+          - generic [ref=e515]:
+            - generic [ref=e516]: A
+            - paragraph [ref=e517]: 18歳以上の方を対象としております。※高校生の方はご受講いただけません。
+        - group [ref=e518]:
+          - generic "Q お支払い方法は？" [ref=e519] [cursor=pointer]:
+            - generic [ref=e520]: Q
+            - generic [ref=e521]: お支払い方法は？
+          - generic [ref=e522]:
+            - generic [ref=e523]: A
+            - paragraph [ref=e524]: 銀行振込またはクレジットカード払い（一括）がご利用いただけます。
+        - group [ref=e525]:
+          - generic "Q 料金の分割はできますか？" [ref=e526] [cursor=pointer]:
+            - generic [ref=e527]: Q
+            - generic [ref=e528]: 料金の分割はできますか？
+          - generic [ref=e529]:
+            - generic [ref=e530]: A
+            - paragraph [ref=e531]: スクール受講料金は全額前払いとなります。クレジットカードの分割払いにつきましては、ご利用のカード会社へお問い合わせください。
+        - group [ref=e532]:
+          - generic "Q 受講可能な日程を知りたいです。" [ref=e533] [cursor=pointer]:
+            - generic [ref=e534]: Q
+            - generic [ref=e535]: 受講可能な日程を知りたいです。
+          - generic [ref=e536]:
+            - generic [ref=e537]: A
+            - paragraph [ref=e538]: 受講スケジュールにつきましては、担当者との面談後に調整・決定させていただいております。
+  - generic [ref=e542]:
+    - paragraph [ref=e543]: まずは無料で相談してみませんか？
+    - heading "あなたの「気になる」を LINEで気軽に相談できます。" [level=2] [ref=e544]:
+      - text: あなたの「気になる」を
+      - text: LINEで気軽に相談できます。
+    - link "LINE 申し込みはLINEから" [ref=e545] [cursor=pointer]:
+      - /url: https://lin.ee/8Btanj22
+      - generic [ref=e546]:
+        - img "LINE" [ref=e548]
+        - generic [ref=e549]: 申し込みはLINEから
+      - img [ref=e550]
+  - generic [ref=e554]:
+    - heading "受講に関するご案内・規約" [level=2] [ref=e555]
+    - generic [ref=e556]:
+      - heading "受講に関するご案内" [level=3] [ref=e557]
+      - list [ref=e558]:
+        - listitem [ref=e559]: 当スクールは、タトゥー技術やデザイン知識を学ぶことを目的とした教育プログラムです。受講後の施術行為を保証・推奨するものではありません。
+        - listitem [ref=e560]: 実技講習では、専用の練習素材（人工スキン）を使用して進行いたします。人体への施術実習は行っておりません。
+        - listitem [ref=e561]: 講義は定刻で開始いたします。円滑な進行のため、開始時間までに余裕を持ってお越しください。
+        - listitem [ref=e562]: 受講対象は18歳以上の方のみとさせていただいております。※高校生の方はご受講いただけません。
+        - listitem [ref=e563]: 授業風景や制作物などを撮影し、当スタジオのSNS・Webサイト・広告媒体等に掲載させていただく場合がございます。あらかじめご了承ください。
+    - generic [ref=e564]:
+      - heading "受講をお断りさせていただくケースについて" [level=3] [ref=e565]
+      - paragraph [ref=e566]: 下記のいずれかに該当すると当スタジオが判断した場合、お申し込み後であっても受講をお断り、または受講資格を停止させていただく場合がございます。
+      - list [ref=e567]:
+        - listitem [ref=e568]: 18歳未満、または高校在学中の方
+        - listitem [ref=e569]: 反社会的勢力、またはそれに準ずる団体・関係者に該当すると判断される方
+        - listitem [ref=e570]: 講師・スタッフ・他受講者への迷惑行為、威圧的な言動、モラルに欠ける行為が見受けられる方
+        - listitem [ref=e571]: 運営上のルールや注意事項を守っていただけない方
+        - listitem [ref=e572]: その他、スクール運営に支障があると判断した場合
+      - paragraph [ref=e573]: なお、受講停止・契約解除となった場合、受講料金の返金はいたしかねます。また、状況に応じて関係機関への相談・対応を行う場合がございますので、あらかじめご了承ください。
+    - generic [ref=e574]:
+      - heading "キャンセル・返金について" [level=3] [ref=e575]
+      - paragraph [ref=e576]:
+        - text: お申し込み完了後のお客様都合によるキャンセル・返金は原則お受けしておりません。
+        - text: やむを得ない事情がある場合は、事前にご相談ください。
